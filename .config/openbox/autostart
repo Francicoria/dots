@@ -1,5 +1,6 @@
 nitrogen --restore &
-urxvt &
-compton &
 setxkbmap it &
+compton &
 tint2 &
+xbindkeys &
+st &
