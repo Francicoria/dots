@@ -1,5 +1,0 @@
-2021/12/07-19:22:18.394 a Creating DB /home/franci/.config/chromium/Profile 2/Local Storage/leveldb since it was missing.
-2021/12/07-19:22:18.420 a Reusing MANIFEST /home/franci/.config/chromium/Profile 2/Local Storage/leveldb/MANIFEST-000001
-2021/12/07-19:31:22.531 c Level-0 table #5: started
-2021/12/07-19:31:22.543 c Level-0 table #5: 55625 bytes OK
-2021/12/07-19:31:22.549 c Delete type=0 #3
