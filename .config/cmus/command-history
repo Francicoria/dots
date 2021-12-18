@@ -1,15 +1,13 @@
 q
+fset missing-tag=!stream&(artist=""|album=""|title=""|tracknumber=-1|date=-1)
+fset 90s=date>=1990&date<2000
 player-next
-player-play 
-player-pause-playback
-lqueue 
-colorscheme dracula
-colorscheme default
-filter 
-colorscheme gray-88
-colorscheme 
-help
-player-play
 player-pause
-add franci/Scaricati/Earth, Wind & Fire - Essentials (Mp3 320kbps) [PMEDIA] ⭐️/
-browser
+browser-down
+player-stop 
+refresh 
+save 
+help
+add Music/
+player-play
+add Music

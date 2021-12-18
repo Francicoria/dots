@@ -1,6 +1,0 @@
-nitrogen --restore &
-setxkbmap it &
-compton &
-tint2 &
-xbindkeys &
-st &
