@@ -1,0 +1,707 @@
+T 1640112317 19*	Now talking on 22#voidlinux
+T 1640112317 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640112317 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640112477 29*	#voidlinux n ntlk :MODE cannot be set due to channel having an active MLOCK restriction policy
+T 1640112610 23*	MY-R (~irc@user/my-r23) has joined
+T 1640112765 23*	ShinyRice (~shinyrice@91.106.17.19323) has joined
+T 1640112789 23*	Guest653 (~Guest65@84.33.178.8723) has joined
+T 1640112955 24*	Guest653 has quit (Client Quit)
+T 1640112969 24*	duckless_quack has quit (Quit: WeeChat 3.3)
+T 1640113130 24*	srv has quit (Quit: Leaving)
+T 1640113230 19*	Now talking on 22#voidlinux
+T 1640113230 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640113230 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640113284 24*	woffs has quit (Excess Flood)
+T 1640115477 19*	Now talking on 22#voidlinux
+T 1640115477 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640115477 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640115533 24*	tewrvd^ has quit (Remote host closed the connection)
+T 1640115592 24*	waleee has quit (Quit: WeeChat 3.3)
+T 1640115643 23*	waleee (~waleee@2001:9b0:21d:fc00:398f:b003:b90d:acf423) has joined
+T 1640115662 20<Cicoria>30	Hi, have an issue since i first installed void, when my cursor is on the desktop or in non-gtk apps it has a default cursor that I don't really like, is there any way to change it? I tried researching a bit but I've only found solution that involve using lightdm, but i'd prefer using startx
+T 1640115730 18<quinq18>	In your ~/.Xresources: Xcursor.theme: whatever-theme-you-like
+T 1640115754 19<nbl>	Cicoria: In your ~/.xinitrc add xsetroot -cursor_name left_ptr
+T 1640115761 18<__abby__18>	^
+T 1640115827 24*	humky has quit (Quit: Leaving)
+T 1640115867 19*	Now talking on 22#voidlinux
+T 1640115867 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640115867 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640115943 18<bleb18>	I'm debugging my wpa_supplicant service
+T 1640115956 20<Cicoria>30	tried both quinq and nbl solutions but the cursor remained the same
+T 1640115970 18<bleb18>	wpa_cli does not connect to it
+T 1640115999 18<bleb18>	ps suggests that wpa_supplicant is not running (only thing that shows up is runsv wpa_supplicant)
+T 1640116066 20<Cicoria>30	did you linked the wpa_supplicant service into /var/service?
+T 1640116069 18<bleb18>	Is there a way to run it in the same environment used by runit?  executing /etc/sv/wpa_supplicant/run exits quietly
+T 1640116090 18<bleb18>	with code 255
+T 1640116099 19<nbl>	Cicoria: https://wiki.archlinux.org/title/Cursor_themes#Change_X_shaped_default_cursor
+T 1640116118 19<nbl>	Cicoria: https://wiki.archlinux.org/title/Cursor_themes#X_resources
+T 1640116122 19<bleb>	Cicoria: yeah it's linked
+T 1640116176 18<bleb18>	I was thinking there must be some way to run the service in the foreground so I can see the error messages etc
+T 1640116192 23*	humky (~humky@user/humky23) has joined
+T 1640116310 bleb barbarossa93 barpthewire bdju Beebz belgarath_ benalb benji betuxy bL3h blackbeard420 blockhead bobertlo bougyman branon breavyn brokenshakles bug2000 
+T 1640116311 bleb barbarossa93 barpthewire bdju Beebz belgarath_ benalb benji betuxy bL3h blackbeard420 blockhead bobertlo bougyman branon breavyn brokenshakles bug2000 
+T 1640116338 24*	humky has quit (Client Quit)
+T 1640116355 20<Cicoria>30	-d = increase debugging verbosity (-dd even more) @bleb 
+T 1640116402 20<Cicoria>30	also with -f you can send print the logs to a file
+T 1640117412 20*	Disconnected (20)
+T 1640117430 22*	26Cicoria sets mode 24+Z on 22Cicoria
+T 1640117430 22*	26Cicoria sets mode 24+i on 22Cicoria
+T 1640117430 22*	26Cicoria sets mode 24+w on 22Cicoria
+T 1640117437 19*	Now talking on 22#voidlinux
+T 1640117437 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640117437 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640117439 23*	johnvan (~johnvan@bras-base-toroon2638w-grc-77-76-70-94-7.dsl.bell.ca23) has joined
+T 1640117505 24*	Inline has quit (Quit: Leaving)
+T 1640117556 23*	Akiva (~Akiva@user/Akiva23) has joined
+T 1640117865 23*	dan0 (~dan0@2001:1438:900:a409:dd49:3465:23a8:712123) has joined
+T 1640117911 24*	_gypci0 has quit (Quit: Connection closed for inactivity)
+T 1640117939 24*	srv has quit (Quit: Leaving)
+T 1640118007 23*	___nick___ (~quassel@cpc68286-cdif17-2-0-cust533.5-1.cable.virginm.net23) has joined
+T 1640118346 23*	sliced (~sliced@nat-185-238-205-210.kampinostelco.pl23) has joined
+T 1640118646 18<dan018>	Hey everyone, I ran into serious problems, not sure if they're void related but I don't know where else to ask right now. I was setting up some stuff on my laptop and suddenly it ran out of power and shut down, before that I ran a full system update which was finished already (I believe). Now a huge amount of stuff doesn't work anymore: startxfce4
+T 1640118647 18<dan018>	leads to the display of this error: "Unable to load a failsafe session \  Unable to determine failsafe session name. Possible causes: xconfd isn't running (D-Bus setup problem); envirnoment variable $XDG_CONFIG_DIRS is set incorrectly (must include "/etc"), or xfxe4-session is installed incorrectly" All the solutions I found online don't work.
+T 1640118647 18<dan018>	Firefox doesn't start, says "Missing Profile. Your Firefox profile cannot be loaded. It may be missed or inaccessible." even after reinstalling it, torbrowser doesn't launch, Qutebrowser and chromium work but suddenly use about 80% CPU on all cores, all of that worked before the unintended shutdown. Have you got ANY ideas what I could do? I
+T 1640118648 18<dan018>	desperately need to sleep but I need this laptop for work tomorrow morning and I need to fix this until then, I'm really going crazy right now
+T 1640118678 18<dan018>	I'm typing all of this on my phone btw, sorry for any typos. This took a decade to write :/
+T 1640118765 18<Velvet18>	i've been having xfce issues in arco too fwiw....suddenly radiotray and kodi stopped working...maybe an xfce issue?
+T 1640118859 20<Cicoria>30	have you tried reinitializing the sys update?
+T 1640118906 18<dan018>	Velvet: Do you think I should try downgrading it? The browser issues didn't occur on xfce though, I tried another wm for that as I can't even start xfce. Downgraded firefox even and that didn't change anything
+T 1640118921 18<aedinius18>	dan0: you can check to make sure packages are okay with `xbps-pkgdb -a`
+T 1640118992 18<Velvet18>	no solutions for me yet either..still looking  :/
+T 1640119025 19<dan0>	Cicoria: I'm sorry for asking stupidly like that, but what does that mean and ehat do I need to do?
+T 1640119042 20<Cicoria>30	xbps-install -Su
+T 1640119043 18<dan018>	aedinius: just ran that, returned nothing
+T 1640119079 18<aedinius18>	okay, that's good.  following the errors it gave you, do you have system dbus running?
+T 1640119184 19<dan0>	Cicoria: okay, did that. It just updated ff again after I downgraded it, apart fron that nothing changed
+T 1640119202 18<dan018>	aedinius: yes, it is running
+T 1640119235 18<dan018>	Thanks for your super fast replies btw, it is awesome to have all of you help me like that!
+T 1640119486 20<Cicoria>30	maybe try reinstalling xfce?
+T 1640119583 18<dan018>	Okay, will do. Are there any config files I should backup?
+T 1640119658 20<Cicoria>30	"Xfce usually stores its configuration files in ~/.config/xfce4 (as well as ~/.local/share/xfce4 and ~/.config/Thunar). Copying these directories to your laptop should do the job. Keyboard shortcuts are stored in ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml, so they should get copied as well."
+T 1640119665 18<dan018>	Doesn't work after reinstall either
+T 1640119700 18<dan018>	Sorry, I didn't even wait as I remembered that I didn't configure xfce in any way at all so it didn't matter
+T 1640119704 18<Velvet18>	did you reboot?
+T 1640119729 18<dan018>	After the xfce reinstall? No, but before I tried a bunch of reboots
+T 1640119761 23*	Inline (~Inline@aftr-37-201-240-204.unity-media.net23) has joined
+T 1640119845 24*	MY-R has quit (Quit: MY-R)
+T 1640119880 18<dan018>	Btw, I may have found some more info on the weird performance issues with qutebrowser and chromium: in my login console, among the output of my wm logs, there are the following lines:
+T 1640119900 29*	#voidlinux t ntlk :MODE cannot be set due to channel having an active MLOCK restriction policy
+T 1640119913 29*	#voidlinux l ntlk :MODE cannot be set due to channel having an active MLOCK restriction policy
+T 1640119913 22*	Channel 22#voidlinux modes: 24+cnt
+T 1640119913 22*	Channel 22#voidlinux created on 24Wed May 19 14:31:31 2021
+T 1640119915 18<dan018>	ATTENTION: default value of option mesa_glthread overriden by environment
+T 1640119970 18<dan018>	JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+T 1640119996 23*	egorenar (~egorenar@85.203.15.1823) has joined
+T 1640120051 24*	egorenar_ has quit (Ping timeout: 240 seconds)
+T 1640120096 20<Cicoria>30	@dan0, the js error is because js is not enabled in your browser
+T 1640120189 23*	woffs (3cd46299b2@woffs.de23) has joined
+T 1640120195 18<dan018>	Oh okay, I was hoping that would somehow be related to my problems. It's probably output from lynx then, which I was spontaneously using as the other browsers were basically unasable
+T 1640120317 20<Cicoria>30	when i search for the mesa_glthread error only firefox website come up, you sure its chromium/qute?
+T 1640120328 23*	hiljusti (~hiljusti@2601:600:c681:23b0:960b:7cc3:3849:e69b23) has joined
+T 1640120407 18<dan018>	Yes, firefox didn't even start due to to the profile issue, if firefox could have printed out that anyways than it could have been firefox. I could try it again
+T 1640120440 23*	MY-R (~irc@user/my-r23) has joined
+T 1640120448 18<dan018>	Yes, you were right. It also occurs if I only try to start ff. The JS errors as well
+T 1640120629 20<Cicoria>30	@dan0, https://support.mozilla.org/en-US/kb/how-run-firefox-when-profile-missing-inaccessible
+T 1640120699 24*	humky has quit (Remote host closed the connection)
+T 1640120717 24*	nerdbro has quit (Remote host closed the connection)
+T 1640120736 23*	nerdbro (~nerdbro@191.240.217.5323) has joined
+T 1640120890 19<dan0>	Cicoria: thanks, unfortunately I can't open profile manager with firefox -P as it returns the same mesa/js errors I shared above. I already tried deleting profiles.ini
+T 1640120990 24*	nerdbro has quit (Remote host closed the connection)
+T 1640121008 23*	nerdbro (~nerdbro@191.240.217.5323) has joined
+T 1640121132 18<dan018>	If I interpret https://bugzilla.mozilla.org/show_bug.cgi?id=1744389 correctly the mesa thing shouldn't be an issue, so it's probably the js error
+T 1640121189 18<urnenheit18>	I have a package that I built with xbps-src. Running xbps-src -Q on my machine doesn't give me any errors but the checks in my PR fail for some architectures.
+T 1640121229 18<urnenheit18>	Should I just whitelist the architectures that work in the template file?
+T 1640121235 18<aedinius18>	urnenheit: No, figure out why the checks fail.
+T 1640121254 18<aedinius18>	urnenheit: What PR#?
+T 1640121264 24*	nerdbro has quit (Remote host closed the connection)
+T 1640121274 18<urnenheit18>	aedinius: https://github.com/void-linux/void-packages/pull/34589/checks
+T 1640121286 23*	nerdbro (~nerdbro@191.240.217.5323) has joined
+T 1640121305 18<aedinius18>	Okay, -Q has nothing to do with that.  You need to fix cross-build
+T 1640121332 18<aedinius18>	Looks like its forcing looking for libtinfo, which we don't separate
+T 1640121413 18<aedinius18>	I mean its not separate from ncurses
+T 1640121427 18<aedinius18>	Or do we now
+T 1640121432 18<aedinius18>	Looks we do now
+T 1640121462 18<aedinius18>	Add ncurses-libtinfo-devel to makedepends
+T 1640121479 18<urnenheit18>	alright
+T 1640121482 18<urnenheit18>	uh
+T 1640121489 18<urnenheit18>	that's symlinked to ncurses
+T 1640121501 18<urnenheit18>	srcpkgs/ncurses-libtinfo-devel is symlinked to ncurses
+T 1640121507 18<aedinius18>	Yes, its a split package
+T 1640121534 18<urnenheit18>	and ncurses-devel is also symlinked to ncurses
+T 1640121541 18<aedinius18>	Also split packages.
+T 1640121544 18<urnenheit18>	aren't they the same package, then?
+T 1640121550 18<aedinius18>	No, they contain different files
+T 1640121576 18<aedinius18>	Look at the ncurses-devel_package() function in the template, it'll show that certain files are moved to the separate package
+T 1640121604 18<aedinius18>	https://github.com/void-linux/void-packages/blob/master/Manual.md#pkgs_sub
+T 1640121616 24*	dan0 has quit (Quit: Client closed)
+T 1640185022 19*	Now talking on 22#voidlinux
+T 1640185022 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640185022 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640185062 24*	Dko1905 has quit (Ping timeout: 245 seconds)
+T 1640185235 24*	bug2000 has quit (Remote host closed the connection)
+T 1640185526 23*	viesturs (~viesturs@188.112.141.12623) has joined
+T 1640185535 18<viesturs18>	 hi! trying to run apache now and it doesn't listen to port 80 according to netstat -tulpn | grep LISTEN
+T 1640185564 18<viesturs18>	Alert!: Unable to connect to remote host - when I run fullstatus
+T 1640185574 18<viesturs18>	 my website file are in /srv/www/apache/
+T 1640185673 23*	teasea6 (~teasea@user/teasea23) has joined
+T 1640185697 24*	Dko1905_ has quit (Ping timeout: 250 seconds)
+T 1640185877 24*	teasea has quit (Ping timeout: 240 seconds)
+T 1640185878 24*	28teasea6 is now known as 18teasea
+T 1640185902 24*	bilebucket has quit (Quit: WeeChat 3.4)
+T 1640186228 23*	moog (~moog@107.126.53.22423) has joined
+T 1640186493 18<paper_18>	check that the service actually runs and doesn't keep crashing and the logs
+T 1640186538 23*	breavyn_ (~breavyn@user/breavyn23) has joined
+T 1640186597 24*	breavyn has quit (Ping timeout: 240 seconds)
+T 1640186618 18<viesturs18>	[mpm_event:crit] [pid 30708:tid 548349953680] (70023)This function has not been implemented on this platform: AH00495: Couldn't create a Thread Safe Pollset. Is it supported on your platform?Also check system or user limits!
+T 1640186628 18<viesturs18>	[:emerg] [pid 30708:tid 548349953680] AH00017: Pre-configuration failed, exiting
+T 1640186647 18<viesturs18>	does apache runs fine for someone on voidlinux?
+T 1640186774 18<viesturs18>	on raspberry pi
+T 1640186960 23*	johnvan (~johnvan@bras-base-toroon2638w-grc-77-76-70-94-7.dsl.bell.ca23) has joined
+T 1640187098 23*	bug2000 (~bug@user/bug23) has joined
+T 1640187157 23*	dnv (~dnv@213.80.broadband16.iol.cz23) has joined
+T 1640187303 24*	xaltsc has quit (Remote host closed the connection)
+T 1640187454 24*	|ast| has quit (Quit: WeeChat 3.4)
+T 1640187651 18<Piraty18>	nginx does, so does caddy
+T 1640187687 18<Piraty18>	never ran apache in last 10y or so
+T 1640187692 18<viesturs18>	for some unknown reason to me, nginx did read one directory but didn't run other
+T 1640187708 18<viesturs18>	so, I decided to try apache
+T 1640187780 23*	xaltsc (~xaltsc@user/xaltsc23) has joined
+T 1640187854 23*	greenel (~el@bl8-67-202.dsl.telepac.pt23) has joined
+T 1640187893 18<xaltsc18>	Any idea what use someone may have for zed (for zfs) ?
+T 1640187895 24*	via_c7 has quit (Quit: Leaving)
+T 1640187943 24*	greenly has quit (Ping timeout: 260 seconds)
+T 1640187972 24*	xaltsc has quit (Client Quit)
+T 1640188034 23*	xaltsc (~xaltsc@user/xaltsc23) has joined
+T 1640188173 FiSHLiM plugin unloaded
+T 1640202539 19*	Now talking on 22#voidlinux
+T 1640202539 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640202539 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640202559 FiSHLiM plugin unloaded
+T 1640202897 19*	Now talking on 22#voidlinux
+T 1640202897 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640202897 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640203002 24*	nerdbro has quit (Remote host closed the connection)
+T 1640203022 23*	nerdbro (~nerdbro@191.240.217.5323) has joined
+T 1640203845 24*	_gypci0 has quit (Quit: Connection closed for inactivity)
+T 1640203980 23*	nezos (~nezos@188.73.234.11523) has joined
+T 1640204051 18<nezos18>	hi, is anyone else facing the "filter failed" error after upgrading cups?
+T 1640204144 23*	_gypci0 (uid22991@id-22991.tinside.irccloud.com23) has joined
+T 1640204263 24*	raposo has quit (Ping timeout: 268 seconds)
+T 1640204465 18<nerdbro18>	I have 2 partitions: Win 10 and Arch, dual booted w/ GRUB in a x64 UEFI system. I wanna install Void in the Arch partition, overwriting it. How do I make it bootable by GRUB? Should I chroot or use the installer?
+T 1640204561 20<Cicoria>30	installer, it sets up grub 
+T 1640204620 24*	flotsam has quit (Quit: flotsam)
+T 1640204665 18<nerdbro18>	It just asks to install GRUB or not, should I just overwrite the GRUB partition w/ the installer's GRUB to make things easier?
+T 1640204676 20<Cicoria>30	yes
+T 1640204726 24*	nezos has quit (Quit: Leaving)
+T 1640204760 24*	nerdbro has quit (Remote host closed the connection)
+T 1640204779 23*	nerdbro (~nerdbro@191.240.217.5323) has joined
+T 1640204805 23*	flotsam (~Thunderbi@2001:9b0:25f:fe00:b6d5:bdff:fea8:fc7323) has joined
+T 1640205193 18<bobertlo18>	does anyone here use rEFInd? I installed windows and successfully installed got rEFInd installed. I haven't installed void again but I'm not expecting any issues at this point. I'm planning on doing multiboot linux with btrfs or zfs and I'm pretty excited.
+T 1640205233 18<ahesford18>	if you want to stay excited, stay away from btrfs :P
+T 1640205278 18<bobertlo18>	heh. i've had interesting experiences with zfs but no experiences with btrfs yet to judge against
+T 1640205311 18<ahesford18>	the zfs experience on void is the best there is
+T 1640205414 18<nerdbro18>	Does the installer come w/ ZFS?
+T 1640205424 18<ahesford18>	no
+T 1640205463 18<bobertlo18>	good to know. i remember running it on void with lxd and it was really great. i don't have any real reason to try btrfs
+T 1640205856 24*	benji has quit (Quit: ZNC - https://znc.in)
+T 1640205866 24*	Shinigami-Sama has quit (Remote host closed the connection)
+T 1640205917 18<zdykstra18>	https://github.com/zbm-dev/zfsbootmenu/wiki/Void-Linux---Single-disk-UEFI
+T 1640205939 23*	benji (~benji@user/benji23) has joined
+T 1640205964 18<zdykstra18>	there's a ZFS guide which uses refind
+T 1640206013 23*	Shinigami-Sama (~xero@user/shinigami-sama23) has joined
+T 1640206034 24*	uzib has quit (Ping timeout: 256 seconds)
+T 1640206074 24*	JollyRoger has quit (Remote host closed the connection)
+T 1640206101 23*	JollyRoger (~JollyRoge@user/thejollyroger23) has joined
+T 1640206137 24*	midasi has quit (Quit: ZNC - https://znc.in)
+T 1640368261 19*	Now talking on 22#voidlinux
+T 1640368261 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640368261 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640368322 FiSHLiM plugin unloaded
+T 1640688566 19*	Now talking on 22#voidlinux
+T 1640688566 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640688566 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640688574 18<rubin5518>	https://github.com/void-linux/void-packages
+T 1640688580 18<paper_18>	no, upstream
+T 1640688580 18<wiben[m]18>	what is a "desktop movie"?
+T 1640688587 18<paper_18>	= the alsa project
+T 1640688598 18<rubin5518>	Alright, will do
+T 1640688694 18<stoneriver18>	wiben[m], not a holywood movie.
+T 1640688726 18<wiben[m]18>	stoneriver: alright, now! im curious
+T 1640688765 18<paper_18>	rubin55: before reporting the bug, try reproducing it with just alsa - without pipewire
+T 1640688788 18<stoneriver18>	Don't look at me! I do not know what the fine sir wan't to record on the top of his desk. ^^,
+T 1640688879 18<stoneriver18>	err, I meant to say "what movie you can do on the top of a desk"
+T 1640688921 18<wiben[m]18>	first what would come to mind... would beeee... a yes! a lego stopmotion  movie :D
+T 1640689029 18<stoneriver18>	;-)
+T 1640689063 23*	Guest98 (~Guest98@83.234.93.15323) has joined
+T 1640689323 18<rubin5518>	ok, talk about heissenbug.. I can't reproduce it. Downgrade fixed it, I upgraded so I can selectively identify which package caused it, now fully upgraded, no issue. Issue was persistent on poweroff/reboot. Hahah
+T 1640689350 18<rubin5518>	Oh well, automatic bug fixes, what's not to love!
+T 1640689551 23*	Galladite (~Galladite@host-92-24-75-159.as13285.net23) has joined
+T 1640689604 24*	kib has quit (Quit: WeeChat 3.4)
+T 1640690062 23*	zeden (~zeden@user/zeden23) has joined
+T 1640690425 24*	ceamac has quit (Ping timeout: 240 seconds)
+T 1640690518 23*	ceamac (~ceamac@89.42.42.14123) has joined
+T 1640690646 23*	ShinyRice (~shinyrice@130.red-79-145-9.dynamicip.rima-tde.net23) has joined
+T 1640690828 23*	oZZ (~oZZ@user/ozz23) has joined
+T 1640691265 24*	natrys has quit (Ping timeout: 240 seconds)
+T 1640691284 18<TheAnachron18>	I have some /usr/bin/gst- orphans, seems like it was from gstreamer which was modified not to include some of those files and others were renamed.
+T 1640691310 18<TheAnachron18>	I wonder if xbps could detect this?
+T 1640691331 18<paper_18>	it should have uninstalled these files
+T 1640691375 18<paper_18>	can you reproduce it?
+T 1640691392 23*	n0toose (~n0toose@tenacity/staff/panos23) has joined
+T 1640691406 18<TheAnachron18>	I dont think so, the files are from gstreamer 0.10 and my xbps cache is quite empty
+T 1640691415 18<paper_18>	xbps-src exists
+T 1640691436 18<TheAnachron18>	https://gist.github.com/Anachron/83f96bb5593db9be57c05cb43d021627
+T 1640691438 18<TheAnachron18>	here are the orphans.
+T 1640691442 18<paper_18>	hmm, but you might not be able to build old versions of gstreamer
+T 1640691466 23*	natrys (~natrys@user/natrys23) has joined
+T 1640691470 18<TheAnachron18>	depends on the source and the dependencies. They all need to be rebuild.
+T 1640691544 18<TheAnachron18>	I have around 70 orphaned files, 27 by one package alone, looks better than I expected.
+T 1640691564 18<paper_18>	I am just saying that with modern tools, older gstreamer versions won't build
+T 1640691575 18<paper_18>	= just git reverts of gstreamer updates
+T 1640691624 24*	oZZ has quit (Ping timeout: 245 seconds)
+T 1640691848 18<Piraty18>	deathmist1: yeah headers is the worst part
+T 1640691882 18<Piraty18>	did you come up with a soluition to crossbuild the tools correctly ?
+T 1640691971 18<Piraty18>	erm, i mean `make scripts`
+T 1640692023 23*	oZZ (~oZZ@user/ozz23) has joined
+T 1640692129 23*	lavaball (aj@31.204.155.21523) has joined
+T 1640692239 18<Piraty18>	so we don't need to build them during dkms hook / xbps-trigiger as it leads to changed files owned by the package
+T 1640692245 24*	einnhverr has quit (Ping timeout: 240 seconds)
+T 1640692343 18<ShinyRice18>	offtopic but anyone here know stuff about mongodb?
+T 1640692372 18<Piraty18>	other than 'shitty license' ?
+T 1640692385 18<ShinyRice18>	yeah
+T 1640692393 18<TheAnachron18>	or that there is a postgres compability layer?
+T 1640692408 18<ShinyRice18>	yeah...
+T 1640692417 18<Piraty18>	what about it then
+T 1640692432 18*	Piraty sips hot chocolate
+T 1640692464 18<ShinyRice18>	just wanted to know if what I'm actually writing is JS when I'm making queries, since I read that "it doesn't have a query language, you talk directly to the API" or something like that
+T 1640692480 18<ShinyRice18>	syntax looks a lot like JS...
+T 1640692528 18<ShinyRice18>	dumb question I know
+T 1640692555 18<Piraty18>	first paragraph of wikipedia told me alot about its relation to json
+T 1640692597 18<Piraty18>	https://en.wikipedia.org/wiki/Mongodb#Server-side_JavaScript_execution
+T 1640692630 18<Piraty18>	that will be 4.99 in voidcoin for my superior research capabilities
+T 1640692717 18<ShinyRice18>	well it says can be used, which makes me think more basic ass queries may or may not be JS
+T 1640692732 18<ShinyRice18>	like
+T 1640692761 18<ShinyRice18>	does this look like JS to you?
+T 1640692763 18<ShinyRice18>	db.municipios.find({comunidad:'Extremadura'}).count();
+T 1640692772 18<TheAnachron18>	I wouldn't dare writing db dependant code ... but that's just me :p
+T 1640692818 18<Piraty18>	i didn't write any js for the last 12y and alot may have changed, so i wouldn't know. but looks reasonable
+T 1640692884 18<Piraty18>	back when js was used to animate image slideshows and open messagebox dialogs
+T 1640692992 18<ShinyRice18>	yeah this is just something basic, don't think it has changed much
+T 1640692994 18<ShinyRice18>	okay thanks
+T 1640693074 24*	natrys has quit (Ping timeout: 245 seconds)
+T 1640693147 23*	natrys (~natrys@user/natrys23) has joined
+T 1640693181 23*	meator (~meator@user/meator23) has joined
+T 1640693482 24*	TheAnachron has quit (Quit: TheAnachron)
+T 1640693625 24*	natrys has quit (Ping timeout: 240 seconds)
+T 1640693838 23*	belgarath_ (~belgarath@lfbn-nan-1-2292-176.w92-139.abo.wanadoo.fr23) has joined
+T 1640693857 18<belgarath_18>	merry christmas voidlinux
+T 1640694085 24*	eoli3n__ has quit (Ping timeout: 240 seconds)
+T 1640694305 23*	bilebucket1 (~bilebucke@user/bilebucket23) has joined
+T 1640694305 24*	bilebucket1 has quit (Client Quit)
+T 1640694324 24*	bilebucket has quit ()
+T 1640694350 23*	bilebucket (~bilebucke@user/bilebucket23) has joined
+T 1640694449 23*	natrys (~natrys@user/natrys23) has joined
+T 1640694714 24*	nexeq has quit (Read error: Connection reset by peer)
+T 1640694795 23*	neceve (~quassel@2.26.93.22823) has joined
+T 1640695057 24*	belgarath_ has quit (Quit: Leaving.)
+T 1640695079 23*	belgarath_ (~belgarath@lfbn-nan-1-2292-176.w92-139.abo.wanadoo.fr23) has joined
+T 1640695217 24*	ceamac has quit (Remote host closed the connection)
+T 1640695290 24*	vanessa has quit (Quit: Leaving)
+T 1640695380 23*	nexeq (~nexeq@user/nexeq23) has joined
+T 1640695481 18<j0ni18>	ShinyRice: iirc if you use mongodb from a js app running in a different process your code will look 90% the same as if you typed it into the mongo commandline, but if you want to do something like set up a map/reduce operation in mongo itself, you must write the part that runs inside mongo using the limited environment available there - i.e., you can't make use of any neato libs you might
+T 1640695483 18<j0ni18>	routinely use to make javascript less horrific
+T 1640695560 18<j0ni18>	I think it's only really confusing if you're using js in your client code too - otherwise it's pretty obvious what's up
+T 1640695571 23*	ceamac (~ceamac@89.42.42.14123) has joined
+T 1640695699 18<j0ni18>	quick look at the mongo docs - there seems to be a new query dsl so I guess I'm an unreliable witness
+T 1640695861 18<ShinyRice18>	yeah I just looked at that like 5 mins ago lol
+T 1640696185 18<Mellowlink18>	hello. is it possible on void to remove the newest kernel and use lts kernel only?
+T 1640696223 18<Mellowlink18>	i can't even get the lts kernel to boot as default on setup with encrypted grub
+T 1640696484 18<Mellowlink18>	forgot to mention that refering to this guide did not work
+T 1640696485 18<Mellowlink18>	https://docs.voidlinux.org/config/kernel.html#removing-the-default-kernel-series
+T 1640696560 18<paper_18>	define "did not work"
+T 1640696649 18<j0ni18>	ShinyRice: I bet it didn't tell you to set fire to your mongo and run away, which is the advice any question about mongo should elicit
+T 1640696649 18<paper_18>	>  It might be necessary to add linux and linux-headers to an ignorepkg entry in xbps.d(5), since base packages can depend on them.
+T 1640696664 18<paper_18>	this os the most important part
+T 1640696773 18<stoneriver18>	I opened an issue on github for pcmanfm...
+T 1640696840 18<stoneriver18>	I don't get it... the last time I installed it on void it worked flawless.
+T 1640696870 18<stoneriver18>	Version does not seem to have changed since then.
+T 1640696897 18<hyperreal18>	good morning Void
+T 1640697074 24*	neceve has quit (Read error: Connection reset by peer)
+T 1640697112 18<Mellowlink18>	paper_: oh yeah i had typo i just had ignore=$name instead of ignorepkg=$name
+T 1640697115 18<Mellowlink18>	thx anyway
+T 1640697240 18<ShinyRice18>	j0ni: fortunately (for now) all I need to know are the basics, as I'm required to learn them in an introductory course to databases...
+T 1640697296 18<ShinyRice18>	so why is it shunned? aside from the bad license
+T 1640697312 18<ShinyRice18>	the dsl doesn't seem the most readable either...
+T 1640697362 18<randomvoiduser18>	I have do_patch() defined in template and it still tries to apply default hook so it patches twice
+T 1640697368 18<randomvoiduser18>	how to handle that?
+T 1640697529 24*	Justin_T (~Justin@user/justin-t/x-244998324) has left (WeeChat 2.7.1)
+T 1640697801 23*	luca1 (~luca@2001:4640:3a2e:0:7571:818a:5032:9f7f23) has joined
+T 1640697849 18<stoneriver18>	guardant[m], you might be right... it's not that pcmanfm-qt writes directly to that file, it seems to go through xdg
+T 1640697854 18<stoneriver18>	so the bug might be there
+T 1640697854 18<luca118>	Hi, I was wondering if there was some iso file out there with a gui installer for void linux?
+T 1640698333 24*	zeden has quit (Quit: WeeChat 3.4)
+T 1640698382 23*	semeion (~semeion@user/semeion23) has joined
+T 1640698413 24*	28semeion is now known as 18mnemonic
+T 1640698581 18<duncaen18>	someone worked on the calamares installed, but I don't think there is anything ready to use or actually compatible other than the ncurses installed
+T 1640698587 18<duncaen18>	s/installed/installer
+T 1640698741 18<luca118>	Do you have a link? Sounds interesting
+T 1640698802 18<duncaen18>	https://github.com/void-linux/void-packages/pull/33310
+T 1640698816 18<luca118>	Thanks
+T 1640698876 23*	einnhverr (~einnhverr@user/einnhverr23) has joined
+T 1640699108 18<stoneriver18>	Ok, I got an answer from the dev of pcmanfm-qt, it's a bug. He is going to fix it. That was fast.
+T 1640699126 24*	belgarath_ has quit (Quit: Leaving.)
+T 1640699127 23*	tvtoon (~tvtoon@168.197.232.17723) has joined
+T 1640699143 23*	belgarath_ (~belgarath@lfbn-nan-1-2292-176.w92-139.abo.wanadoo.fr23) has joined
+T 1640699331 24*	sliced has quit (Ping timeout: 256 seconds)
+T 1640699987 24*	greenly has quit (Quit: WeeChat 3.0.1)
+T 1640700001 24*	nexeq has quit (Remote host closed the connection)
+T 1640700008 23*	greenel (~el@bl8-67-202.dsl.telepac.pt23) has joined
+T 1640700139 23*	nexeq (~nexeq@user/nexeq23) has joined
+T 1640700498 24*	stoneriver has quit (Quit: Leaving)
+T 1640701024 24*	EnfauKerus has quit (Remote host closed the connection)
+T 1640701058 24*	nexeq has quit (Remote host closed the connection)
+T 1640701114 24*	Epsilon has quit (Remote host closed the connection)
+T 1640701132 23*	Epsilon (~Epsilon@user/epsilon23) has joined
+T 1640701142 23*	nexeq (~nexeq@user/nexeq23) has joined
+T 1640701168 23*	EnfauKerus (~EnfauKeru@gateway/tor-sasl/enfaukerus23) has joined
+T 1640701230 24*	lavaball has quit (Ping timeout: 240 seconds)
+T 1640702757 20*	Disconnected (20)
+T 1640703017 22*	26Cicoria sets mode 24+Z on 22Cicoria
+T 1640703019 22*	26Cicoria sets mode 24+i on 22Cicoria
+T 1640703022 22*	26Cicoria sets mode 24+w on 22Cicoria
+T 1640704524 19*	Now talking on 22#voidlinux
+T 1640704524 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640704524 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640704524 -18ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+T 1640704524 18<stoneriver18>	how can i set environment variables correctly? I have tried .xinitrc, with a script... etc... so I can specify xdg_current_desktop variable for graphical apps
+T 1640704524 18<stoneriver18>	I want to set this variable globally.
+T 1640704524 18<stoneriver18>	XDG_CURRENT_DESKTOP="lxqt"
+T 1640704524 18<lopid18>	i put mine in /etc/profile.d/local.sh
+T 1640704524 18<lopid18>	or ~/.profile for user stuff
+T 1640704524 24*	Cicoria has quit (Ping timeout: 252 seconds)
+T 1640704524 20*	Disconnected (20Remote host closed socket)
+T 1640704542 22*	26Cicoria sets mode 24+Z on 22Cicoria
+T 1640704542 22*	26Cicoria sets mode 24+i on 22Cicoria
+T 1640704542 22*	26Cicoria sets mode 24+w on 22Cicoria
+T 1640704548 19*	Now talking on 22#voidlinux
+T 1640704548 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1640704548 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1640704548 -18ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+T 1640704555 23*	xaltsc (0013b3a2de@2604:bf00:561:2000::2a023) has joined
+T 1641131191 19*	Now talking on 22#voidlinux
+T 1641131191 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1641131191 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1641131308 24*	ftpd has quit (Quit: ftpd)
+T 1641131323 23*	ftpd (f@gentoo/ricer/ftpd23) has joined
+T 1641131331 24*	joahe has quit (Remote host closed the connection)
+T 1641131475 23*	spcext (~athena@103.79.248.14823) has joined
+T 1641131486 24*	erich_zann has quit (Quit: WeeChat 3.4)
+T 1641131690 23*	sektor (~sektor@2601:547:202:930:3985:4732:2650:ce6e23) has joined
+T 1641132162 18<spcext18>	anyone has some ideas to fix/improve battery life on linux?
+T 1641132180 18<spcext18>	i find the battery behavior quite erratic on my new laptop, i have a fairly light workload but despite that it chugs battery like anything somedays (even when lite browsing/book-reading)
+T 1641132182 18<Toromino18>	Maybe use tlp
+T 1641132244 18<spcext18>	i thought that the improvements to the linux kernel make tlp somewhat redundant?
+T 1641132252 18<spcext18>	although i haven
+T 1641132269 18<spcext18>	*haven't personally tried it
+T 1641132468 23*	jyom10j3 (~jyom10j3@2405:6580:8da0:3800:3e84::100023) has joined
+T 1641132492 18<spcext18>	somedays i can get 7-9 hours but other days it barely lasts me 4 hours while my workload remains the same
+T 1641132567 18<Toromino18>	tlp helped a bit on my old laptop
+T 1641132575 18<Toromino18>	It too had poor battery life
+T 1641132649 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641132666 23*	sgn (~sgn@user/sgn23) has joined
+T 1641132710 18<spcext18>	i don't think the problem lies with my laptop though, its brand new and the battery is consistently good when on windows
+T 1641132754 24*	28Toromino is now known as 18toromino
+T 1641132845 18<toromino18>	Hmm, any resource intensive processes?
+T 1641132884 18<spcext18>	i actually thought battery might be a bit better on a systemd-free system but doesn't seem much of a difference compared to other linuxes
+T 1641132919 18<steinex18>	spcext: have a look at powertop. it has a --auto-tune switch, you could run this on boot. i ceased to do that though, i configured usb and pci autosuspend via udev manually, because this is mostly all powertop is doing anyway. i think it's described in the arch wiki.
+T 1641132920 23*	akonai (~akonai@user/akonai23) has joined
+T 1641132935 18<toromino18>	I don't think systemd makes that much of a difference. But DEs like GNOME or KDE can be rather resource hungry.
+T 1641132960 18<spcext18>	toromino: not really, just lite browsing/text editing/ocassional video watching
+T 1641132979 24*	ceamac has quit (Remote host closed the connection)
+T 1641133022 18<spcext18>	steinex: thanks! i will take a look at it
+T 1641133041 18<spcext18>	how do i make it run on boot everytime though?
+T 1641133059 18<steinex18>	/etc/rc.local
+T 1641133159 18<steinex18>	i remember why i stopped using --auto-tune though. because i have several devices i want to charge on my laptop. with usb autosuspend active for every device, it will charge 30 seconds and then the port goes to sleep. i do this nowadays: https://nognu.de/s/99-powermanagement.rules.j2
+T 1641133171 18<steinex18>	as /etc/udev/rules.d/99-powermanagement.rules
+T 1641133171 24*	kts has quit (Quit: Konversation terminated!)
+T 1641133191 18<toromino18>	yea. tlp also messes a bit with bluetooth
+T 1641133236 23*	prez (~prez@2001:470:b610::56023) has joined
+T 1641133250 18<spcext18>	steinex: should it not suspend the port then if it knows a device is already connected?
+T 1641133298 18<steinex18>	if it's used, it's not suspended. if it just charges though, it will suspend anyway.
+T 1641133363 18<ftpd18>	Hi guys. Since kernel 5.15 my resuming after opening the lid works 'funny'. After pressing any key I have black screen for a couple of seconds, then a quick glimpse of my desktop and after that my physlock kicks in. I've tested suckless slock, the same effect. It's a Thinkpad T14s with amdgpu.
+T 1641133410 18<ftpd18>	I'm using elogind (started automatically with dbus) and have line `xss-lock -- physlock &` in my xinitrc.
+T 1641133466 18<spcext18>	ftpd: lol its been like that for me even before 5.15
+T 1641133586 18<ftpd18>	Maybe it's not the kernel but something different. Mesa? xorg-server? No idea.
+T 1641133598 18<ftpd18>	I can live with it, but it would be nice to have fixed.
+T 1641133607 18<spcext18>	ftpd: maybe you can stay on the older kernel for a while till its fixed?
+T 1641133672 18<ftpd18>	It's not like "it happened 10 mins ago". I live with it for a few kernel versions now, I simply didn't ask before.
+T 1641133682 18<ftpd18>	So I don't know which kernel version is 'safe'.
+T 1641133717 18<spcext18>	ah, too much of a hassle then to go figuring by trial and error then
+T 1641133730 18<steinex18>	ftpd: do you have acpid running by any chance?
+T 1641133739 18<ftpd18>	Nope.
+T 1641133745 18<steinex18>	k
+T 1641134353 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641134375 23*	sgn (~sgn@user/sgn23) has joined
+T 1641134388 18<jyom10j318>	Should i put: Copyright (C) 2022, My name <email> ; Authors: my name <email>
+T 1641134401 18<jyom10j318>	in the gpl license comment at the top of my source?
+T 1641134440 18<needle18>	yes
+T 1641134504 18<jyom10j318>	do i put authors and copyright because on the gnu website the template just has copyright, i figured i should add in the authors part. \
+T 1641134642 24*	___nick___ has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+T 1641134732 23*	___nick___ (~quassel@cpc68286-cdif17-2-0-cust533.5-1.cable.virginm.net23) has joined
+T 1641134753 24*	___nick___ has quit (Client Quit)
+T 1641134800 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641134822 23*	sgn (~sgn@user/sgn23) has joined
+T 1641134843 23*	___nick___ (~quassel@cpc68286-cdif17-2-0-cust533.5-1.cable.virginm.net23) has joined
+T 1641134872 23*	kts (~kts@103.73.237.21223) has joined
+T 1641134879 24*	_spOOn_ has quit (Ping timeout: 256 seconds)
+T 1641135075 24*	kts has quit (Client Quit)
+T 1641135212 23*	kts (~kts@103.73.237.21223) has joined
+T 1641135267 24*	jyom10j3 has quit (Quit: Client closed)
+T 1641135870 18<paper_18>	I don't think GPL requires that, MIT and BSD do
+T 1641135909 18<paper_18>	and it should be copyleft, not copyright :P
+T 1641136392 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641136414 23*	sgn (~sgn@user/sgn23) has joined
+T 1641136511 24*	einnhverr has quit (Ping timeout: 256 seconds)
+T 1641136840 23*	meator (~meator@user/meator23) has joined
+T 1641137657 23*	ar-jan (~quassel@185.65.134.23323) has joined
+T 1641137666 24*	greenel has quit (Ping timeout: 268 seconds)
+T 1641137693 23*	greenel (~el@bl8-67-202.dsl.telepac.pt23) has joined
+T 1641137840 24*	meator has quit (Quit: Leaving)
+T 1641137879 24*	sektor has quit (Remote host closed the connection)
+T 1641137898 23*	_sa0sin_ (~sa0sin@2a01:e0a:414:b360:91a0:b012:97da:4f5a23) has joined
+T 1641137973 24*	sa0 has quit (Ping timeout: 240 seconds)
+T 1641138254 24*	spcext has quit (Quit: Leaving)
+T 1641138522 23*	_gypci0 (uid22991@id-22991.tinside.irccloud.com23) has joined
+T 1641138638 23*	rb1 (~rb@2a02:a313:a041:e800:c5e6:f8f0:848b:4f8723) has joined
+T 1641138823 23*	Galladite (~Galladite@host-92-24-75-159.as13285.net23) has joined
+T 1641139257 24*	greenel has quit (Ping timeout: 268 seconds)
+T 1641139394 23*	Momentum (momentum@tilde.team23) has joined
+T 1641139502 18<Momentum18>	anyone using pipewire? i wonder if i can still use pavucontrol along with pipewire
+T 1641139509 24*	raspbeguy (~raspbeguy@wireguard/tunneler/raspbeguy24) has left (Error from remote client)
+T 1641139514 18<nonchip18>	yes and yes. it's actually the preferred tool
+T 1641139550 18<Momentum18>	hmm for some reason pavu tells me that the pulse server is not running. any idea how to address this?
+T 1641139562 18<paper_18>	did you run pipewire-pulse?
+T 1641139567 18<nonchip18>	it probably doesn't know how to talk to it then.
+T 1641139568 18<paper_18>	this is btw documented in the handbook
+T 1641139606 18<Momentum18>	oh! i think i just enabled the pw service
+T 1641139615 18<paper_18>	please don't use the services
+T 1641139625 18<paper_18>	we warn against this in the hadnbook AND in the services
+T 1641139640 18<nonchip18>	you'll want to run that as part of the desktop session in like 99% of use cases
+T 1641139647 18<paper_18>	^
+T 1641139685 18<Momentum18>	oh oups! i actually thought i'm running it as a service. yeah i read that and apparently i'm running it from xinitrc
+T 1641139690 18<Momentum18>	or from X
+T 1641139696 18<nonchip18>	because that's also how it tells programs how to talk to it. combination of dbus magic, x11 properties and fancy sockets that are expected to belong to you
+T 1641139725 18<Momentum18>	but yeah there's just `pipewire &` in my .xinitrc file
+T 1641139734 18<Momentum18>	should i add `pipewire-pulse` ?
+T 1641139745 18<Momentum18>	got it nonchip
+T 1641139815 23*	Guest1731 (~Guest17@185.183.97.18723) has joined
+T 1641139843 18<Guest173118>	any specific reason why bitwarden is not in repos yet?
+T 1641139894 18<nonchip18>	probably because either nobody cared yet or because it's not allowed
+T 1641139921 18<Momentum18>	beautiful. thanks paper_ and nonchip
+T 1641139982 24*	Guest1731 has quit (Client Quit)
+T 1641140050 FiSHLiM plugin unloaded
+T 1641161179 19*	Now talking on 22#voidlinux
+T 1641161179 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1641161179 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1641161363 23*	Qixt[m] (~pixtummat@2001:470:69fc:105::d6d123) has joined
+T 1641161966 23*	pinote (~pinote@179.95.211.14723) has joined
+T 1641161992 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641162017 23*	sgn (~sgn@user/sgn23) has joined
+T 1641162157 24*	justJanne has quit (Quit: So, if you care to find me, look to the western sky. As someone told me lately, everyone deserves a chance to fly.)
+T 1641162157 24*	Laralubsch has quit ()
+T 1641162157 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641162174 23*	sgn (~sgn@user/sgn23) has joined
+T 1641162182 23*	ShinyRice (~shinyrice@130.red-79-145-9.dynamicip.rima-tde.net23) has joined
+T 1641162218 24*	eoli3n___ has quit (Ping timeout: 260 seconds)
+T 1641162426 23*	via_c7 (~orangeext@user/orangeextract23) has joined
+T 1641162516 23*	antoine62[m] (~antoine62@2001:470:69fc:105::2ad523) has joined
+T 1641162520 23*	nfbyte (~nfbyte@2001:470:69fc:105::db3923) has joined
+T 1641162520 23*	eschwartz[m] (~eschwartz@archlinux/bugwrangler/eschwartz23) has joined
+T 1641162520 23*	toromino_m (~torominos@2001:470:69fc:105::1:5cdb23) has joined
+T 1641162537 23*	Laura[m] (~selfiseka@2001:470:69fc:105::1:361023) has joined
+T 1641162555 23*	ferie[m] (~feriematr@2001:470:69fc:105::1:283b23) has joined
+T 1641162556 23*	vpzom[m] (~vpzomsyna@2001:470:69fc:105::432d23) has joined
+T 1641162560 23*	wiben[m] (~wibe@2001:470:69fc:105::1:5a0523) has joined
+T 1641162560 23*	dziq|m (~dziq@user/dziq23) has joined
+T 1641162560 23*	paper[m] (~thepaperm@2001:470:69fc:105::1:1f3823) has joined
+T 1641162725 24*	paper_ has quit (Read error: Connection reset by peer)
+T 1641162731 23*	paper__ (~paper_@user/paper23) has joined
+T 1641162735 24*	28voiceofreason_ is now known as 18voiceofreason
+T 1641162742 24*	28paper__ is now known as 18paper_
+T 1641162809 23*	Laralubsch (~laralubsc@kuschku.de23) has joined
+T 1641162812 23*	justJanne (~kuschku@kuschku.de23) has joined
+T 1641162926 24*	Laralubsch has quit (Client Quit)
+T 1641162926 24*	justJanne has quit (Client Quit)
+T 1641162995 24*	nklsfrt has quit (Remote host closed the connection)
+T 1641162997 23*	Laralubsch (~laralubsc@kuschku.de23) has joined
+T 1641163000 23*	justJanne (~kuschku@kuschku.de23) has joined
+T 1641163210 23*	computerworm110 (~quassel@xpress10873.htc.net23) has joined
+T 1641163254 24*	computerworm110 has quit (Client Quit)
+T 1641163261 24*	mahmutov has quit (Ping timeout: 256 seconds)
+T 1641163272 23*	computerworm110 (~quassel@xpress10873.htc.net23) has joined
+T 1641163384 23*	pitch (~pitch@user/pitch23) has joined
+T 1641163414 23*	srv (~cmd@user/srv23) has joined
+T 1641163488 23*	AlaskanEmily (~AlaskanEm@user/alaskanemily23) has joined
+T 1641163539 24*	28pr-asadi_ is now known as 18pr-asadi
+T 1641163549 23*	Xenguy (~Xenguy@user/xenguy23) has joined
+T 1641163706 24*	pitch has quit (Write error: Connection reset by peer)
+T 1641163706 24*	paper[m] has quit (Remote host closed the connection)
+T 1641163706 24*	ferie[m] has quit (Remote host closed the connection)
+T 1641163706 24*	antoine62[m] has quit (Remote host closed the connection)
+T 1641163707 24*	wiben[m] has quit (Remote host closed the connection)
+T 1641163707 24*	vpzom[m] has quit (Remote host closed the connection)
+T 1641163707 24*	Laura[m] has quit (Remote host closed the connection)
+T 1641163707 24*	eschwartz[m] has quit (Remote host closed the connection)
+T 1641163708 24*	nfbyte has quit (Remote host closed the connection)
+T 1641163709 24*	toromino_m has quit (Remote host closed the connection)
+T 1641163709 24*	exit70[m] has quit (Remote host closed the connection)
+T 1641163710 24*	drake[m] has quit (Write error: Connection reset by peer)
+T 1641163710 24*	dziq|m has quit (Remote host closed the connection)
+T 1641163711 24*	AviKav[m] has quit (Remote host closed the connection)
+T 1641163711 24*	comphuter[m] has quit (Remote host closed the connection)
+T 1641163711 24*	julian[m]123456 has quit (Write error: Connection reset by peer)
+T 1641163711 24*	M9d0cd7d2[m] has quit (Write error: Connection reset by peer)
+T 1641163711 24*	Qixt[m] has quit (Read error: Connection reset by peer)
+T 1641163734 24*	sgn has quit (Read error: Connection reset by peer)
+T 1641163758 23*	sgn (~sgn@user/sgn23) has joined
+T 1641163777 23*	julian[m] (~kniffymat@2001:470:69fc:105::ca0923) has joined
+T 1641163792 23*	joahe (~joahe@110.54.247.4523) has joined
+T 1641163857 24*	28eftepede is now known as 18ftpd
+T 1641163873 24*	deu has quit (Ping timeout: 256 seconds)
+T 1641163924 23*	jcgruenhage (~jcgruenha@2001:470:69fc:105::2f723) has joined
+T 1641163924 23*	theantz (~theantz@2001:470:69fc:105::1fa23) has joined
+T 1641163924 23*	jA_cOp (~jacopmatr@2001:470:69fc:105::103b23) has joined
+T 1641163925 23*	priner (~priner@2001:470:69fc:105::80423) has joined
+T 1641163925 23*	nicoty (~nicoty@user/nicoty23) has joined
+T 1641163925 23*	tiziodcaio (~tiziodcai@2001:470:69fc:105::1:2bf823) has joined
+T 1641163925 23*	exit70[m] (~exit70@user/exit7023) has joined
+T 1641163925 23*	jemershaw[m] (~jemershaw@2001:470:69fc:105::b90423) has joined
+T 1641163925 23*	CarlosEDP (~carlosedp@2001:470:69fc:105::218e23) has joined
+T 1641163925 23*	harrydus-matrix (~harrydusm@2001:470:69fc:105::fa6023) has joined
+T 1641163925 23*	ormaaj2 (~ormaaj@user/ormaaj23) has joined
+T 1641163925 23*	dziq|m (~dziq@user/dziq23) has joined
+T 1641163925 23*	rslabbert1 (~rslabbert@2001:470:69fc:105::1:457d23) has joined
+T 1641163925 23*	nfbyte (~nfbyte@2001:470:69fc:105::db3923) has joined
+T 1641163925 23*	peeweep[m] (~peeweepm]@2001:470:69fc:105::1:39c123) has joined
+T 1641163926 23*	_javyre (~javyre@2001:470:69fc:105::216223) has joined
+T 1641163926 23*	lorens[m] (~greatwiel@2001:470:69fc:105::500b23) has joined
+T 1641163929 23*	guardant[m] (~guardante@2001:470:69fc:105::1:220c23) has joined
+T 1641163930 23*	not-chicken (~not-chick@2001:470:69fc:105::17b123) has joined
+T 1641163931 23*	JoelB[m] (~joelthebe@2001:470:69fc:105::327e23) has joined
+T 1641163936 23*	Epictek[m] (~epictekma@2001:470:69fc:105::d7cd23) has joined
+T 1641163936 23*	foxlet (~foxletmat@2001:470:69fc:105::30b523) has joined
+T 1641163936 23*	AviKav[m] (~avikavmat@2001:470:69fc:105::1:5e3a23) has joined
+T 1641163936 23*	drake[m] (~xldrakeen@2001:470:69fc:105::e62d23) has joined
+T 1641163937 23*	toromino_m (~torominos@2001:470:69fc:105::1:5cdb23) has joined
+T 1641163937 23*	Acid-Bong (~acid-bong@2001:470:69fc:105::ef4523) has joined
+T 1641163937 23*	comphuter[m] (~comphuter@2001:470:69fc:105::e93423) has joined
+T 1641163937 23*	Laura[m] (~selfiseka@2001:470:69fc:105::1:361023) has joined
+T 1641163937 23*	CodeBitCookie[m] (~code-bit-@2001:470:69fc:105::a2f23) has joined
+T 1641163937 23*	ferie[m] (~feriematr@2001:470:69fc:105::1:283b23) has joined
+T 1641163938 23*	Qixt[m] (~pixtummat@2001:470:69fc:105::d6d123) has joined
+T 1641163938 23*	nihilipster[m] (~nihilipst@2001:470:69fc:105::72023) has joined
+T 1641163938 23*	andrea[m] (~andreanit@2001:470:69fc:105::1:28a823) has joined
+T 1641163938 23*	vpzom[m] (~vpzomsyna@2001:470:69fc:105::432d23) has joined
+T 1641163938 23*	illusive_evil[m] (~illusivee@2001:470:69fc:105::1:3d2a23) has joined
+T 1641163938 23*	antoine62[m] (~antoine62@2001:470:69fc:105::2ad523) has joined
+T 1641163938 23*	anniehallmoon (~anniehall@2001:470:69fc:105::c19023) has joined
+T 1641163938 23*	JuniorJPDJ (~juniorjpd@2001:470:69fc:105::c2223) has joined
+T 1641163939 23*	paper[m] (~thepaperm@2001:470:69fc:105::1:1f3823) has joined
+T 1641163939 23*	OmarZeghouani[m] (~ram02zmat@2001:470:69fc:105::de8823) has joined
+T 1641163939 23*	M9d0cd7d2[m] (~M9d0cd7d2@2001:470:69fc:105::1:160923) has joined
+T 1641163939 23*	majomi[m] (~majomi@2001:470:69fc:105::1:100823) has joined
+T 1641163939 23*	teldra (~teldra@2001:470:69fc:105::bb1f23) has joined
+T 1641163939 23*	pitch (~pitch@user/pitch23) has joined
+T 1641163940 23*	eschwartz[m] (~eschwartz@archlinux/bugwrangler/eschwartz23) has joined
+T 1641163941 23*	wiben[m] (~wibe@2001:470:69fc:105::1:5a0523) has joined
+T 1641163960 24*	28trmg1 is now known as 18trmg
+T 1641164078 23*	mahmutov (~mahmutov@5.176.45.23723) has joined
+T 1641164130 23*	deu (de@uio.re23) has joined
+T 1641164756 23*	cruelnoise_ (~cruelnois@198-200-100-148.cpe.distributel.net23) has joined
+T 1641164802 24*	joahe has quit (Remote host closed the connection)
+T 1641164923 24*	teasea has quit (Quit: teasea)
+T 1641165034 23*	teasea50 (~teasea@user/teasea23) has joined
+T 1641165132 24*	28teasea50 is now known as 18teasea
+T 1641165197 24*	julian[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165216 24*	dziq|m has quit (Quit: Client limit exceeded: 20000)
+T 1641165230 24*	nicoty has quit (Quit: Client limit exceeded: 20000)
+T 1641165241 24*	ormaaj2 has quit (Quit: Client limit exceeded: 20000)
+T 1641165262 24*	theantz has quit (Quit: Client limit exceeded: 20000)
+T 1641165320 24*	jemershaw[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165326 24*	CarlosEDP has quit (Quit: Client limit exceeded: 20000)
+T 1641165349 24*	jA_cOp has quit (Quit: Client limit exceeded: 20000)
+T 1641165349 24*	peeweep[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165380 24*	priner has quit (Quit: Client limit exceeded: 20000)
+T 1641165383 24*	jcgruenhage has quit (Quit: Client limit exceeded: 20000)
+T 1641165404 24*	Laralubsch has quit ()
+T 1641165404 24*	justJanne has quit (Quit: So, if you care to find me, look to the western sky. As someone told me lately, everyone deserves a chance to fly.)
+T 1641165418 23*	Laralubsch (~laralubsc@kuschku.de23) has joined
+T 1641165418 24*	nfbyte has quit (Quit: Client limit exceeded: 20000)
+T 1641165420 23*	justJanne (~kuschku@kuschku.de23) has joined
+T 1641165422 24*	exit70[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165428 24*	lorens[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165456 24*	tiziodcaio has quit (Quit: Client limit exceeded: 20000)
+T 1641165457 24*	barbaros- has quit (Quit: ZNC 1.7.2+deb3 - https://znc.in)
+T 1641165477 24*	_javyre has quit (Quit: Client limit exceeded: 20000)
+T 1641165477 24*	harrydus-matrix has quit (Quit: Client limit exceeded: 20000)
+T 1641165477 24*	rslabbert1 has quit (Quit: Client limit exceeded: 20000)
+T 1641165490 24*	guardant[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165491 24*	not-chicken has quit (Quit: Client limit exceeded: 20000)
+T 1641165492 24*	JoelB[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165511 24*	Acid-Bong has quit (Quit: Client limit exceeded: 20000)
+T 1641165511 24*	comphuter[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165512 24*	foxlet has quit (Quit: Client limit exceeded: 20000)
+T 1641165512 24*	Epictek[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165512 24*	AviKav[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165513 24*	drake[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165513 24*	toromino_m has quit (Quit: Client limit exceeded: 20000)
+T 1641165513 24*	antoine62[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	CodeBitCookie[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	Laura[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	ferie[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	nihilipster[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	Qixt[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	vpzom[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165514 24*	andrea[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165515 24*	illusive_evil[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165515 24*	anniehallmoon has quit (Quit: Client limit exceeded: 20000)
+T 1641165515 24*	M9d0cd7d2[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165516 24*	OmarZeghouani[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165516 24*	paper[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165516 24*	JuniorJPDJ has quit (Quit: Client limit exceeded: 20000)
+T 1641165516 24*	teldra has quit (Quit: Client limit exceeded: 20000)
+T 1641165517 24*	pitch has quit (Quit: Client limit exceeded: 20000)
+T 1641165517 24*	majomi[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165518 24*	eschwartz[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165520 24*	wiben[m] has quit (Quit: Client limit exceeded: 20000)
+T 1641165635 23*	barbarossa93 (~barbaross@c-73-39-107-44.hsd1.md.comcast.net23) has joined
+T 1641165823 23*	lavaball (~Melissa@p54a4dd9a.dip0.t-ipconnect.de23) has joined
+T 1641166012 24*	natte has quit (Quit: Leaving)
+T 1641756928 19*	Now talking on 22#voidlinux
+T 1641756928 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1641756928 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1641756962 18*	Piraty meanwhile sets up swapfile in /tmp
+T 1641757013 24*	PackRat-2019 has quit (Quit: Leaving)
+T 1641757452 20<Cicoria>30	im trying to clean the /var/cache/xbps/ directory and i noticed that there are some files of some packages i have not currently installed. I tried doing xbps-remove -O but nothing was removed. Can i safely delete the /var/cache/xbps?
+T 1641757740 23*	marcello42 (~mp@2001:1a81:1319:4e00:2dd7:b332:3cc:702123) has joined
+T 1641758043 24*	oZZ has quit (Quit: Leaving)
+T 1641758475 24*	lavaball has quit (Remote host closed the connection)
+T 1641760808 20*	Disconnected (20)
+T 1641760824 22*	26Cicoria sets mode 24+Z on 22Cicoria
+T 1641760824 22*	26Cicoria sets mode 24+i on 22Cicoria
+T 1641760824 22*	26Cicoria sets mode 24+w on 22Cicoria
+T 1641760824 20*	Disconnected (20)
+T 1641760838 19*	Now talking on 22#voidlinux
+T 1641760838 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1641760838 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1641760838 -18ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+T 1642254533 19*	Now talking on 22#voidlinux
+T 1642254533 22*	Topic for 22#voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+T 1642254533 22*	Topic for 22#voidlinux set by 26maldridge (24Sat May 22 06:06:29 2021)
+T 1642254611 24*	fhblf has quit (Quit: Leaving.)
+T 1642254695 18<meator18>	paper_: Ok, Thanks! I'll have to do it via /etc/zzz.d/ then.
+T 1642255364 23*	kts (~kts@103.73.237.19523) has joined
+T 1642255396 24*	kts has quit (Client Quit)
+T 1642255406 23*	mahmutov (~mahmutov@37.155.74.2623) has joined
+T 1642255433 24*	gnd has quit (Quit: Going offline, see ya! (www.adiirc.com))
+T 1642255465 24*	lavaball has quit (Remote host closed the connection)

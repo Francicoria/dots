@@ -1,0 +1,6 @@
+T 1640112693 19*	Now talking on 22#xbps
+T 1640112693 22*	Topic for 22#xbps is: daily pkg update-check http://alpha.de.repo.voidlinux.org/void-updates/void-updates.txt
+T 1640112693 22*	Topic for 22#xbps set by 26maldridge (24Sat May 22 06:08:35 2021)
+T 1640112969 24*	duckless_quack has quit (Quit: WeeChat 3.3)
+T 1640113130 24*	srv has quit (Quit: Leaving)
+T 1640113182 FiSHLiM plugin unloaded

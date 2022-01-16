@@ -1,0 +1,12 @@
+[037A]
+hwbutton1=2
+hwbutton2=3
+layout=unknown
+model=unknown
+name=Wacom One by Wacom S Pen
+padbuttons=2
+statusleds=4
+touchring=false
+touchstripl=false
+touchstripr=false
+wheel=false

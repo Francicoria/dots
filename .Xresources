@@ -1,3 +1,5 @@
+Xcursor.theme: phinger-cursors
+Xcursor.size: 48px
 !! Appearance
 urxvt.termName: rxvt-unicode
 urxvt.scrollBar: false

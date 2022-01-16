@@ -1,0 +1,597 @@
+**** BEGIN LOGGING AT Tue Dec 28 11:50:08 2021
+
+Dec 28 11:50:08 *	Now talking on #gentoo
+Dec 28 11:50:08 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Dec 28 11:50:08 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Dec 28 11:50:08 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+Dec 28 11:50:08 *	Channel #gentoo url: https://www.gentoo.org
+Dec 28 11:52:18 *	_inky (~inky_@46.36.113.102) has joined
+Dec 28 11:52:33 *	hl521 has quit (Ping timeout: 268 seconds)
+Dec 28 11:52:58 *	hl521 (~hl521@mx.servers.hl521.me) has joined
+Dec 28 12:00:53 <mrhansen>	sam_: around?
+Dec 28 12:02:10 *	SkunkyLaptop (~skunky@user/skunky) has joined
+Dec 28 12:05:51 *	Galladite (~Galladite@host-92-24-75-159.as13285.net) has joined
+Dec 28 12:07:52 *	LordVan (~lordvan@gentoo/developer/lordvan) has joined
+Dec 28 12:07:52 *	ChanServ gives voice to LordVan
+Dec 28 12:08:55 *	Kuleshov (~Kuleshov@109-252-99-146.nat.spd-mgts.ru) has joined
+Dec 28 12:09:21 *	eiche_home has quit (Read error: Connection reset by peer)
+Dec 28 12:09:32 *	eiche_home (~eiche_hom@user/eiche-home/x-6304440) has joined
+Dec 28 12:10:05 *	arinov_ has quit (Ping timeout: 240 seconds)
+Dec 28 12:10:25 *	hentai (~hentai@firmware.endpoint.users.absolutely.mooo.com) has joined
+Dec 28 12:14:22 *	zeden (~zeden@user/zeden) has joined
+Dec 28 12:17:12 *	mystified (~redcoreus@110-174-65-233.tpgi.com.au) has joined
+Dec 28 12:20:07 *	sh1r4s3 (~sh1r4s3@88.239.23.163) has joined
+Dec 28 12:20:07 *	mrgz (~mrgz@201-42-0-191.dsl.telesp.net.br) has joined
+Dec 28 12:20:22 *	Thymo has quit (Quit: ZNC - http://znc.in)
+Dec 28 12:20:25 *	ceamac has quit (Ping timeout: 240 seconds)
+Dec 28 12:21:29 *	Thymo (~Thymo@82-74-137-251.cable.dynamic.v4.ziggo.nl) has joined
+Dec 28 12:21:58 *	ceamac (~ceamac@89.42.42.141) has joined
+Dec 28 12:23:45 *	ggabriel has quit (Ping timeout: 240 seconds)
+Dec 28 12:25:41 *	ggabriel (~slv@gabrielgi.plus.com) has joined
+Dec 28 12:27:58 *	chrissl_ has quit (Ping timeout: 260 seconds)
+Dec 28 12:28:29 *	linjian (~linj@user/linj) has joined
+Dec 28 12:33:16 *	sh1r4s3 has quit (Ping timeout: 268 seconds)
+Dec 28 12:34:09 *	Czernobog (~Czernobog@user/czernobog) has joined
+Dec 28 12:43:03 *	eiche_home has quit (Ping timeout: 256 seconds)
+Dec 28 12:43:25 *	mystified has quit (Ping timeout: 240 seconds)
+Dec 28 12:43:57 *	cdown (~cdown@163.114.131.1) has joined
+Dec 28 12:48:48 *	Joro (~joro@149.62.206.71) has joined
+Dec 28 12:48:51 *	lavaball (aj@31.204.155.215) has joined
+Dec 28 12:49:43 *	Thymo has quit (Quit: ZNC - http://znc.in)
+Dec 28 12:50:06 *	mozhaaak_ (~mozhaaak_@schizoden.xyz) has joined
+Dec 28 12:50:30 *	Thymo (~Thymo@82-74-137-251.cable.dynamic.v4.ziggo.nl) has joined
+Dec 28 12:51:10 *	dor has quit (Remote host closed the connection)
+Dec 28 12:52:14 *	dor (~erg@78.11.12.207) has joined
+Dec 28 12:52:40 *	EchelonX has quit (Quit: Leaving)
+Dec 28 12:52:59 *	dor has quit (Remote host closed the connection)
+Dec 28 12:54:03 *	acalm has quit (Remote host closed the connection)
+Dec 28 12:54:10 *	dor (~erg@78.11.12.207) has joined
+Dec 28 12:54:13 *	pa4wdh has quit (Quit: Leaving)
+Dec 28 12:58:52 *	trace987 has quit (Remote host closed the connection)
+Dec 28 12:59:18 *	dor has quit (Remote host closed the connection)
+Dec 28 13:02:09 *	dor (~erg@78.11.12.207) has joined
+Dec 28 13:02:53 *	_inky has quit (Ping timeout: 256 seconds)
+Dec 28 13:08:03 *	chadmed has quit (Quit: Konversation terminated!)
+Dec 28 13:09:32 *	meta-sys- has quit (Quit: ZNC 1.8.2 - https://znc.in)
+Dec 28 13:09:58 *	Joro has quit (Quit: Joro)
+Dec 28 13:12:28 *	matsl_ (~matsl@gentoo/developer/matsl) has joined
+Dec 28 13:12:28 *	ChanServ gives voice to matsl_
+Dec 28 13:12:46 *	accelerat0r (~accelerat@user/accelerat0r) has joined
+Dec 28 13:12:58 *	matsl_ has quit (Client Quit)
+Dec 28 13:19:05 *	_inky (~inky_@188.115.226.224) has joined
+Dec 28 13:29:37 *	azed has quit (Quit: WeeChat 3.4)
+Dec 28 13:32:16 *	[router] has quit (Quit: - = : | R E B O O T | : = - https://denjik.ru/)
+Dec 28 13:34:10 *	luxemboye has quit (Ping timeout: 276 seconds)
+Dec 28 13:34:17 *	nabblet (~nabblet@user/nabblet) has joined
+Dec 28 13:34:29 <nabblet>	hi, is mirror.switch.ch/ftp/mirror/gentoo/ down?
+Dec 28 13:36:31 <Corvus>	doesn't respond to pings
+Dec 28 13:38:18 <ionen>	isn't that a rather old mirror? asking given bug 663900 is 3 years old
+Dec 28 13:38:19 <willikins>	ionen: https://bugs.gentoo.org/663900 "mirror.switch.ch will be shut down"; Mirrors, Server Problem; RESO, FIXE; fturco:mirror-admin
+Dec 28 13:38:41 *	[router] (~peaktop@user/router/x-8457926) has joined
+Dec 28 13:40:17 *	ceamac has quit (Remote host closed the connection)
+Dec 28 13:40:32 <ionen>	if don't want to worry about these, can just use the default GENTOO_MIRRORS, it'll use the default rotation which is typically good enough and gets updated
+Dec 28 13:41:19 <ionen>	site will use rotation for stage3 and others too
+Dec 28 13:46:11 *	ceamac (~ceamac@89.42.42.141) has joined
+Dec 28 13:55:14 *	sh1r4s3 (~sh1r4s3@195.142.120.38) has joined
+Dec 28 14:01:02 *	dor has quit (Remote host closed the connection)
+Dec 28 14:02:08 *	dor (~erg@78.11.12.207) has joined
+Dec 28 14:02:38 *	[router] is now known as Guest5464
+Dec 28 14:02:38 *	Guest5464 has quit (Killed (molybdenum.libera.chat (Nickname regained by services)))
+Dec 28 14:06:07 *	Despatche has quit (Quit: Read error: Connection reset by deer)
+Dec 28 14:13:54 *	PEAKTOP (~PEAKTOP@2a02:2168:a12:370c::1) has joined
+Dec 28 14:14:03 *	PEAKTOP is now known as [router]
+Dec 28 14:16:40 *	meta-system (~metasyste@lfbn-poi-1-276-214.w86-233.abo.wanadoo.fr) has joined
+Dec 28 14:18:34 *	Kobboi (~christoph@2a02:a03f:847d:9b00:54be:b4af:d33d:ea0d) has joined
+Dec 28 14:18:50 *	Inepu has quit (Remote host closed the connection)
+Dec 28 14:21:35 *	eiche_home (~eiche_hom@user/eiche-home/x-6304440) has joined
+Dec 28 14:21:37 *	azimut has quit (Ping timeout: 276 seconds)
+Dec 28 14:26:05 *	lockywolf has quit (Ping timeout: 240 seconds)
+Dec 28 14:27:35 *	anjannath (~anjan@user/anjannath) has joined
+Dec 28 14:30:33 <jpds>	nabblet: A good Swiss alternative is: https://mirror.init7.net/
+Dec 28 14:32:13 *	zeden has quit (Quit: WeeChat 3.4)
+Dec 28 14:32:13 <nabblet>	jpds: thanks - had init7 as ISP for some time, nice to seem them here (had to change for external reasons - i liked them)
+Dec 28 14:32:51 <nabblet>	ionen: thanks for the bug link, was not aware of that
+Dec 28 14:34:31 *	tastytea has quit (Quit: Gateway shutdown)
+Dec 28 14:34:54 <satmd>	:)
+Dec 28 14:35:26 *	tastytea (704f8d0680@tzend.de) has joined
+Dec 28 14:35:31 *	trace987 (~trace@ip5b42963a.dynamic.kabel-deutschland.de) has joined
+Dec 28 14:36:14 <jpds>	nabblet: Needed to see what non-25Gbps Internet was like again?
+Dec 28 14:36:25 <jpds>	;-)
+Dec 28 14:36:29 *	arinov (~arinov@213.194.126.155) has joined
+Dec 28 14:36:36 *	lockywolf (~lockywolf@vultr-seoul-openbsd.lockywolf.net) has joined
+Dec 28 14:38:13 <nabblet>	jpds: ;)
+Dec 28 14:38:30 <trace987>	how do I reinstall mariadb and remove anything that existed before of mariadb
+Dec 28 14:42:39 *	accelerat0r has quit (Quit: Leaving)
+Dec 28 14:47:50 <Corvus>	trace987: it keeps its stuff somewhere in /var/ but there's no reason to remove it. You can --configure it
+Dec 28 14:48:02 <Corvus>	and drop databases if you want to
+Dec 28 14:48:33 <trace987>	how
+Dec 28 14:48:41 <trace987>	it is also about /etc
+Dec 28 14:49:13 *	synchris (~quassel@user/synchris) has joined
+Dec 28 14:50:02 <Corvus>	https://wiki.gentoo.org/wiki/MariaDB#Configuration
+Dec 28 14:50:47 <Corvus>	emerge --config dev-db/mariadb
+Dec 28 14:50:47 <Corvus>	The configuration will create a database, set proper permissions, and assist you in creating a secure root password (this is for the MariaDB root account, which is not related to the Linux root account).
+Dec 28 14:51:07 *	sh1r4s3 has quit (Ping timeout: 256 seconds)
+Dec 28 14:51:16 *	newb (~newb@host-92-4-48-225.as13285.net) has joined
+Dec 28 14:51:17 <newb>	Hi
+Dec 28 14:51:28 <newb>	I am having a problem
+Dec 28 14:51:48 <newb>	I can not open zoom as a normal user but only root
+Dec 28 14:51:55 <Corvus>	trace987: I just have a feeling you're about to go deleting files, which is not usually the way to handle things
+Dec 28 14:51:55 *	jim__ (~jim@69-92-185-65.cpe.sparklight.net) has joined
+Dec 28 14:51:59 <newb>	can anyone help please
+Dec 28 14:52:09 *	dfdx (~F@user/dfdx) has joined
+Dec 28 14:52:12 *	spare (~mp3fi4d3x@user/spareproject) has joined
+Dec 28 14:52:41 <ggabriel>	newb: share `emerge --info` via pastebin or similar, and also share the error that you get from issuing the `zoom` command from a terminal
+Dec 28 14:52:42 *	magnavox (~MagnaVox@user/MagnaVox) has joined
+Dec 28 14:52:47 <trace987>	emerge --configure or how?
+Dec 28 14:53:08 <Corvus>	`emerge --config`
+Dec 28 14:54:24 <newb>	https://dpaste.com/4QKE3A2DP
+Dec 28 14:54:31 <ionen>	newb: I don't use zoom but a common culprit with electron apps wrt root is that CONFIG_USER_NS is not enabled in the kernel (if it's a custom / minimal kernel)
+Dec 28 14:55:00 <ionen>	oh that sounds different
+Dec 28 14:55:18 <ggabriel>	newb: ...and `emerge --info`?
+Dec 28 14:55:22 <newb>	ionen  I will enable that first
+Dec 28 14:55:50 *	anjannath has quit (Quit: Zzz)
+Dec 28 14:55:53 <ionen>	permission denied would be something else, likely /opt doesn't have right world execution permisions or something like that
+Dec 28 14:56:01 <newb>	https://dpaste.com/G5JXD96FT
+Dec 28 14:56:47 <newb>	https://dpaste.com/269CQ4748
+Dec 28 14:56:53 <ggabriel>	newb: sorry, no idea about hardened, we do have #gentoo-hardened (I think), or maybe somebody else here knows
+Dec 28 14:56:58 *	jim__ has quit (Quit: leaving)
+Dec 28 14:57:25 *	username234 has quit (Ping timeout: 240 seconds)
+Dec 28 14:57:28 <ionen>	hardened is nothing special, it just switch a few USE default arounds
+Dec 28 14:57:33 <ggabriel>	newb: you can try `qcheck zoom` and see if the install is sound, otherwise it could be a permissions problem like ionen suggests
+Dec 28 14:57:34 *	spare has quit (Remote host closed the connection)
+Dec 28 14:57:45 <ionen>	it used to be more, but lot of this stuff is a default nowadays
+Dec 28 14:57:53 *	spare (~mp3fi4d3x@user/spareproject) has joined
+Dec 28 14:58:00 *	jesse1 (~jesse@cpe-107-15-194-238.nc.res.rr.com) has joined
+Dec 28 14:59:02 <ggabriel>	fwiw, my /opt/zoom has drwxr-xr-x (and so does the binary), this is a standard gentoo install though in a non hardened profile
+Dec 28 14:59:25 <Corvus>	>  Invalid atom in /etc/portage/package.unmask/zoom: >=net-im/zoom-5.8.4.210 ~amd64 < I wonder what was the intent
+Dec 28 14:59:26 *	jesse1 has quit (Client Quit)
+Dec 28 14:59:32 <ionen>	it could also be because of /opt itself, all directories need to be reachable
+Dec 28 15:00:33 <newb>	Corvus I was trying to install zoom then I forgot to remove that
+Dec 28 15:00:37 <ggabriel>	certainly package.unmask looks old
+Dec 28 15:00:57 <Corvus>	I guess it should've gone to accept_keywords
+Dec 28 15:01:07 *	sa02irc (~mbax@155-079-043-212.ip-addr.inexio.net) has joined
+Dec 28 15:01:12 <newb>	yesah
+Dec 28 15:01:14 <newb>	yeah
+Dec 28 15:01:15 *	martums has quit (Ping timeout: 268 seconds)
+Dec 28 15:02:56 <Corvus>	ls -la /opt/
+Dec 28 15:07:58 *	JPP_way (~JPP_way@181.31.214.99) has joined
+Dec 28 15:09:09 <newb>	https://dpaste.com/6BZKWFXF6
+Dec 28 15:09:34 <newb>	should I change permission of zoom
+Dec 28 15:09:39 <Corvus>	> drwx------ 25 root  root  4096 Dec 28 13:59 zoom
+Dec 28 15:09:42 *	username234 (~username2@user/username234) has joined
+Dec 28 15:09:42 *	ChanServ gives voice to username234
+Dec 28 15:09:53 <Corvus>	yeah, well, there's your answer
+Dec 28 15:10:23 <Corvus>	you are not even allowed to look at the executable as a user
+Dec 28 15:10:52 <ionen>	wonder how that happened, the portage definitely wouldn't create it like that
+Dec 28 15:10:54 <Corvus>	ionen: isn't that a bug in the ebuild?
+Dec 28 15:11:45 <Corvus>	oh, well, I don't use it either
+Dec 28 15:12:45 <ionen>	not that I can see, one use of fperms feel a bit dodgy at most but I doubt it
+Dec 28 15:15:02 *	_inky has quit (Ping timeout: 260 seconds)
+Dec 28 15:15:34 <ionen>	since running hardened, maybe also using a umask for root? It shouldn't affect portage but it does end up messing things up by mistake easily (e.g. /usr/src/linux being built with wrong permissions)
+Dec 28 15:16:56 <Corvus>	maybe the hardened is too hard
+Dec 28 15:17:04 *	crabbedhaloablut has quit (Remote host closed the connection)
+Dec 28 15:17:21 *	crabbedhaloablut (~crabbedha@user/crabbedhaloablut) has joined
+Dec 28 15:17:36 <ionen>	I tend to take hardened profile as a hint that users are probably doing a lot of things on top ;p
+Dec 28 15:18:27 <Corvus>	wouldn't be the first time a safety feature ended up being incompatible with life
+Dec 28 15:20:30 *	lavaball has quit (Ping timeout: 240 seconds)
+Dec 28 15:20:43 *	_inky (~inky_@188.115.226.224) has joined
+Dec 28 15:21:23 *	azimut (~azimut@gateway/tor-sasl/azimut) has joined
+Dec 28 15:21:37 *	Czernobog has quit (Read error: Connection reset by peer)
+Dec 28 15:21:55 *	twnqx has quit (Quit: Leaving)
+Dec 28 15:22:08 *	twnqx (~twnqx@ip4d1464c3.dynamic.kabel-deutschland.de) has joined
+Dec 28 15:24:39 *	Czernobog (~Czernobog@user/czernobog) has joined
+Dec 28 15:25:05 *	spare has quit (Remote host closed the connection)
+Dec 28 15:25:14 <newb>	thanks
+Dec 28 15:25:45 *	spare (~mp3fi4d3x@user/spareproject) has joined
+Dec 28 15:32:57 *	hl521 has quit (Ping timeout: 268 seconds)
+Dec 28 15:40:58 *	aplainze1akind (~johndoe@captainludd.powered.by.lunarbnc.net) has joined
+Dec 28 15:43:22 *	aplainzetakind has quit (Read error: Connection reset by peer)
+Dec 28 15:45:52 *	Disconnected ()
+**** ENDING LOGGING AT Tue Dec 28 15:45:53 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 16:10:12 2021
+
+Dec 28 16:10:19 *	Now talking on #gentoo
+Dec 28 16:13:38 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Dec 28 16:13:43 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Dec 28 16:15:24 *	Channel #gentoo url: https://www.gentoo.org
+Dec 28 16:15:24 *	JPP_way_ (~JPP_way@181.31.214.99) has joined
+Dec 28 16:15:24 *	JPP_way has quit (Read error: Connection reset by peer)
+Dec 28 16:15:24 *	JPP_way_ is now known as JPP_way
+Dec 28 16:15:24 *	Cicoria has quit (Ping timeout: 252 seconds)
+Dec 28 16:15:24 *	Disconnected (Remote host closed socket)
+**** ENDING LOGGING AT Tue Dec 28 16:15:24 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 16:15:48 2021
+
+Dec 28 16:15:48 *	Now talking on #gentoo
+Dec 28 16:15:48 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Dec 28 16:15:48 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Dec 28 16:15:48 *	Channel #gentoo url: https://www.gentoo.org
+Dec 28 16:15:59 <Kelsar>	you can resume them with ebuild
+Dec 28 16:16:03 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Tue Dec 28 16:16:03 2021
+
+**** BEGIN LOGGING AT Sun Jan  2 23:19:32 2022
+
+Jan 02 23:19:32 *	Now talking on #gentoo
+Jan 02 23:19:32 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Jan 02 23:19:32 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Jan 02 23:19:32 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+Jan 02 23:19:32 *	Channel #gentoo url: https://www.gentoo.org
+Jan 02 23:22:04 *	chown_ has quit (Ping timeout: 268 seconds)
+Jan 02 23:22:56 *	salahx has quit (Quit: Leaving)
+Jan 02 23:23:17 <adeliktas>	holyspirit ok that's not showing the output/error. Can you manually provide the output containing the error? Like the last 100 lines of it. Run `emerge -v wasmer &> wasmer_emerge.log`
+Jan 02 23:26:22 *	righetz (~righetz@host-79-31-215-44.retail.telecomitalia.it) has joined
+Jan 02 23:27:30 *	righetz has quit (Client Quit)
+Jan 02 23:27:34 *	antlers (~antlers@gateway/vpn/pia/antlers) has joined
+Jan 02 23:28:21 <Jannik2099>	no need to emerge again, the build.log still persists after all
+Jan 02 23:28:38 <holyspirit>	once i run that command for the log how do i access it and paste it here for you to see
+Jan 02 23:28:38 *	userusename600[m (~userusena@2001:470:69fc:105::1:a1d) has joined
+Jan 02 23:28:51 *	AxelG[m] (~axelgmatr@2001:470:69fc:105::1:55c7) has joined
+Jan 02 23:28:51 *	duxsco has quit (Quit: duxsco)
+Jan 02 23:29:02 <adeliktas>	it will be saved in the directory where you ran the command
+Jan 02 23:29:12 <adeliktas>	Jannik2099 is that true for emerge -p as well?
+Jan 02 23:29:23 *	planetarian[m] (~planetari@2001:470:69fc:105::1:56c3) has joined
+Jan 02 23:29:25 *	dontstalkmepls[m (~dontstalk@2001:470:69fc:105::b583) has joined
+Jan 02 23:29:28 <Jannik2099>	no
+Jan 02 23:29:51 <NeddySeagoon>	holyspirit: wgetpaste /var/tmp/portage/dev-util/wasmer-0.11.0/temp/build.log
+Jan 02 23:30:04 <NeddySeagoon>	from your forum post :)
+Jan 02 23:30:06 *	Odyssey346[m] (~odyssey3_@2001:470:69fc:105::c0a7) has joined
+Jan 02 23:30:18 *	tanriol (~tanriol@2001:470:69fc:105::2fb) has joined
+Jan 02 23:30:36 *	Shaorin[m] (~shaorinma@2001:470:69fc:105::6259) has joined
+Jan 02 23:31:19 <holyspirit>	http://dpaste.com/GY6VDHMMQ
+Jan 02 23:31:55 *	triode (~number9@ip174-64-173-41.lf.br.cox.net) has joined
+Jan 02 23:32:03 *	heroku-miraheze[ (~heroku-mi@2001:470:69fc:105::1:47db) has joined
+Jan 02 23:32:37 <Jannik2099>	this looks like something that *may* be fixed with a different rust version, but it's an error in their code
+Jan 02 23:33:03 <triode>	Ok, I changed my monitors around, as I was using two that had different resolutions... it seems to have helped, but not completely solved the issue. It is still the case that when I launch another application (e.g. open a terminal, then open firefox) that the most recent application gets focus, and then all mouse operations outside of the new application fail. Any ideas?
+Jan 02 23:33:21 <holyspirit>	so what rust version should i use?
+Jan 02 23:33:32 *	TinyTimmyTokyo (~TinyTimmy@kuschku.de) has joined
+Jan 02 23:33:47 <holyspirit>	what a shame i really wanted it to
+Jan 02 23:34:21 *	antlers has quit (Ping timeout: 256 seconds)
+Jan 02 23:34:29 *	kernel_panic has quit (Quit: WeeChat 3.3)
+Jan 02 23:35:10 *	holyspirit (~holyspiri@pa49-197-147-153.pa.qld.optusnet.com.au) has left
+Jan 02 23:35:25 *	TinyTimmyTokyo has quit (Client Quit)
+Jan 02 23:36:35 *	nklsfrt has quit (Remote host closed the connection)
+Jan 02 23:36:40 *	TinyTimmyTokyo (~TinyTimmy@kuschku.de) has joined
+Jan 02 23:36:57 <nedko>	with 4G RAM and j3, chromium failed to build with OOM. should i try j2 or i rather try j1 directly?
+Jan 02 23:37:21 <adeliktas>	nedko j2 will be fine.
+Jan 02 23:37:32 <Jannik2099>	it will consume slightly over 2GB per job at one point
+Jan 02 23:37:37 *	guzzlefry has quit (Ping timeout: 256 seconds)
+Jan 02 23:38:04 <nedko>	thanks
+Jan 02 23:38:35 *	guzzlefry (~gus@user/guzzlefry) has joined
+Jan 02 23:41:15 <adeliktas>	@nedko it depends on how much free ram you have. I don't know if swap will count too so i can't really guarantee that it will work. You should give it a try nonetheless if a failure isn't critical :)
+Jan 02 23:41:59 *	srv (~cmd@user/srv) has joined
+Jan 02 23:42:14 <triode>	Am I asking in the wrong gentoo channel for Xorg server / WM issues?
+Jan 02 23:42:35 <adeliktas>	triode no, just ask :)
+Jan 02 23:42:36 *	antlers (~antlers@gateway/vpn/pia/antlers) has joined
+Jan 02 23:42:37 <genr8eofl_>	triode: did you move the old system to the new system with DD ?
+Jan 02 23:43:20 <triode>	genr8eofl_: clonezilla.
+Jan 02 23:44:29 *	alex11 (~alex11@user/alex11) has joined
+Jan 02 23:44:30 <genr8eofl_>	hmm... that lets you choose how the move was done, and i forget the exact mechanism. I dont want to assume its correct because it really sounds suspect, but I cant confirm or deny based on that
+Jan 02 23:44:31 *	helium-3 is now known as dilfridge
+Jan 02 23:44:31 <triode>	genr8eofl_: I think it is odd that, as far as I can tell, everything works 100%, except this. What is odd, is if I disconnect one of my monitors, it works as one would expect the window manager to work. WHen I plug in the second monitor and reboot, it does not work correclty, you can only use one application at a time.
+Jan 02 23:44:59 *	kitsunenokenja (~kitsunech@68.91.220.96) has joined
+Jan 02 23:45:13 <genr8eofl_>	that makes somewhat more sense but i still have no idea
+Jan 02 23:45:16 <triode>	Or I should say, the mouse only works in the most recently opened application.
+Jan 02 23:45:28 <triode>	yes, me either.
+Jan 02 23:47:43 <genr8eofl_>	heres a weird one: are you sure its actually a legit video card in the second system? We are in a shortage and fake video card scams are going on
+Jan 02 23:48:07 *	natewrench123456 (~joshu@cpe-72-228-153-194.buffalo.res.rr.com) has joined
+Jan 02 23:48:12 <triode>	LOL, mine are far too old for that.
+Jan 02 23:48:26 *	hw9891[m]12 has quit (Read error: Connection reset by peer)
+Jan 02 23:48:26 *	planetarian[m] has quit (Write error: Connection reset by peer)
+Jan 02 23:48:26 *	AxelG[m] has quit (Write error: Connection reset by peer)
+Jan 02 23:48:27 *	ambasta has quit (Write error: Connection reset by peer)
+Jan 02 23:48:27 *	heroku-miraheze[ has quit (Write error: Connection reset by peer)
+Jan 02 23:48:27 *	dontstalkmepls[m has quit (Read error: Connection reset by peer)
+Jan 02 23:48:27 *	userusename600[m has quit (Read error: Connection reset by peer)
+Jan 02 23:48:27 *	owl4ce[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:29 *	adibsaad[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:29 *	genewitch[m] has quit (Write error: Connection reset by peer)
+Jan 02 23:48:30 *	ozwald1[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	go4godvin has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	gentoorax[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	hw9891[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	fsckskye[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	s0n1k[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	Zarter[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:30 *	Odyssey346[m] has quit (Write error: Connection reset by peer)
+Jan 02 23:48:30 *	tanriol has quit (Write error: Connection reset by peer)
+Jan 02 23:48:31 *	Shaorin[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:31 *	stintel has quit (Read error: Connection reset by peer)
+Jan 02 23:49:05 <genr8eofl_>	what card and video driver was it then?
+Jan 02 23:49:41 <nedko>	adeliktas: thanks for your advice. i also have 4+ GB swap and when firefox is not started almost all RAM is free
+Jan 02 23:49:44 <triode>	Uhhhh, I can not get out of this window to check, but its like an nvidia 7xx. I am using neouvou.
+Jan 02 23:50:11 *	Guest60 has quit (Quit: Client closed)
+Jan 02 23:50:17 <triode>	genr8eofl_: I guess I never setup keybindings for swapping terminals right on this gentoo either.
+Jan 02 23:50:33 *	bubbler has quit (Quit: WeeChat 3.4)
+Jan 02 23:50:38 <nedko>	so the hard part is not starting firefox to watch some music videos while chromium (or some other fat/bloated soft) is building :)
+Jan 02 23:51:13 *	deu has quit (Ping timeout: 256 seconds)
+Jan 02 23:51:15 *	sgs has quit (Quit: Yes, brave Sir sgs turned about. And gallantly he chickened out.)
+Jan 02 23:51:16 *	s0n1k[m] (~s0n1kmatr@2001:470:69fc:105::1:46dc) has joined
+Jan 02 23:51:49 *	madjestic (~madjestic@88-159-247-120.fixed.kpn.net) has joined
+Jan 02 23:51:55 *	sgs (~sgs@pichove.org) has joined
+Jan 02 23:52:34 <adeliktas>	@nedko but that can't be the solution. You should be able to run anything you want and not be interrupted when niceness is set. I would suggest you to test it like you would use the pc normally. When it fails you know that you will have to run it -j1 after all
+Jan 02 23:52:35 *	Nico[m] (~deepbluev@2001:470:69fc:105::2d6) has joined
+Jan 02 23:52:35 *	tanriol (~tanriol@2001:470:69fc:105::2fb) has joined
+Jan 02 23:52:47 *	Hav0kk[m] (~rawhav0kk@2001:470:69fc:105::d03c) has joined
+Jan 02 23:52:47 *	stintel (~stintel@user/stintel) has joined
+Jan 02 23:52:47 *	ozwald1[m] (~ozwald1ma@2001:470:69fc:105::120) has joined
+Jan 02 23:52:47 *	anodae[m] (~anodaemat@2001:470:69fc:105::400a) has joined
+Jan 02 23:52:47 *	lordievader (~olivierol@2001:470:69fc:105::2e83) has joined
+Jan 02 23:52:54 *	holgersson has quit (Ping timeout: 268 seconds)
+Jan 02 23:52:55 *	Kirbs has quit (Ping timeout: 256 seconds)
+Jan 02 23:53:02 *	hikari[m] (~atharvaam@2001:470:69fc:105::d9dd) has joined
+Jan 02 23:53:02 *	Guest9107 (~krabadorm@2001:470:69fc:105::3114) has joined
+Jan 02 23:53:15 *	Shaorin[m] (~shaorinma@2001:470:69fc:105::6259) has joined
+Jan 02 23:53:32 *	Ananace (~ananace@2001:470:69fc:105::233) has joined
+Jan 02 23:53:35 <madjestic>	hey guys, after getting latest, some of the urxvt functionality seems to be broken, e.g. Shift+Down does not seem to open new tabs any more.  Does anyone experienct issues with urxvt?
+Jan 02 23:53:44 *	acedic[m] (~acedicmat@2001:470:69fc:105::c8f4) has joined
+Jan 02 23:53:45 *	Weiss-Fder[m] (~weissfoed@2001:470:69fc:105::359c) has joined
+Jan 02 23:54:01 *	fsckskye[m] (~kmatrixth@2001:470:69fc:105::1:3b2f) has joined
+Jan 02 23:54:03 *	hacc[m] (~haccmatri@2001:470:69fc:105::1:2792) has joined
+Jan 02 23:54:11 *	sweetshark[m] (~sweetshar@2001:470:69fc:105::1:184) has joined
+Jan 02 23:54:18 <nedko>	adeliktas: yeah, but solution for this is probably to just get machine with more RAM. i started it with j2 now
+Jan 02 23:54:36 *	holgersson (~quassel@user/holgersson) has joined
+Jan 02 23:54:37 *	genewitch[m] (~genewitch@2001:470:69fc:105::be79) has joined
+Jan 02 23:54:38 *	M3be9f93ace71e5f (~M3be9f93a@2001:470:69fc:105::1:436e) has joined
+Jan 02 23:54:38 *	Odyssey346[m] (~odyssey3_@2001:470:69fc:105::c0a7) has joined
+Jan 02 23:55:00 *	Zarter[m] (~zartermat@2001:470:69fc:105::db31) has joined
+Jan 02 23:55:04 *	ormaaj2 (~ormaaj@user/ormaaj) has joined
+Jan 02 23:55:04 *	nlocalhost[m] (~nikitaloc@2001:470:69fc:105::f6fe) has joined
+Jan 02 23:55:24 *	adibsaad[m] (~adibsaad@2001:470:69fc:105::2f65) has joined
+Jan 02 23:55:30 *	deu (de@uio.re) has joined
+Jan 02 23:55:31 *	AhmedCharles[m] (~acharlesm@2001:470:69fc:105::188d) has joined
+Jan 02 23:55:46 *	duxsco (~Thunderbi@user/duxsco) has joined
+Jan 02 23:55:48 *	M0xC0ncord[m] (~concordfu@2001:470:69fc:105::31b9) has joined
+Jan 02 23:56:01 *	userusename600[m (~userusena@2001:470:69fc:105::1:a1d) has joined
+Jan 02 23:56:02 *	xiamx (~xiamx@2001:470:69fc:105::1:5692) has joined
+Jan 02 23:56:02 *	alicela1n (~alicela1n@2001:470:69fc:105::c890) has joined
+Jan 02 23:56:02 *	heroku-miraheze[ (~heroku-mi@2001:470:69fc:105::1:47db) has joined
+Jan 02 23:56:15 *	gentoorax[m] (~chrisprom@2001:470:69fc:105::1:4bba) has joined
+Jan 02 23:56:15 *	cparker[m] (~cparker@2001:470:69fc:105::1973) has joined
+Jan 02 23:56:15 *	jkssodhxu[m] (~barzarian@2001:470:69fc:105::1:3a12) has joined
+Jan 02 23:56:15 *	rvlobato[m] (~ronaldo@2001:470:69fc:105::219f) has joined
+Jan 02 23:56:28 *	crusader[m] (~crusaderf@2001:470:69fc:105::bff6) has joined
+Jan 02 23:56:40 *	jellybeeeen[m] (~hydrobnkm@2001:470:69fc:105::1:2997) has joined
+Jan 02 23:56:40 *	Caesar (~caesar@2001:470:69fc:105::328a) has joined
+Jan 02 23:56:53 <adeliktas>	madjestic what package are you exactly refering to?
+Jan 02 23:56:54 *	Samsonite[m] (~gwilliams@2001:470:69fc:105::7f56) has joined
+Jan 02 23:56:54 *	Librecat[m] (~librecatm@2001:470:69fc:105::f287) has joined
+Jan 02 23:57:09 *	Florian[m]12 (~floffelma@2001:470:69fc:105::1:372f) has joined
+Jan 02 23:57:09 *	e-pleb[m] (~e-plebwai@2001:470:69fc:105::1:3b45) has joined
+Jan 02 23:57:22 *	dm9pZCAq[m] (~vanontier@2001:470:69fc:105::1:c83) has joined
+Jan 02 23:57:22 *	parallelOld[m] (~parallelk@2001:470:69fc:105::e816) has joined
+Jan 02 23:57:22 *	hw9891[m]1 (~hw9891moz@2001:470:69fc:105::1:3ece) has joined
+Jan 02 23:57:22 *	yemou[m] (~yemoumatr@2001:470:69fc:105::5021) has joined
+Jan 02 23:57:22 *	freshgum[m] (~freshgum_@2001:470:69fc:105::c1a5) has joined
+Jan 02 23:57:37 *	ambasta (~ambasta@2001:470:69fc:105::1:3973) has joined
+Jan 02 23:57:38 *	rockmonstr (~alexthegr@2001:470:69fc:105::1:1a19) has joined
+Jan 02 23:57:38 *	Moregon[m] (~moregonne@2001:470:69fc:105::1:54ec) has joined
+Jan 02 23:57:51 *	Alina-ma| (~Alina-mal@37.252.83.224) has joined
+Jan 02 23:57:52 *	AxelG[m] (~axelgmatr@2001:470:69fc:105::1:55c7) has joined
+Jan 02 23:57:52 *	hw9891[m] (~hw9891thx@2001:470:69fc:105::1:533c) has joined
+Jan 02 23:58:04 *	planetarian[m] (~planetari@2001:470:69fc:105::1:56c3) has joined
+Jan 02 23:58:06 *	linjian (~linj@user/linj) has joined
+Jan 02 23:58:10 <triode>	Even more odd, I can verify that my two monitors are the same resolution... At first, I thought it was because they were different.
+Jan 02 23:58:19 *	rockmonstr[m] (~rockmonst@2001:470:69fc:105::1:48db) has joined
+Jan 02 23:58:31 *	dontstalkmepls[m (~dontstalk@2001:470:69fc:105::b583) has joined
+Jan 02 23:58:32 *	go4godvin (~go4godvin@user/go4godvin) has joined
+Jan 02 23:58:32 *	Acid-Bong (~acid-bong@2001:470:69fc:105::ef45) has joined
+Jan 02 23:58:32 *	owl4ce[m] (~owl4cemat@2001:470:69fc:105::1:3235) has joined
+Jan 02 23:59:42 <triode>	Strange, If I go back to the old computer, it works. I think, however, that the old computer has an OLDER nvidia, like a GeForce 9500, and this has a second to latest generation card. I am not sure if I would have to do anything different though, as they both use the nouvou driver.
+Jan 03 00:00:08 *	bubbler (~bubbler@2a02:810d:8cc0:3fa0::8b3a) has joined
+Jan 03 00:01:46 <triode>	Hrm, I am going to go check now.
+Jan 03 00:01:50 <genr8eofl_>	paste the Xorg log
+Jan 03 00:02:42 *	xmorph has quit (Quit: leaving)
+Jan 03 00:07:54 <triode>	genr8eofl_: again, I am rofl. I can not get out of this window without killing the window completely. e.g. leave IRC and kill the window. Then how do I paste? Hrm, I forget how to split an epic IRC window. I just checked, however, and the video cards are identical.
+Jan 03 00:08:22 *	chown_ (~chown@96-19-96-19-109-218.cpe.sparklight.net) has joined
+Jan 03 00:09:55 <madjestic>	adeliktas: I can't tell exactly what got updated, it's just emerge world, so a bunch of things got pulled.  I suppose it must be something rxvt or perl related?
+Jan 03 00:09:56 <adeliktas>	triode since your issue is not just visual as i understood, this should not be driver/hardware related. I would guess it's a DE/WM issue. Maybe try to upgrade/update your DE to testing/unstable.
+Jan 03 00:09:59 <genr8eofl_>	does switching TTYs back to command prompt work ? Ctrl+Alt+F2 and back to F7 ?
+Jan 03 00:10:45 <adeliktas>	madjestic what application (xterm?) are we talking about?
+Jan 03 00:10:50 <triode>	adeliktas, yes, but I just did an update world yesterday before the clone, so I am at the latest... and it does not do it on computer #1.
+Jan 03 00:11:09 <triode>	genr8eofl_: For some reason, Ctrl-alt-swithing is not working.
+Jan 03 00:11:24 <madjestic>	adeliktas: x11-terms/rxvt-unicode
+Jan 03 00:12:03 <adeliktas>	@triode i can only guess your cloning/copying didn't succeed properly.
+Jan 03 00:12:05 <triode>	Interestingly, when I switch from icewm to windowmaker (I use both), I see the exact same issue. So... does that point to xorg-server?
+Jan 03 00:12:36 <genr8eofl_>	i think its X related personally
+Jan 03 00:12:37 <triode>	adeliktas: everything cloned right but the wm behaviour? Hrm, I could rebuild them.
+Jan 03 00:12:38 *	_ixti_ is now known as ixti
+Jan 03 00:13:15 <triode>	What would be the simplest way to get a list of all X releated builds don the box and recompile them you think?
+Jan 03 00:13:25 *	holgersson has quit (Ping timeout: 250 seconds)
+Jan 03 00:13:25 *	stintel has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:32 *	lordievader has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:45 *	hikari[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:45 *	Guest9107 has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:52 *	AhmedCharles[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:01 *	ormaaj2 has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:02 *	tanriol has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:03 <triode>	I mean, if a copy messed up something, the recompile should fix it, correct?
+Jan 03 00:14:14 *	hacc[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:19 <adeliktas>	madjestic no idea of the application and if hotkeys are set as in configs or if hotkeys of your DE (as in for example gnome) changed this behaviour
+Jan 03 00:14:23 *	ixti is now known as _ixti_
+Jan 03 00:14:25 *	tanriol (~tanriol@2001:470:69fc:105::2fb) has joined
+Jan 03 00:14:25 *	stintel (~stintel@user/stintel) has joined
+Jan 03 00:14:38 *	lordievader (~olivierol@2001:470:69fc:105::2e83) has joined
+Jan 03 00:14:38 *	hikari[m] (~atharvaam@2001:470:69fc:105::d9dd) has joined
+Jan 03 00:14:38 *	enick_145 (~krabadorm@2001:470:69fc:105::3114) has joined
+Jan 03 00:14:38 *	hacc[m] (~haccmatri@2001:470:69fc:105::1:2792) has joined
+Jan 03 00:14:38 *	ormaaj2 (~ormaaj@user/ormaaj) has joined
+Jan 03 00:14:46 *	yemou[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:53 *	AhmedCharles[m] (~acharlesm@2001:470:69fc:105::188d) has joined
+Jan 03 00:14:56 *	Nico[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:02 *	cparker[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:03 <madjestic>	adeliktas: no configuration was changed before the update.
+Jan 03 00:15:06 *	yemou[m] (~yemoumatr@2001:470:69fc:105::5021) has joined
+Jan 03 00:15:11 *	_ixti_ is now known as ixti
+Jan 03 00:15:21 *	anodae[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:22 *	ixti is now known as _ixti_
+Jan 03 00:15:22 *	rockmonstr has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:23 *	Nico[m] (~deepbluev@2001:470:69fc:105::2d6) has joined
+Jan 03 00:15:27 *	Weiss-Fder[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:35 *	anodae[m] (~anodaemat@2001:470:69fc:105::400a) has joined
+Jan 03 00:15:39 *	_ixti_ is now known as ixti
+Jan 03 00:15:51 *	Weiss-Fder[m] (~weissfoed@2001:470:69fc:105::359c) has joined
+Jan 03 00:15:51 *	cparker[m] (~cparker@2001:470:69fc:105::1973) has joined
+Jan 03 00:15:52 *	rockmonstr (~alexthegr@2001:470:69fc:105::1:1a19) has joined
+Jan 03 00:15:58 *	DiffieHellman has quit (Remote host closed the connection)
+Jan 03 00:16:04 *	holgersson (~quassel@user/holgersson) has joined
+Jan 03 00:16:09 *	Odyssey346[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:16 *	ambasta has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:19 *	s0n1k[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:19 *	nlocalhost[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:26 *	jkssodhxu[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:28 *	alicela1n has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:35 *	heroku-miraheze[ has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:35 *	DiffieHellman (~Username@user/curve25519chacha) has joined
+Jan 03 00:16:44 *	TinyTimmyTokyo has quit (Quit: Privet!)
+Jan 03 00:16:45 *	nlocalhost[m] (~nikitaloc@2001:470:69fc:105::f6fe) has joined
+Jan 03 00:16:49 *	jkssodhxu[m] (~barzarian@2001:470:69fc:105::1:3a12) has joined
+Jan 03 00:16:50 *	Odyssey346[m] (~odyssey3_@2001:470:69fc:105::c0a7) has joined
+Jan 03 00:16:50 *	ambasta (~ambasta@2001:470:69fc:105::1:3973) has joined
+Jan 03 00:16:51 *	alicela1n (~alicela1n@2001:470:69fc:105::c890) has joined
+Jan 03 00:17:01 *	TinyTimmyTokyo (~TinyTimmy@kuschku.de) has joined
+Jan 03 00:17:02 *	xiamx has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:08 *	rvlobato[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:31 *	Librecat[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:34 *	freshgum[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:36 *	go4godvin has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:45 <adeliktas>	madjestic what i mean is that for example when updating gnome, it changes/defaults existing hotkeys. You could where the hotkeys you are expected are originating from (application or DE) and what changed.
+Jan 03 00:18:02 *	s0n1k[m] (~s0n1kmatr@2001:470:69fc:105::1:46dc) has joined
+Jan 03 00:18:15 *	xiamx (~xiamx@2001:470:69fc:105::1:5692) has joined
+Jan 03 00:18:15 *	heroku-miraheze[ (~heroku-mi@2001:470:69fc:105::1:47db) has joined
+Jan 03 00:18:15 *	rvlobato[m] (~ronaldo@2001:470:69fc:105::219f) has joined
+Jan 03 00:18:28 *	Librecat[m] (~librecatm@2001:470:69fc:105::f287) has joined
+Jan 03 00:18:28 *	freshgum[m] (~freshgum_@2001:470:69fc:105::c1a5) has joined
+Jan 03 00:18:29 *	go4godvin (~go4godvin@user/go4godvin) has joined
+Jan 03 00:18:31 *	Acid-Bong has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:41 *	e-pleb[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:44 *	linjian has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:20:24 *	CMoH|notebook has quit (Quit: Konversation terminated!)
+Jan 03 00:20:39 *	Serafean has quit (Quit: Konversation terminated!)
+Jan 03 00:20:49 *	CMoH|notebook (~cipi@95.76.67.141) has joined
+Jan 03 00:21:06 *	sweetshark[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:21:28 *	Hav0kk[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:21:32 *	ozwald1[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:21:44 *	Corbit has quit (Quit: WeeChat 3.3)
+Jan 03 00:23:43 *	lavaball (~Melissa@p54a4dd9a.dip0.t-ipconnect.de) has joined
+Jan 03 00:23:49 *	twnqx has quit (Ping timeout: 240 seconds)
+Jan 03 00:24:09 *	guzzlefry has quit (Ping timeout: 240 seconds)
+Jan 03 00:24:27 *	triode has quit (Quit: "Man who drive like hell bound to get there!")
+Jan 03 00:24:34 <madjestic>	adeliktas the keys and the urxvt config is set in ~/.Xresources, I don't use gnome or plasma, just xmonad, but I don't think that's related
+Jan 03 00:24:35 *	guzzlefry (~gus@user/guzzlefry) has joined
+Jan 03 00:24:47 *	Hav0kk[m] (~rawhav0kk@2001:470:69fc:105::d03c) has joined
+Jan 03 00:24:59 *	ozwald1[m] (~ozwald1ma@2001:470:69fc:105::120) has joined
+Jan 03 00:25:11 *	sweetshark[m] (~sweetshar@2001:470:69fc:105::1:184) has joined
+Jan 03 00:25:23 *	e-pleb[m] (~e-plebwai@2001:470:69fc:105::1:3b45) has joined
+Jan 03 00:25:37 *	linjian (~linj@user/linj) has joined
+Jan 03 00:25:50 *	Acid-Bong (~acid-bong@2001:470:69fc:105::ef45) has joined
+Jan 03 00:27:03 <DanF>	sam_: my checkout is/was up-to-date but I rpull'ed again and still get the downgrade when I try to install catalyst - http://dpaste.com/6YGXTGB5Z - Ideally updating the dependency in catalyst to use snakeoil-0.9.7 would fix this, as it's already set this way in catalyst-3.0.20 (which is masked) but not sure if it works with 3.0.18 (which is stable)
+Jan 03 00:27:52 <genr8eofl_>	find out and report back ?
+Jan 03 00:27:53 *	Kirbs (~memes@71.219.219.100) has joined
+Jan 03 00:27:55 <adeliktas>	madjestic ok.. well the last thing i can think of it just downgrading/reinstalling to the previous version if that's possible. If that works then again, it would be an package (update) issue.
+Jan 03 00:30:07 *	sinhue has quit (Quit: Leaving)
+Jan 03 00:30:43 <t4nk_freenode>	after a reboot just now.. I'm getting "bash: su: command not found" how could that be?
+Jan 03 00:31:41 <ixti>	t4nk_freenode: check your $PATH
+Jan 03 00:31:46 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Mon Jan  3 00:31:46 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:35:28 2022
+
+Jan 09 20:35:28 *	Now talking on #gentoo
+Jan 09 20:35:28 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Jan 09 20:35:28 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Jan 09 20:35:28 *	Channel #gentoo url: https://www.gentoo.org
+**** ENDING LOGGING AT Sun Jan  9 20:36:47 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:36:47 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:37:04 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:37:04 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:37:46 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:37:46 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:17 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:17 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:44 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:44 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:50 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:50 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:40:28 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:40:28 2022
+
+Jan 09 20:41:09 *	sa02irc has quit (Remote host closed the connection)
+Jan 09 20:42:14 *	aHick has quit (Ping timeout: 256 seconds)
+Jan 09 20:42:43 *	feriman has quit (Read error: Connection reset by peer)
+Jan 09 20:46:00 *	d_ferdi has quit (Ping timeout: 240 seconds)
+Jan 09 20:46:11 *	aleck1 (~aleck@user/aleck) has joined
+Jan 09 20:48:27 *	Jupy7er (~Jupy7er@2001:d08:e3:b1:dd4e:c9da:9c60:5d27) has joined
+Jan 09 20:48:37 *	feriman (~feriman@188.163.113.151) has joined
+Jan 09 20:49:01 *	aleck has quit (Ping timeout: 256 seconds)
+Jan 09 20:49:27 *	Jupy7er has quit (Client Quit)
+Jan 09 20:52:39 *	hiyori (~hiyori@user/hiyori) has joined
+Jan 09 20:52:43 <hiyori>	https://dpaste.com/F5YJDCJUX
+Jan 09 20:53:44 *	noex has quit (Ping timeout: 240 seconds)
+Jan 09 20:55:21 <hussein1>	hi, there's a way of saving last boot's /var/log/dmesg - could someone remind me what it is?
+Jan 09 20:55:24 <sam_>	would need to see the build.log hiyori
+Jan 09 20:57:44 <hussein1>	ah yes it's in /etc/conf.d/bootmisc
+Jan 09 20:58:08 <hiyori>	sam http://0x0.st/oiuY.log%3B
+Jan 09 20:58:16 <hiyori>	sam_
+Jan 09 20:59:26 *	_2E0LNX has quit (Quit: Connection closed for inactivity)
+Jan 09 21:01:15 *	lavaball has quit (Remote host closed the connection)
+Jan 09 21:01:54 *	guzzlefry has quit (Ping timeout: 256 seconds)
+Jan 09 21:02:14 <Marquel>	sam_: ping. i have an issue with a reliable inability to compile elogind.
+Jan 09 21:02:19 *	guzzlefry (~gus@user/guzzlefry) has joined
+Jan 09 21:02:26 <Marquel>	sam_: you don't happen to have seen that already?
+Jan 09 21:02:32 <sam_>	Marquel: busy for the next.... unknown minutes, but send me the log anyway
+Jan 09 21:02:34 <sam_>	hiyori: no idea
+Jan 09 21:40:07 *	Disconnected ()
+**** ENDING LOGGING AT Sun Jan  9 21:40:07 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 21:40:38 2022
+
+Jan 09 21:40:38 *	Now talking on #gentoo
+Jan 09 21:40:38 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Jan 09 21:40:38 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Jan 09 21:40:38 *	Channel #gentoo url: https://www.gentoo.org
+Jan 09 21:41:09 *	foehammer (~foehammer@208-73-102-229.fttp.usinternet.com) has joined
+Jan 09 21:41:10 <triode>	I still for the life of me can not figure out why my wallpaper in icewm is not working. It works on my other (agian, except for the mouse) identical box. Sigh.
+Jan 09 21:41:30 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sun Jan  9 21:41:30 2022
+
+**** BEGIN LOGGING AT Sat Jan 15 14:48:53 2022
+
+Jan 15 14:48:53 *	Now talking on #gentoo
+Jan 15 14:48:53 *	Topic for #gentoo is: Gentoo Linux Support | Can't speak? /j #gentoo-ops | Don't ask if anyone can help; just ask your question | long pastes: wgetpaste or dpaste.com | Perl conflicts? https://goo.gl/7Miost | Be nice! https://wiki.gentoo.org/wiki/Project:Ops#Channel_Policy | Switch to profile 17.1? https://bit.ly/322fxVr | Circular conflict with python? Append emerge command with: python:3.9
+Jan 15 14:48:53 *	Topic for #gentoo set by tdr!~tdr@user/tdr (Sun Dec 12 19:34:16 2021)
+Jan 15 14:48:53 *	Channel #gentoo url: https://www.gentoo.org
+Jan 15 14:50:02 <zetaE>	what's the commands to check perl and python dep consitency?
+Jan 15 14:50:04 *	anaveragehuman (~anaverage@user/anaveragehuman) has joined
+Jan 15 14:51:17 *	sillyquestions (~stop_look@172.58.196.113) has joined
+Jan 15 14:52:08 *	feriman has quit (Ping timeout: 240 seconds)
+Jan 15 14:53:27 *	uis has quit (Quit: ZNC 1.7.5 - https://znc.in)
+Jan 15 14:53:42 *	uis (~uis@uigors.tk) has joined
+Jan 15 14:56:24 *	anaveragehuman has quit (Ping timeout: 276 seconds)
+Jan 15 15:01:27 *	uis has quit (Quit: ZNC 1.7.5 - https://znc.in)
+Jan 15 15:01:41 *	uis (~uis@uigors.tk) has joined
+Jan 15 15:02:25 <desultory>	im kinda lost on making this udev rule, so far I have `SUBSYSTEM=="net", ACTION="add", NAME="`, I think I can use ATTR{address} but I'm not sure how to do something like wlx{ATTR{address}
+Jan 15 15:02:44 *	kts (~kts@103.73.237.195) has joined
+Jan 15 15:03:07 <BtbN>	udev already has rules for that. You just need to select it
+Jan 15 15:03:16 *	kts has quit (Client Quit)
+Jan 15 15:03:17 <BtbN>	easiest is via networkd
+Jan 15 15:03:18 <Jens3>	zetaE: Do you mean revdep-rebuild and perlcleaner --all ?
+Jan 15 15:03:34 <avoidr>	EchelonX, when I browse this page, my X crashes and I see some error saying "Exiting due to "... something with "channel", I forgot. This page: https://github.com/black7375/Firefox-UI-Fix
+Jan 15 15:03:37 <zetaE>	thanks
+Jan 15 15:04:25 *	lavaball has quit (Remote host closed the connection)
+Jan 15 15:04:26 <avoidr>	EchelonX, but now I remember that there is a colorful emoji in the title, and I've had this issue before. Something with fontconfig. But that was months ago. Have to verify that.

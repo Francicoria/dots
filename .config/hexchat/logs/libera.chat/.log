@@ -1,0 +1,69 @@
+**** BEGIN LOGGING AT Tue Dec 21 19:44:51 2021
+
+Dec 21 19:44:51 Failed loading notification plugin: GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+Dec 21 19:44:52 *	Connecting to irc.libera.chat (204.225.96.123:6697)
+Dec 21 19:44:52 *	* Subject: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Dec 21 19:44:52 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Dec 21 19:44:52 *	* Subject: /C=US/O=Let's Encrypt/CN=R3
+Dec 21 19:44:52 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Dec 21 19:44:52 *	* Subject: /CN=strontium.libera.chat
+Dec 21 19:44:52 *	* Issuer: /C=US/O=Let's Encrypt/CN=R3
+Dec 21 19:44:52 *	* Certification info:
+Dec 21 19:44:52 *	  Subject:
+Dec 21 19:44:52 *	    CN=strontium.libera.chat
+Dec 21 19:44:52 *	  Issuer:
+Dec 21 19:44:52 *	    C=US
+Dec 21 19:44:52 *	    O=Let's Encrypt
+Dec 21 19:44:52 *	    CN=R3
+Dec 21 19:44:52 *	  Public key algorithm: rsaEncryption (4096 bits)
+Dec 21 19:44:52 *	  Sign algorithm sha256WithRSAEncryption
+Dec 21 19:44:52 *	  Valid since Oct 30 17:07:53 2021 GM to Jan 28 17:07:52 2022 GM
+Dec 21 19:44:52 *	* Cipher info:
+Dec 21 19:44:52 *	  Version: TLSv1.3, cipher TLS_AES_256_GCM_SHA384 (256 bits)
+Dec 21 19:44:52 *	Connected. Now logging in.
+**** BEGIN LOGGING AT Tue Dec 21 21:10:30 2021
+
+Dec 21 21:10:30 *	Cicoria sets mode +Z on Cicoria
+Dec 21 21:10:30 *	Cicoria sets mode +i on Cicoria
+Dec 21 21:10:30 *	Cicoria sets mode +w on Cicoria
+**** ENDING LOGGING AT Tue Dec 21 21:10:37 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 15:50:14 2021
+
+Dec 28 15:50:15 *	Cicoria sets mode +Z on Cicoria
+Dec 28 15:50:18 *	Cicoria sets mode +i on Cicoria
+Dec 28 15:50:21 *	Cicoria sets mode +w on Cicoria
+**** ENDING LOGGING AT Tue Dec 28 16:15:24 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 16:15:42 2021
+
+Dec 28 16:15:42 *	Cicoria sets mode +Z on Cicoria
+Dec 28 16:15:42 *	Cicoria sets mode +i on Cicoria
+Dec 28 16:15:42 *	Cicoria sets mode +w on Cicoria
+**** ENDING LOGGING AT Tue Dec 28 16:15:48 2021
+
+**** BEGIN LOGGING AT Sun Jan  9 21:40:24 2022
+
+Jan 09 21:40:24 *	Cicoria sets mode +Z on Cicoria
+Jan 09 21:40:24 *	Cicoria sets mode +i on Cicoria
+Jan 09 21:40:24 *	Cicoria sets mode +w on Cicoria
+**** BEGIN LOGGING AT Sun Jan  9 21:40:24 2022
+
+Jan 09 21:40:24 *	Disconnected ()
+**** ENDING LOGGING AT Sun Jan  9 21:40:24 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 21:40:24 2022
+
+Jan 09 21:40:24 *	Disconnected ()
+**** ENDING LOGGING AT Sun Jan  9 21:40:24 2022
+
+Jan 09 21:40:24 *	Disconnected ()
+**** ENDING LOGGING AT Sun Jan  9 21:40:24 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 21:40:32 2022
+
+Jan 09 21:40:32 *	Cicoria sets mode +Z on Cicoria
+Jan 09 21:40:32 *	Cicoria sets mode +i on Cicoria
+Jan 09 21:40:32 *	Cicoria sets mode +w on Cicoria
+**** ENDING LOGGING AT Sun Jan  9 21:40:38 2022
+

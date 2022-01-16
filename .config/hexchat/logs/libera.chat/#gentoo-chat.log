@@ -1,0 +1,276 @@
+**** BEGIN LOGGING AT Tue Dec 28 11:50:29 2021
+
+Dec 28 11:50:29 *	Now talking on #gentoo-chat
+Dec 28 11:50:29 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Dec 28 11:50:29 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+Dec 28 11:52:03 *	steeznson (~user@cpc103080-sgyl39-2-0-cust306.18-2.cable.virginm.net) has joined
+Dec 28 11:52:33 *	hl521 has quit (Ping timeout: 268 seconds)
+Dec 28 11:52:58 *	hl521 (~hl521@mx.servers.hl521.me) has joined
+Dec 28 12:02:10 *	SkunkyLaptop (~skunky@user/skunky) has joined
+Dec 28 12:10:25 *	hentai (~hentai@firmware.endpoint.users.absolutely.mooo.com) has joined
+Dec 28 12:16:58 <Smiley>	RIP Doc235, would of been 70 today.
+Dec 28 12:18:38 <Jannik2099>	> would of
+Dec 28 12:20:07 *	mrgz (~mrgz@201-42-0-191.dsl.telesp.net.br) has joined
+Dec 28 12:20:22 *	Thymo has quit (Quit: ZNC - http://znc.in)
+Dec 28 12:21:29 *	Thymo (~Thymo@82-74-137-251.cable.dynamic.v4.ziggo.nl) has joined
+Dec 28 12:26:46 <wikky>	Jannik2099: defiantly
+Dec 28 12:27:58 *	chrissl_ has quit (Ping timeout: 260 seconds)
+Dec 28 12:29:10 <wikky>	for all intensive purposes, the "'ve' and the 'of' are homophones in a lot of accents
+Dec 28 12:39:49 *	needle prefers rss over email newsletter sokan 
+Dec 28 12:40:38 <needle>	.seen doc235
+Dec 28 12:40:38 <chat>	doc235 was last seen in #gentoo-chat 20w 0d 11h 1m 45s ago: <doc235> gentoo it
+Dec 28 12:41:52 <Jannik2099>	wikky: "intensive purposes" lmao
+Dec 28 12:41:55 <Jannik2099>	good one
+Dec 28 12:49:43 *	Thymo has quit (Quit: ZNC - http://znc.in)
+Dec 28 12:50:06 *	mozhaaak_ (~mozhaaak_@schizoden.xyz) has joined
+Dec 28 12:50:30 *	Thymo (~Thymo@82-74-137-251.cable.dynamic.v4.ziggo.nl) has joined
+Dec 28 12:52:40 *	EchelonX has quit (Quit: Leaving)
+Dec 28 12:58:52 *	trace987 has quit (Remote host closed the connection)
+Dec 28 13:08:03 *	chadmed has quit (Quit: Konversation terminated!)
+Dec 28 13:12:53 *	accelerat0r (~accelerat@user/accelerat0r) has joined
+Dec 28 13:34:10 *	luxemboye has quit (Ping timeout: 276 seconds)
+Dec 28 14:12:20 *	LordRishav (~LordRisha@user/lordrishav) has joined
+Dec 28 14:15:09 <satmd>	:((
+Dec 28 14:15:19 *	satmd hugs doc235's ghost
+Dec 28 14:16:07 <satmd>	sokan: you don't need special flags for nginx to work with rutorrent
+Dec 28 14:16:16 <satmd>	100% of the work will be done by php-fpm
+Dec 28 14:16:21 <satmd>	so... fastcgi it is
+Dec 28 14:20:39 <sokan>	:(
+Dec 28 14:20:58 <sokan>	doc235 shall be missed really :(
+Dec 28 14:21:27 <sokan>	needle: you use rss agreggator like newsboat?
+Dec 28 14:21:41 <sokan>	satmd: ty man :)
+Dec 28 14:23:32 <ionen>	...I used to use newsboat but I just rss2email to read in mutt now
+Dec 28 14:25:07 <ionen>	at least saves me from needing to compile rust-based binpkgs for my server where I used to use it ;p
+Dec 28 14:25:09 *	Kobboi (~christoph@2a02:a03f:847d:9b00:54be:b4af:d33d:ea0d) has joined
+Dec 28 14:25:32 <ionen>	(was the only thing using rust there, not a desktop so no librsvg and such either)
+Dec 28 14:25:42 <Kobboi>	I am logged in on a system that is supposed several instances of a script that does this:
+Dec 28 14:25:48 <Kobboi>	container_name=$(cat /dev/urandom | tr -dc 'a-zA-Z' | fold -w 32 | head -n 1)
+Dec 28 14:26:08 <Kobboi>	it turns out several (all?) instances of that script are still running the assignment
+Dec 28 14:26:21 <Kobboi>	cat, tr and fold are running and passing data to each other via the fds
+Dec 28 14:26:26 <Kobboi>	but head is not running
+Dec 28 14:26:34 <Kobboi>	keeping the assignment running indefinitely
+Dec 28 14:26:35 <sokan>	ionen: mutt supports rss-feed too?
+Dec 28 14:26:47 <sokan>	also, you connect to mutt on your server to read your rss?
+Dec 28 14:26:48 <ionen>	sokan: see the bit I mentioned about rss2email
+Dec 28 14:27:01 <ionen>	it's a package
+Dec 28 14:27:06 <Kobboi>	and I cannot reproduce it
+Dec 28 14:27:41 <sokan>	ionen: interesting
+Dec 28 14:28:01 <Kobboi>	also, is there an easy way to load the environment of a process into my current shell?
+Dec 28 14:28:23 <Kobboi>	(was thinking about locale related stuff maybe?)
+Dec 28 14:30:00 <sokan>	ionen: might give it a go. Seems rather interesting
+Dec 28 14:30:25 <sokan>	rss is more privacy friendly I presume than sharing email
+Dec 28 14:32:43 <ionen>	r2e checks rss feeds, save the already-sent ones in some .json, deliver as local mail with some easy to use headers for filtering, then I check in mutt with some custom configs for opening urls and such -- saves me from having two different readers open
+Dec 28 14:34:31 *	tastytea has quit (Quit: Gateway shutdown)
+Dec 28 14:34:40 <ionen>	of course that didn't give the email to anyone either ;p
+Dec 28 14:35:26 *	tastytea (704f8d0680@tzend.de) has joined
+Dec 28 14:35:31 *	trace987 (~trace@ip5b42963a.dynamic.kabel-deutschland.de) has joined
+Dec 28 14:42:39 *	accelerat0r has quit (Quit: Leaving)
+Dec 28 14:48:39 *	LordRishav has quit (Quit: Ight Imma Head out)
+Dec 28 14:51:55 *	jim__ (~jim@69-92-185-65.cpe.sparklight.net) has joined
+Dec 28 14:52:09 *	dfdx (~F@user/dfdx) has joined
+Dec 28 14:56:58 *	jim__ has quit (Quit: leaving)
+Dec 28 14:57:25 *	username234 has quit (Ping timeout: 240 seconds)
+Dec 28 15:03:36 <Naib>	anyone know if it is possible in github to redirect a repository to the wiki instead?
+Dec 28 15:03:56 <Naib>	the README.md can obviously include a link, but if you just want a repository as a wiki
+Dec 28 15:08:33 <Viperlin>	don't think so - unless you magic embed some redirect into markdown
+Dec 28 15:08:48 <Viperlin>	which would instantly become naib4j
+Dec 28 15:09:42 *	username234 (~username2@user/username234) has joined
+Dec 28 15:15:20 <Naib>	true... meh... if ppl are too stupid to click on the hyperlink [OVERVIEW] they deserve no support
+Dec 28 15:17:04 *	crabbedhaloablut has quit (Remote host closed the connection)
+Dec 28 15:17:21 *	crabbedhaloablut (~crabbedha@user/crabbedhaloablut) has joined
+Dec 28 15:21:04 <satmd>	kinda true
+Dec 28 15:21:11 <satmd>	if you spoonfeed, you get babies
+Dec 28 15:21:27 <Viperlin>	that's not how babies are made
+Dec 28 15:21:48 <Viperlin>	i think it involves a stork
+Dec 28 15:30:50 *	hl521 has quit (Ping timeout: 268 seconds)
+Dec 28 15:45:48 *	Disconnected ()
+**** ENDING LOGGING AT Tue Dec 28 15:45:50 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 15:50:24 2021
+
+Dec 28 15:50:25 *	Now talking on #gentoo-chat
+Dec 28 15:50:31 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Dec 28 15:50:36 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+Dec 28 16:15:24 *	steeznson (~user@cpc103080-sgyl39-2-0-cust306.18-2.cable.virginm.net) has left (ERC (IRC client for Emacs 27.2))
+Dec 28 16:15:24 <Latrina>	Afternoon mofos
+Dec 28 16:15:24 <Latrina>	how are we doing?
+Dec 28 16:15:24 *	malina (~malina@user/malina) has joined
+Dec 28 16:15:24 *	Cicoria has quit (Ping timeout: 252 seconds)
+Dec 28 16:15:24 *	Disconnected (Remote host closed socket)
+**** ENDING LOGGING AT Tue Dec 28 16:15:24 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 16:15:48 2021
+
+Dec 28 16:15:48 *	Now talking on #gentoo-chat
+Dec 28 16:15:48 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Dec 28 16:15:48 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+**** ENDING LOGGING AT Tue Dec 28 16:16:03 2021
+
+**** BEGIN LOGGING AT Sun Jan  2 23:19:57 2022
+
+Jan 02 23:19:57 *	Now talking on #gentoo-chat
+Jan 02 23:19:57 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Jan 02 23:19:57 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+Jan 02 23:19:59 <gentwo>	:-(
+Jan 02 23:22:04 *	chown_ has quit (Ping timeout: 268 seconds)
+Jan 02 23:22:38 <gentwo>	just realized there is a bitcoin-gentoo community channel :)
+Jan 02 23:22:56 *	salahx has quit (Quit: Leaving)
+Jan 02 23:27:34 *	antlers (~antlers@gateway/vpn/pia/antlers) has joined
+Jan 02 23:28:33 <jcbjoe2021>	Spawns: what package has the FreeBSD flag?
+Jan 02 23:28:33 <anatomicalex>	have fun with the ponzi-scheme themed chats
+Jan 02 23:28:51 *	duxsco has quit (Quit: duxsco)
+Jan 02 23:30:13 *	aisha[m] (~aisha@2001:470:69fc:105::13a) has joined
+Jan 02 23:33:32 *	TinyTimmyTokyo (~TinyTimmy@kuschku.de) has joined
+Jan 02 23:34:21 *	antlers has quit (Ping timeout: 256 seconds)
+Jan 02 23:35:25 *	TinyTimmyTokyo has quit (Client Quit)
+Jan 02 23:36:25 <gentwo>	:D
+Jan 02 23:36:40 *	TinyTimmyTokyo (~TinyTimmy@kuschku.de) has joined
+Jan 02 23:39:18 <Spawns>	i cant remember, i just saw it when updating jcbjoe2021
+Jan 02 23:40:19 <gentwo>	remote to windows machine, i was using rdesktop earlier but these days strugling with extra security built on win10
+Jan 02 23:40:42 <gentwo>	how about freerdp?
+Jan 02 23:41:10 <Jannik2099>	huh?
+Jan 02 23:41:18 <Jannik2099>	you can still enable unrestricted rdp on win10
+Jan 02 23:41:30 <Jannik2099>	so just go with that?
+Jan 02 23:41:50 <Viperlin>	xfreerdp works fine
+Jan 02 23:42:03 <Viperlin>	with correct authentication
+Jan 02 23:42:36 *	antlers (~antlers@gateway/vpn/pia/antlers) has joined
+Jan 02 23:43:24 <gentwo>	Jannik2099: unfortunately  it's not possible to change, domain policy
+Jan 02 23:43:48 <gentwo>	Viperlin: will try that
+Jan 02 23:44:31 *	helium-3 is now known as dilfridge
+Jan 02 23:45:00 <gentwo>	Viperlin: any specific use flags ?
+Jan 02 23:48:27 *	ambasta has quit (Write error: Connection reset by peer)
+Jan 02 23:48:27 *	aisha[m] has quit (Remote host closed the connection)
+Jan 02 23:48:31 *	stintel has quit (Read error: Connection reset by peer)
+Jan 02 23:48:55 <Viperlin>	gentwo: nothing special - can connect to win10RDP - might have to specify username/pw on the comand itself
+Jan 02 23:49:36 <gentwo>	thanks
+Jan 02 23:50:23 *	stintel (~stintel@user/stintel) has joined
+Jan 02 23:50:37 <jcbjoe2021>	oo Chrome is in the repos :P
+Jan 02 23:50:37 *	Nico[m] (~deepbluev@2001:470:69fc:105::2d6) has joined
+Jan 02 23:50:51 *	cb1 (~cb1@user/cb1) has joined
+Jan 02 23:51:06 *	aisha[m] (~aisha@2001:470:69fc:105::13a) has joined
+Jan 02 23:51:06 *	hacc[m] (~haccmatri@2001:470:69fc:105::1:2792) has joined
+Jan 02 23:51:06 *	joecool (~joecool@2001:470:69fc:105::edd) has joined
+Jan 02 23:51:17 *	nlocalhost[m] (~nikitaloc@2001:470:69fc:105::f6fe) has joined
+Jan 02 23:51:17 *	hikari[m] (~atharvaam@2001:470:69fc:105::d9dd) has joined
+Jan 02 23:51:18 <Jannik2099>	always has been
+Jan 02 23:51:31 *	alicela1n (~alicela1n@2001:470:69fc:105::c890) has joined
+Jan 02 23:51:43 *	xiamx (~xiamx@2001:470:69fc:105::1:5692) has joined
+Jan 02 23:51:43 *	ormaaj2 (~ormaaj@user/ormaaj) has joined
+Jan 02 23:51:43 *	bujeddhazeus (~hairu@user/hairu) has joined
+Jan 02 23:51:43 *	Spawns_Carpet[m] (~inceptor-@2001:470:69fc:105::1:298b) has joined
+Jan 02 23:51:56 *	Librecat[m] (~librecatm@2001:470:69fc:105::f287) has joined
+Jan 02 23:51:56 *	yemou[m] (~yemoumatr@2001:470:69fc:105::5021) has joined
+Jan 02 23:51:56 *	ambasta (~ambasta@2001:470:69fc:105::1:3973) has joined
+Jan 02 23:52:08 *	gentwo has quit (Quit: Leaving.)
+Jan 02 23:52:54 *	holgersson has quit (Ping timeout: 268 seconds)
+Jan 02 23:54:36 *	holgersson (~quassel@user/holgersson) has joined
+Jan 02 23:55:46 *	duxsco (~Thunderbi@user/duxsco) has joined
+Jan 03 00:00:40 <ionen>	who needs chrome when you can emerge microsoft-edge
+Jan 03 00:01:24 <hanetzer>	... oh no.
+Jan 03 00:05:03 <R0b0t1`>	there's -edge-beta and -edge-dev too
+Jan 03 00:05:10 <R0b0t1`>	who is maintaining these ....
+Jan 03 00:05:29 <anatomicalex>	I keep microsoft-edge installed as a backup in case proprietary software mucks up my access to online office tools. Sadly, I need those for my work. I'm not smart enough to maintain nuffin though.
+Jan 03 00:06:01 <R0b0t1`>	yeah that's why I use it on a work pc I'm just amazed it compiles on Linux
+Jan 03 00:06:22 <R0b0t1`>	increasingly though, those ported-over internal sharepoint sites fail on the new edge because new edge is chromium based
+Jan 03 00:06:22 <anatomicalex>	I think its a bin, no?
+Jan 03 00:06:23 <Viperlin>	they make a linux binary for a lot
+Jan 03 00:06:38 <R0b0t1`>	it don't end in -bin so it's not a binpkg in portage, no
+Jan 03 00:07:34 <Viperlin>	google-chrome doesn't end in bin
+Jan 03 00:08:04 <R0b0t1`>	hm
+Jan 03 00:08:22 *	chown_ (~chown@96-19-96-19-109-218.cpe.sparklight.net) has joined
+Jan 03 00:08:34 *	hanetzer laughs in idea
+Jan 03 00:09:18 <anatomicalex>	"/var/cache/binpkgs" it is found here
+Jan 03 00:10:39 <R0b0t1`>	dang
+Jan 03 00:10:50 <R0b0t1`>	I am distraught
+Jan 03 00:11:19 <anatomicalex>	there, there, it will be alright
+Jan 03 00:13:02 *	bujeddhazeus has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:25 *	holgersson has quit (Ping timeout: 250 seconds)
+Jan 03 00:13:25 *	stintel has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:45 *	hikari[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:01 *	ormaaj2 has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:14 *	hacc[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:46 *	yemou[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:56 *	Nico[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:17 *	Spawns_Carpet[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:51 *	cb1 has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:04 *	holgersson (~quassel@user/holgersson) has joined
+Jan 03 00:16:06 *	aisha[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:16 *	joecool has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:16 *	ambasta has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:19 *	nlocalhost[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:28 *	alicela1n has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:44 *	TinyTimmyTokyo has quit (Quit: Privet!)
+Jan 03 00:17:01 *	TinyTimmyTokyo (~TinyTimmy@kuschku.de) has joined
+Jan 03 00:17:02 *	xiamx has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:31 *	Librecat[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:21:44 *	Corbit has quit (Quit: WeeChat 3.3)
+**** ENDING LOGGING AT Mon Jan  3 00:31:46 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:35:28 2022
+
+Jan 09 20:35:28 *	Now talking on #gentoo-chat
+Jan 09 20:35:28 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Jan 09 20:35:28 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+Jan 09 20:35:28 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+**** ENDING LOGGING AT Sun Jan  9 20:36:47 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:36:47 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:37:04 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:37:04 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:37:46 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:37:46 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:17 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:17 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:44 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:44 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:50 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:50 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:40:28 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:40:28 2022
+
+Jan 09 20:42:43 *	feriman has quit (Read error: Connection reset by peer)
+Jan 09 20:43:36 *	Bruners has quit (Ping timeout: 240 seconds)
+Jan 09 20:45:16 *	Bruners (lasseb@178.16.64.98) has joined
+Jan 09 20:48:37 *	feriman (~feriman@188.163.113.151) has joined
+Jan 09 20:48:52 <Naib>	oops... undefined symbol: LLVMInitializeNVPTXTargetInfo, version LLVM_13
+Jan 09 20:50:16 <Jannik2099>	Rebuilt llvm with different targets, you did?
+Jan 09 20:50:24 <Naib>	apparently...
+Jan 09 20:50:24 *	Bruners has quit (Ping timeout: 240 seconds)
+Jan 09 20:50:34 <Naib>	time to fallback to gcc and rebuild
+Jan 09 20:52:20 *	Bruners (~lasseb@178.16.64.98) has joined
+Jan 09 20:53:44 *	noex has quit (Ping timeout: 240 seconds)
+Jan 09 20:56:58 <sam_>	jcbjoe2021: that wiki is a godsend
+Jan 09 20:58:53 <jcbjoe2021>	:P
+Jan 09 21:40:07 *	Disconnected ()
+**** ENDING LOGGING AT Sun Jan  9 21:40:07 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 21:40:38 2022
+
+Jan 09 21:40:38 *	Now talking on #gentoo-chat
+Jan 09 21:40:38 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Jan 09 21:40:38 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+**** ENDING LOGGING AT Sun Jan  9 21:41:30 2022
+
+**** BEGIN LOGGING AT Sat Jan 15 14:48:53 2022
+
+Jan 15 14:48:53 *	Now talking on #gentoo-chat
+Jan 15 14:48:53 *	Topic for #gentoo-chat is: RIP doc235 | https://memleek.org/gentoo-chat.txt | To obtain Griz's seekrit notes file, see https://memleek.org/griz.txt | ##notgentoo-idlerpg for classic Idle RPG fun with fellow Gentoo users | IRC isn't the place for your antivax bs.
+Jan 15 14:48:53 *	Topic for #gentoo-chat set by MetaNova!zero-one@znc/supporter/metanova (Tue Nov  2 23:03:45 2021)
+Jan 15 14:48:53 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+Jan 15 14:51:17 *	sillyquestions (~stop_look@172.58.196.113) has joined
+Jan 15 14:52:08 *	feriman has quit (Ping timeout: 240 seconds)
+Jan 15 14:52:25 <sillyquestions>	anyone know anything about hplip?  my printer is refusing to print.
+Jan 15 14:53:39 <e21e3941>	I think it worked the last time I tried. Other than that, I guess I know it exists. It's been about a decade
+Jan 15 14:57:39 <sillyquestions>	e21e3941: thanks.  i have it working on one machine and not on a new install.  i was hoping someone knew where the magic goes.  i wasn't sure which channel they would be watching either.

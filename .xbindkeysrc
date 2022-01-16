@@ -44,11 +44,8 @@
 #Lower
 "amixer set Master 5%-"
    XF86AudioLowerVolume
-#Mute/Unmute Master
-#"amixer set Master toggle"
-#   XF86AudioMute
-#Mute/Unmute Headphones
-"amixer set Headphone toggle"
+#Mute/Unmute
+"amixer set Master toggle"
    XF86AudioMute
 
 # Examples of commands:

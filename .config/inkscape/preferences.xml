@@ -6,7 +6,7 @@
      id="window">
     <group
        id="task"
-       taskset="2" />
+       taskset="0" />
     <group
        id="menu"
        state="1" />
@@ -125,8 +125,10 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="919.025"
-         height="113.964" />
+         width="883.307"
+         height="1236.93"
+         ry="0"
+         rx="152.632" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -163,8 +165,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="456.654"
-         ry="456.654" />
+         rx="12.0339"
+         ry="10.2008" />
       <eventcontext
          id="star"
          magnitude="5"
@@ -194,7 +196,8 @@
          mode="drag"
          selcue="1"
          style="stroke-width:1px;"
-         usecurrent="0" />
+         usecurrent="0"
+         freehand-mode="0" />
     </group>
     <eventcontext
        id="calligraphic"
@@ -316,7 +319,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -342,8 +345,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="159.394"
-       y="212.978"
+       x="411.001"
+       y="-145.093"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -375,10 +378,13 @@
        mean="0" />
     <eventcontext
        id="gradient"
-       selcue="1" />
+       selcue="1"
+       newgradient="2"
+       newfillorstroke="1" />
     <eventcontext
        id="mesh"
-       selcue="1" />
+       selcue="1"
+       mesh_geometry="0" />
     <eventcontext
        id="zoom"
        selcue="1"
@@ -535,7 +541,7 @@
   </group>
   <group
      id="colorselector"
-     page="1" />
+     page="2" />
   <group
      id="embedded">
     <group
@@ -579,7 +585,8 @@
        state="1" />
     <group
        id="preferences"
-       state="1" />
+       state="1"
+       page="28" />
     <group
        id="gradienteditor" />
     <group
@@ -594,14 +601,14 @@
          value="selection" />
       <group
          id="defaultxdpi"
-         value="68.3" />
+         value="53.687" />
     </group>
     <group
        id="save_as"
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/home/franci/Pictures"
+       path="/home/franci/Documents/svgs"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -612,7 +619,7 @@
     <group
        id="open"
        enable_preview="1"
-       path="" />
+       path="/home/franci/Documents/svgs/" />
     <group
        id="import"
        enable_preview="1"
@@ -673,7 +680,9 @@
   </group>
   <group
      id="options"
-     onimport="0">
+     onimport="0"
+     dpifixbackup="1"
+     dpiupdatemethod="0">
     <group
        id="renderingcache"
        size="512" />
@@ -945,11 +954,13 @@
        theme="grayscale">
       <group
          id="shown"
-         ver1.1="1" />
+         ver1.1="1"
+         ver1.1.1="1" />
     </group>
     <group
        id="kbshortcuts"
-       shortcutfile="inkscape.xml" />
+       shortcutfile="inkscape.xml"
+       value="delete" />
     <group
        id="rendering" />
     <group
@@ -961,7 +972,7 @@
      org.inkscape.input.svg.scale="auto" />
   <group
      id="desktop"
-     style="fill:#b48ead;stroke-width:10;paint-order:stroke fill markers">
+     style="fill:#000000;stroke-width:200;paint-order:stroke fill markers;stroke-linecap:round;stroke-linejoin:round">
     <group
        width="640"
        height="480"
@@ -1070,7 +1081,7 @@
      id="theme"
      defaultPreferDarkTheme="0"
      defaultGtkTheme="Adwaita-dark"
-     defaultIconTheme="Adwaita"
+     defaultIconTheme="breeze-dark"
      symbolicIcons="1"
      preferDarkTheme="1"
      darkTheme="1"

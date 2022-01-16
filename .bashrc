@@ -3,9 +3,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#autostart
+coffetch
 #aliases
-alias ufetch='./~/ufetch'
-alias ls='ls -A --color=auto'
-alias dmenu_run='dmenu_run -l 5 -p Search: -fn Monospace -nb black -sb grey -sf black'
+alias ls='ls -lAh --color=auto'
+alias rm='rm -i'
+alias cp='cp -i'
+alias sudo='doas'
+alias nnn='nnn -C -H'
 
-PS1='\w|\$ -> '
+#PS1
+PS1='\w|\$ ↪ '

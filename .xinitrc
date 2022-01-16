@@ -1,11 +1,8 @@
-#!/bin/sh
-#
-# ~/.xinitrc
-#
-# Executed by startx (run your window manager from here)
-
-#Autostart
 xbacklight -set 25 &
 setxkbmap it &
-nitrogen --restore &
-picom &
+dwmblocks &
+xwallpaper --zoom .wallpapers/RetroPC.png &
+xbindkeys &
+exec dwm
+#exec openbox
+#exec vtwm

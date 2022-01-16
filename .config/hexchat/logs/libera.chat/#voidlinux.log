@@ -1,0 +1,844 @@
+**** BEGIN LOGGING AT Tue Dec 21 19:45:17 2021
+
+Dec 21 19:45:17 *	Now talking on #voidlinux
+Dec 21 19:45:17 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 21 19:45:17 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 21 19:47:57 *	#voidlinux n ntlk :MODE cannot be set due to channel having an active MLOCK restriction policy
+Dec 21 19:50:10 *	MY-R (~irc@user/my-r) has joined
+Dec 21 19:52:45 *	ShinyRice (~shinyrice@91.106.17.193) has joined
+Dec 21 19:53:09 *	Guest653 (~Guest65@84.33.178.87) has joined
+Dec 21 19:55:55 *	Guest653 has quit (Client Quit)
+Dec 21 19:56:09 *	duckless_quack has quit (Quit: WeeChat 3.3)
+Dec 21 19:58:50 *	srv has quit (Quit: Leaving)
+**** ENDING LOGGING AT Tue Dec 21 19:59:42 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:00:30 2021
+
+Dec 21 20:00:30 *	Now talking on #voidlinux
+Dec 21 20:00:30 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 21 20:00:30 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+**** ENDING LOGGING AT Tue Dec 21 20:01:04 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:01:04 2021
+
+Dec 21 20:01:24 *	woffs has quit (Excess Flood)
+**** ENDING LOGGING AT Tue Dec 21 20:01:45 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:01:45 2021
+
+**** ENDING LOGGING AT Tue Dec 21 20:02:09 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:02:09 2021
+
+**** ENDING LOGGING AT Tue Dec 21 20:02:57 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:02:57 2021
+
+**** ENDING LOGGING AT Tue Dec 21 20:03:15 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:03:15 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:37:57 2021
+
+Dec 21 20:37:57 *	Now talking on #voidlinux
+Dec 21 20:37:57 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 21 20:37:57 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 21 20:38:53 *	tewrvd^ has quit (Remote host closed the connection)
+Dec 21 20:39:52 *	waleee has quit (Quit: WeeChat 3.3)
+Dec 21 20:40:43 *	waleee (~waleee@2001:9b0:21d:fc00:398f:b003:b90d:acf4) has joined
+Dec 21 20:41:02 <Cicoria>	Hi, have an issue since i first installed void, when my cursor is on the desktop or in non-gtk apps it has a default cursor that I don't really like, is there any way to change it? I tried researching a bit but I've only found solution that involve using lightdm, but i'd prefer using startx
+**** ENDING LOGGING AT Tue Dec 21 20:41:52 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 20:41:52 2021
+
+Dec 21 20:42:10 <quinq>	In your ~/.Xresources: Xcursor.theme: whatever-theme-you-like
+Dec 21 20:42:34 <nbl>	Cicoria: In your ~/.xinitrc add xsetroot -cursor_name left_ptr
+Dec 21 20:42:41 <__abby__>	^
+Dec 21 20:43:47 *	humky has quit (Quit: Leaving)
+**** BEGIN LOGGING AT Tue Dec 21 20:44:27 2021
+
+Dec 21 20:44:27 *	Now talking on #voidlinux
+Dec 21 20:44:27 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 21 20:44:27 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 21 20:45:43 <bleb>	I'm debugging my wpa_supplicant service
+Dec 21 20:45:56 <Cicoria>	tried both quinq and nbl solutions but the cursor remained the same
+Dec 21 20:46:10 <bleb>	wpa_cli does not connect to it
+Dec 21 20:46:39 <bleb>	ps suggests that wpa_supplicant is not running (only thing that shows up is runsv wpa_supplicant)
+Dec 21 20:47:46 <Cicoria>	did you linked the wpa_supplicant service into /var/service?
+Dec 21 20:47:49 <bleb>	Is there a way to run it in the same environment used by runit?  executing /etc/sv/wpa_supplicant/run exits quietly
+Dec 21 20:48:10 <bleb>	with code 255
+Dec 21 20:48:19 <nbl>	Cicoria: https://wiki.archlinux.org/title/Cursor_themes#Change_X_shaped_default_cursor
+Dec 21 20:48:38 <nbl>	Cicoria: https://wiki.archlinux.org/title/Cursor_themes#X_resources
+Dec 21 20:48:42 <bleb>	Cicoria: yeah it's linked
+Dec 21 20:49:36 <bleb>	I was thinking there must be some way to run the service in the foreground so I can see the error messages etc
+Dec 21 20:49:52 *	humky (~humky@user/humky) has joined
+Dec 21 20:51:50 bleb barbarossa93 barpthewire bdju Beebz belgarath_ benalb benji betuxy bL3h blackbeard420 blockhead bobertlo bougyman branon breavyn brokenshakles bug2000 
+Dec 21 20:51:51 bleb barbarossa93 barpthewire bdju Beebz belgarath_ benalb benji betuxy bL3h blackbeard420 blockhead bobertlo bougyman branon breavyn brokenshakles bug2000 
+Dec 21 20:52:18 *	humky has quit (Client Quit)
+Dec 21 20:52:35 <Cicoria>	-d = increase debugging verbosity (-dd even more) @bleb 
+Dec 21 20:53:22 <Cicoria>	also with -f you can send print the logs to a file
+Dec 21 21:10:12 *	Disconnected ()
+**** ENDING LOGGING AT Tue Dec 21 21:10:12 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:10:37 2021
+
+Dec 21 21:10:37 *	Now talking on #voidlinux
+Dec 21 21:10:37 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 21 21:10:37 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 21 21:10:39 *	johnvan (~johnvan@bras-base-toroon2638w-grc-77-76-70-94-7.dsl.bell.ca) has joined
+Dec 21 21:11:45 *	Inline has quit (Quit: Leaving)
+Dec 21 21:12:36 *	Akiva (~Akiva@user/Akiva) has joined
+Dec 21 21:17:45 *	dan0 (~dan0@2001:1438:900:a409:dd49:3465:23a8:7121) has joined
+Dec 21 21:18:31 *	_gypci0 has quit (Quit: Connection closed for inactivity)
+Dec 21 21:18:59 *	srv has quit (Quit: Leaving)
+Dec 21 21:20:07 *	___nick___ (~quassel@cpc68286-cdif17-2-0-cust533.5-1.cable.virginm.net) has joined
+Dec 21 21:25:46 *	sliced (~sliced@nat-185-238-205-210.kampinostelco.pl) has joined
+Dec 21 21:30:46 <dan0>	Hey everyone, I ran into serious problems, not sure if they're void related but I don't know where else to ask right now. I was setting up some stuff on my laptop and suddenly it ran out of power and shut down, before that I ran a full system update which was finished already (I believe). Now a huge amount of stuff doesn't work anymore: startxfce4
+Dec 21 21:30:47 <dan0>	leads to the display of this error: "Unable to load a failsafe session \  Unable to determine failsafe session name. Possible causes: xconfd isn't running (D-Bus setup problem); envirnoment variable $XDG_CONFIG_DIRS is set incorrectly (must include "/etc"), or xfxe4-session is installed incorrectly" All the solutions I found online don't work.
+Dec 21 21:30:47 <dan0>	Firefox doesn't start, says "Missing Profile. Your Firefox profile cannot be loaded. It may be missed or inaccessible." even after reinstalling it, torbrowser doesn't launch, Qutebrowser and chromium work but suddenly use about 80% CPU on all cores, all of that worked before the unintended shutdown. Have you got ANY ideas what I could do? I
+Dec 21 21:30:48 <dan0>	desperately need to sleep but I need this laptop for work tomorrow morning and I need to fix this until then, I'm really going crazy right now
+Dec 21 21:31:18 <dan0>	I'm typing all of this on my phone btw, sorry for any typos. This took a decade to write :/
+Dec 21 21:32:45 <Velvet>	i've been having xfce issues in arco too fwiw....suddenly radiotray and kodi stopped working...maybe an xfce issue?
+Dec 21 21:34:19 <Cicoria>	have you tried reinitializing the sys update?
+Dec 21 21:35:06 <dan0>	Velvet: Do you think I should try downgrading it? The browser issues didn't occur on xfce though, I tried another wm for that as I can't even start xfce. Downgraded firefox even and that didn't change anything
+Dec 21 21:35:21 <aedinius>	dan0: you can check to make sure packages are okay with `xbps-pkgdb -a`
+Dec 21 21:36:32 <Velvet>	no solutions for me yet either..still looking  :/
+Dec 21 21:37:05 <dan0>	Cicoria: I'm sorry for asking stupidly like that, but what does that mean and ehat do I need to do?
+Dec 21 21:37:22 <Cicoria>	xbps-install -Su
+Dec 21 21:37:23 <dan0>	aedinius: just ran that, returned nothing
+Dec 21 21:37:59 <aedinius>	okay, that's good.  following the errors it gave you, do you have system dbus running?
+**** ENDING LOGGING AT Tue Dec 21 21:39:16 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:39:16 2021
+
+**** ENDING LOGGING AT Tue Dec 21 21:39:41 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:39:41 2021
+
+Dec 21 21:39:44 <dan0>	Cicoria: okay, did that. It just updated ff again after I downgraded it, apart fron that nothing changed
+**** ENDING LOGGING AT Tue Dec 21 21:39:58 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:39:58 2021
+
+Dec 21 21:40:01 <dan0>	aedinius: yes, it is running
+Dec 21 21:40:35 <dan0>	Thanks for your super fast replies btw, it is awesome to have all of you help me like that!
+**** ENDING LOGGING AT Tue Dec 21 21:40:41 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:40:41 2021
+
+Dec 21 21:44:46 <Cicoria>	maybe try reinstalling xfce?
+**** ENDING LOGGING AT Tue Dec 21 21:45:01 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:45:01 2021
+
+**** ENDING LOGGING AT Tue Dec 21 21:45:21 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:45:21 2021
+
+**** ENDING LOGGING AT Tue Dec 21 21:45:34 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:45:34 2021
+
+Dec 21 21:46:23 <dan0>	Okay, will do. Are there any config files I should backup?
+Dec 21 21:47:38 <Cicoria>	"Xfce usually stores its configuration files in ~/.config/xfce4 (as well as ~/.local/share/xfce4 and ~/.config/Thunar). Copying these directories to your laptop should do the job. Keyboard shortcuts are stored in ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml, so they should get copied as well."
+Dec 21 21:47:45 <dan0>	Doesn't work after reinstall either
+Dec 21 21:48:20 <dan0>	Sorry, I didn't even wait as I remembered that I didn't configure xfce in any way at all so it didn't matter
+Dec 21 21:48:24 <Velvet>	did you reboot?
+Dec 21 21:48:49 <dan0>	After the xfce reinstall? No, but before I tried a bunch of reboots
+Dec 21 21:49:21 *	Inline (~Inline@aftr-37-201-240-204.unity-media.net) has joined
+**** ENDING LOGGING AT Tue Dec 21 21:50:24 2021
+
+**** BEGIN LOGGING AT Tue Dec 21 21:50:24 2021
+
+Dec 21 21:50:45 *	MY-R has quit (Quit: MY-R)
+Dec 21 21:51:20 <dan0>	Btw, I may have found some more info on the weird performance issues with qutebrowser and chromium: in my login console, among the output of my wm logs, there are the following lines:
+Dec 21 21:51:40 *	#voidlinux t ntlk :MODE cannot be set due to channel having an active MLOCK restriction policy
+Dec 21 21:51:53 *	#voidlinux l ntlk :MODE cannot be set due to channel having an active MLOCK restriction policy
+Dec 21 21:51:53 *	Channel #voidlinux modes: +cnt
+Dec 21 21:51:53 *	Channel #voidlinux created on Wed May 19 14:31:31 2021
+Dec 21 21:51:55 <dan0>	ATTENTION: default value of option mesa_glthread overriden by environment
+Dec 21 21:52:50 <dan0>	JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+Dec 21 21:53:16 *	egorenar (~egorenar@85.203.15.18) has joined
+Dec 21 21:54:11 *	egorenar_ has quit (Ping timeout: 240 seconds)
+Dec 21 21:54:56 <Cicoria>	@dan0, the js error is because js is not enabled in your browser
+Dec 21 21:56:29 *	woffs (3cd46299b2@woffs.de) has joined
+Dec 21 21:56:35 <dan0>	Oh okay, I was hoping that would somehow be related to my problems. It's probably output from lynx then, which I was spontaneously using as the other browsers were basically unasable
+Dec 21 21:58:37 <Cicoria>	when i search for the mesa_glthread error only firefox website come up, you sure its chromium/qute?
+Dec 21 21:58:48 *	hiljusti (~hiljusti@2601:600:c681:23b0:960b:7cc3:3849:e69b) has joined
+Dec 21 22:00:07 <dan0>	Yes, firefox didn't even start due to to the profile issue, if firefox could have printed out that anyways than it could have been firefox. I could try it again
+Dec 21 22:00:40 *	MY-R (~irc@user/my-r) has joined
+Dec 21 22:00:48 <dan0>	Yes, you were right. It also occurs if I only try to start ff. The JS errors as well
+Dec 21 22:03:49 <Cicoria>	@dan0, https://support.mozilla.org/en-US/kb/how-run-firefox-when-profile-missing-inaccessible
+Dec 21 22:04:59 *	humky has quit (Remote host closed the connection)
+Dec 21 22:05:17 *	nerdbro has quit (Remote host closed the connection)
+Dec 21 22:05:36 *	nerdbro (~nerdbro@191.240.217.53) has joined
+Dec 21 22:08:10 <dan0>	Cicoria: thanks, unfortunately I can't open profile manager with firefox -P as it returns the same mesa/js errors I shared above. I already tried deleting profiles.ini
+Dec 21 22:09:50 *	nerdbro has quit (Remote host closed the connection)
+Dec 21 22:10:08 *	nerdbro (~nerdbro@191.240.217.53) has joined
+Dec 21 22:12:12 <dan0>	If I interpret https://bugzilla.mozilla.org/show_bug.cgi?id=1744389 correctly the mesa thing shouldn't be an issue, so it's probably the js error
+Dec 21 22:13:09 <urnenheit>	I have a package that I built with xbps-src. Running xbps-src -Q on my machine doesn't give me any errors but the checks in my PR fail for some architectures.
+Dec 21 22:13:49 <urnenheit>	Should I just whitelist the architectures that work in the template file?
+Dec 21 22:13:55 <aedinius>	urnenheit: No, figure out why the checks fail.
+Dec 21 22:14:14 <aedinius>	urnenheit: What PR#?
+Dec 21 22:14:24 *	nerdbro has quit (Remote host closed the connection)
+Dec 21 22:14:33 <urnenheit>	aedinius: https://github.com/void-linux/void-packages/pull/34589/checks
+Dec 21 22:14:46 *	nerdbro (~nerdbro@191.240.217.53) has joined
+Dec 21 22:15:05 <aedinius>	Okay, -Q has nothing to do with that.  You need to fix cross-build
+Dec 21 22:15:32 <aedinius>	Looks like its forcing looking for libtinfo, which we don't separate
+Dec 21 22:16:53 <aedinius>	I mean its not separate from ncurses
+Dec 21 22:17:07 <aedinius>	Or do we now
+Dec 21 22:17:12 <aedinius>	Looks we do now
+Dec 21 22:17:42 <aedinius>	Add ncurses-libtinfo-devel to makedepends
+Dec 21 22:17:59 <urnenheit>	alright
+Dec 21 22:18:02 <urnenheit>	uh
+Dec 21 22:18:09 <urnenheit>	that's symlinked to ncurses
+Dec 21 22:18:21 <urnenheit>	srcpkgs/ncurses-libtinfo-devel is symlinked to ncurses
+Dec 21 22:18:27 <aedinius>	Yes, its a split package
+Dec 21 22:18:54 <urnenheit>	and ncurses-devel is also symlinked to ncurses
+Dec 21 22:19:01 <aedinius>	Also split packages.
+Dec 21 22:19:04 <urnenheit>	aren't they the same package, then?
+Dec 21 22:19:10 <aedinius>	No, they contain different files
+Dec 21 22:19:36 <aedinius>	Look at the ncurses-devel_package() function in the template, it'll show that certain files are moved to the separate package
+Dec 21 22:20:04 <aedinius>	https://github.com/void-linux/void-packages/blob/master/Manual.md#pkgs_sub
+Dec 21 22:20:16 *	dan0 has quit (Quit: Client closed)
+**** BEGIN LOGGING AT Wed Dec 22 15:57:02 2021
+
+Dec 22 15:57:02 *	Now talking on #voidlinux
+Dec 22 15:57:02 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 22 15:57:02 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 22 15:57:42 *	Dko1905 has quit (Ping timeout: 245 seconds)
+Dec 22 16:00:35 *	bug2000 has quit (Remote host closed the connection)
+Dec 22 16:05:26 *	viesturs (~viesturs@188.112.141.126) has joined
+Dec 22 16:05:35 <viesturs>	 hi! trying to run apache now and it doesn't listen to port 80 according to netstat -tulpn | grep LISTEN
+Dec 22 16:06:04 <viesturs>	Alert!: Unable to connect to remote host - when I run fullstatus
+Dec 22 16:06:14 <viesturs>	 my website file are in /srv/www/apache/
+Dec 22 16:07:53 *	teasea6 (~teasea@user/teasea) has joined
+Dec 22 16:08:17 *	Dko1905_ has quit (Ping timeout: 250 seconds)
+Dec 22 16:11:17 *	teasea has quit (Ping timeout: 240 seconds)
+Dec 22 16:11:18 *	teasea6 is now known as teasea
+Dec 22 16:11:42 *	bilebucket has quit (Quit: WeeChat 3.4)
+Dec 22 16:17:08 *	moog (~moog@107.126.53.224) has joined
+Dec 22 16:21:33 <paper_>	check that the service actually runs and doesn't keep crashing and the logs
+Dec 22 16:22:18 *	breavyn_ (~breavyn@user/breavyn) has joined
+Dec 22 16:23:17 *	breavyn has quit (Ping timeout: 240 seconds)
+Dec 22 16:23:38 <viesturs>	[mpm_event:crit] [pid 30708:tid 548349953680] (70023)This function has not been implemented on this platform: AH00495: Couldn't create a Thread Safe Pollset. Is it supported on your platform?Also check system or user limits!
+Dec 22 16:23:48 <viesturs>	[:emerg] [pid 30708:tid 548349953680] AH00017: Pre-configuration failed, exiting
+Dec 22 16:24:07 <viesturs>	does apache runs fine for someone on voidlinux?
+Dec 22 16:26:14 <viesturs>	on raspberry pi
+Dec 22 16:29:20 *	johnvan (~johnvan@bras-base-toroon2638w-grc-77-76-70-94-7.dsl.bell.ca) has joined
+Dec 22 16:31:38 *	bug2000 (~bug@user/bug) has joined
+Dec 22 16:32:37 *	dnv (~dnv@213.80.broadband16.iol.cz) has joined
+Dec 22 16:35:03 *	xaltsc has quit (Remote host closed the connection)
+Dec 22 16:37:34 *	|ast| has quit (Quit: WeeChat 3.4)
+Dec 22 16:40:51 <Piraty>	nginx does, so does caddy
+Dec 22 16:41:27 <Piraty>	never ran apache in last 10y or so
+Dec 22 16:41:32 <viesturs>	for some unknown reason to me, nginx did read one directory but didn't run other
+Dec 22 16:41:48 <viesturs>	so, I decided to try apache
+Dec 22 16:43:00 *	xaltsc (~xaltsc@user/xaltsc) has joined
+Dec 22 16:44:14 *	greenel (~el@bl8-67-202.dsl.telepac.pt) has joined
+Dec 22 16:44:53 <xaltsc>	Any idea what use someone may have for zed (for zfs) ?
+Dec 22 16:44:55 *	via_c7 has quit (Quit: Leaving)
+Dec 22 16:45:43 *	greenly has quit (Ping timeout: 260 seconds)
+Dec 22 16:46:12 *	xaltsc has quit (Client Quit)
+Dec 22 16:47:14 *	xaltsc (~xaltsc@user/xaltsc) has joined
+Dec 22 16:49:33 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Wed Dec 22 16:49:33 2021
+
+**** BEGIN LOGGING AT Wed Dec 22 20:48:59 2021
+
+Dec 22 20:48:59 *	Now talking on #voidlinux
+Dec 22 20:48:59 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 22 20:48:59 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 22 20:49:19 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Wed Dec 22 20:49:19 2021
+
+**** BEGIN LOGGING AT Wed Dec 22 20:54:57 2021
+
+Dec 22 20:54:57 *	Now talking on #voidlinux
+Dec 22 20:54:57 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 22 20:54:57 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 22 20:56:42 *	nerdbro has quit (Remote host closed the connection)
+Dec 22 20:57:02 *	nerdbro (~nerdbro@191.240.217.53) has joined
+Dec 22 21:10:45 *	_gypci0 has quit (Quit: Connection closed for inactivity)
+Dec 22 21:13:00 *	nezos (~nezos@188.73.234.115) has joined
+Dec 22 21:14:11 <nezos>	hi, is anyone else facing the "filter failed" error after upgrading cups?
+Dec 22 21:15:44 *	_gypci0 (uid22991@id-22991.tinside.irccloud.com) has joined
+Dec 22 21:17:43 *	raposo has quit (Ping timeout: 268 seconds)
+Dec 22 21:21:05 <nerdbro>	I have 2 partitions: Win 10 and Arch, dual booted w/ GRUB in a x64 UEFI system. I wanna install Void in the Arch partition, overwriting it. How do I make it bootable by GRUB? Should I chroot or use the installer?
+Dec 22 21:22:41 <Cicoria>	installer, it sets up grub 
+Dec 22 21:23:40 *	flotsam has quit (Quit: flotsam)
+Dec 22 21:24:25 <nerdbro>	It just asks to install GRUB or not, should I just overwrite the GRUB partition w/ the installer's GRUB to make things easier?
+Dec 22 21:24:36 <Cicoria>	yes
+Dec 22 21:25:26 *	nezos has quit (Quit: Leaving)
+Dec 22 21:26:00 *	nerdbro has quit (Remote host closed the connection)
+Dec 22 21:26:19 *	nerdbro (~nerdbro@191.240.217.53) has joined
+Dec 22 21:26:45 *	flotsam (~Thunderbi@2001:9b0:25f:fe00:b6d5:bdff:fea8:fc73) has joined
+Dec 22 21:33:13 <bobertlo>	does anyone here use rEFInd? I installed windows and successfully installed got rEFInd installed. I haven't installed void again but I'm not expecting any issues at this point. I'm planning on doing multiboot linux with btrfs or zfs and I'm pretty excited.
+Dec 22 21:33:53 <ahesford>	if you want to stay excited, stay away from btrfs :P
+Dec 22 21:34:38 <bobertlo>	heh. i've had interesting experiences with zfs but no experiences with btrfs yet to judge against
+Dec 22 21:35:11 <ahesford>	the zfs experience on void is the best there is
+Dec 22 21:36:54 <nerdbro>	Does the installer come w/ ZFS?
+Dec 22 21:37:04 <ahesford>	no
+Dec 22 21:37:43 <bobertlo>	good to know. i remember running it on void with lxd and it was really great. i don't have any real reason to try btrfs
+Dec 22 21:44:16 *	benji has quit (Quit: ZNC - https://znc.in)
+Dec 22 21:44:26 *	Shinigami-Sama has quit (Remote host closed the connection)
+Dec 22 21:45:17 <zdykstra>	https://github.com/zbm-dev/zfsbootmenu/wiki/Void-Linux---Single-disk-UEFI
+Dec 22 21:45:39 *	benji (~benji@user/benji) has joined
+Dec 22 21:46:04 <zdykstra>	there's a ZFS guide which uses refind
+Dec 22 21:46:53 *	Shinigami-Sama (~xero@user/shinigami-sama) has joined
+Dec 22 21:47:14 *	uzib has quit (Ping timeout: 256 seconds)
+Dec 22 21:47:54 *	JollyRoger has quit (Remote host closed the connection)
+Dec 22 21:48:21 *	JollyRoger (~JollyRoge@user/thejollyroger) has joined
+Dec 22 21:48:57 *	midasi has quit (Quit: ZNC - https://znc.in)
+**** BEGIN LOGGING AT Fri Dec 24 18:51:01 2021
+
+Dec 24 18:51:01 *	Now talking on #voidlinux
+Dec 24 18:51:01 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 24 18:51:01 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 24 18:52:02 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Fri Dec 24 18:52:02 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 11:49:26 2021
+
+Dec 28 11:49:26 *	Now talking on #voidlinux
+Dec 28 11:49:26 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 28 11:49:26 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 28 11:49:34 <rubin55>	https://github.com/void-linux/void-packages
+Dec 28 11:49:40 <paper_>	no, upstream
+Dec 28 11:49:40 <wiben[m]>	what is a "desktop movie"?
+Dec 28 11:49:47 <paper_>	= the alsa project
+Dec 28 11:49:58 <rubin55>	Alright, will do
+Dec 28 11:51:34 <stoneriver>	wiben[m], not a holywood movie.
+Dec 28 11:52:06 <wiben[m]>	stoneriver: alright, now! im curious
+Dec 28 11:52:45 <paper_>	rubin55: before reporting the bug, try reproducing it with just alsa - without pipewire
+Dec 28 11:53:08 <stoneriver>	Don't look at me! I do not know what the fine sir wan't to record on the top of his desk. ^^,
+Dec 28 11:54:39 <stoneriver>	err, I meant to say "what movie you can do on the top of a desk"
+Dec 28 11:55:21 <wiben[m]>	first what would come to mind... would beeee... a yes! a lego stopmotion  movie :D
+Dec 28 11:57:09 <stoneriver>	;-)
+Dec 28 11:57:43 *	Guest98 (~Guest98@83.234.93.153) has joined
+Dec 28 12:02:03 <rubin55>	ok, talk about heissenbug.. I can't reproduce it. Downgrade fixed it, I upgraded so I can selectively identify which package caused it, now fully upgraded, no issue. Issue was persistent on poweroff/reboot. Hahah
+Dec 28 12:02:30 <rubin55>	Oh well, automatic bug fixes, what's not to love!
+Dec 28 12:05:51 *	Galladite (~Galladite@host-92-24-75-159.as13285.net) has joined
+Dec 28 12:06:44 *	kib has quit (Quit: WeeChat 3.4)
+Dec 28 12:14:22 *	zeden (~zeden@user/zeden) has joined
+Dec 28 12:20:25 *	ceamac has quit (Ping timeout: 240 seconds)
+Dec 28 12:21:58 *	ceamac (~ceamac@89.42.42.141) has joined
+Dec 28 12:24:06 *	ShinyRice (~shinyrice@130.red-79-145-9.dynamicip.rima-tde.net) has joined
+Dec 28 12:27:08 *	oZZ (~oZZ@user/ozz) has joined
+Dec 28 12:34:25 *	natrys has quit (Ping timeout: 240 seconds)
+Dec 28 12:34:44 <TheAnachron>	I have some /usr/bin/gst- orphans, seems like it was from gstreamer which was modified not to include some of those files and others were renamed.
+Dec 28 12:35:10 <TheAnachron>	I wonder if xbps could detect this?
+Dec 28 12:35:31 <paper_>	it should have uninstalled these files
+Dec 28 12:36:15 <paper_>	can you reproduce it?
+Dec 28 12:36:32 *	n0toose (~n0toose@tenacity/staff/panos) has joined
+Dec 28 12:36:46 <TheAnachron>	I dont think so, the files are from gstreamer 0.10 and my xbps cache is quite empty
+Dec 28 12:36:55 <paper_>	xbps-src exists
+Dec 28 12:37:16 <TheAnachron>	https://gist.github.com/Anachron/83f96bb5593db9be57c05cb43d021627
+Dec 28 12:37:18 <TheAnachron>	here are the orphans.
+Dec 28 12:37:22 <paper_>	hmm, but you might not be able to build old versions of gstreamer
+Dec 28 12:37:46 *	natrys (~natrys@user/natrys) has joined
+Dec 28 12:37:50 <TheAnachron>	depends on the source and the dependencies. They all need to be rebuild.
+Dec 28 12:39:04 <TheAnachron>	I have around 70 orphaned files, 27 by one package alone, looks better than I expected.
+Dec 28 12:39:24 <paper_>	I am just saying that with modern tools, older gstreamer versions won't build
+Dec 28 12:39:35 <paper_>	= just git reverts of gstreamer updates
+Dec 28 12:40:24 *	oZZ has quit (Ping timeout: 245 seconds)
+Dec 28 12:44:08 <Piraty>	deathmist1: yeah headers is the worst part
+Dec 28 12:44:42 <Piraty>	did you come up with a soluition to crossbuild the tools correctly ?
+Dec 28 12:46:11 <Piraty>	erm, i mean `make scripts`
+Dec 28 12:47:03 *	oZZ (~oZZ@user/ozz) has joined
+Dec 28 12:48:49 *	lavaball (aj@31.204.155.215) has joined
+Dec 28 12:50:39 <Piraty>	so we don't need to build them during dkms hook / xbps-trigiger as it leads to changed files owned by the package
+Dec 28 12:50:45 *	einnhverr has quit (Ping timeout: 240 seconds)
+Dec 28 12:52:23 <ShinyRice>	offtopic but anyone here know stuff about mongodb?
+Dec 28 12:52:52 <Piraty>	other than 'shitty license' ?
+Dec 28 12:53:05 <ShinyRice>	yeah
+Dec 28 12:53:13 <TheAnachron>	or that there is a postgres compability layer?
+Dec 28 12:53:28 <ShinyRice>	yeah...
+Dec 28 12:53:37 <Piraty>	what about it then
+Dec 28 12:53:52 *	Piraty sips hot chocolate
+Dec 28 12:54:24 <ShinyRice>	just wanted to know if what I'm actually writing is JS when I'm making queries, since I read that "it doesn't have a query language, you talk directly to the API" or something like that
+Dec 28 12:54:40 <ShinyRice>	syntax looks a lot like JS...
+Dec 28 12:55:28 <ShinyRice>	dumb question I know
+Dec 28 12:55:55 <Piraty>	first paragraph of wikipedia told me alot about its relation to json
+Dec 28 12:56:37 <Piraty>	https://en.wikipedia.org/wiki/Mongodb#Server-side_JavaScript_execution
+Dec 28 12:57:10 <Piraty>	that will be 4.99 in voidcoin for my superior research capabilities
+Dec 28 12:58:37 <ShinyRice>	well it says can be used, which makes me think more basic ass queries may or may not be JS
+Dec 28 12:58:52 <ShinyRice>	like
+Dec 28 12:59:21 <ShinyRice>	does this look like JS to you?
+Dec 28 12:59:23 <ShinyRice>	db.municipios.find({comunidad:'Extremadura'}).count();
+Dec 28 12:59:32 <TheAnachron>	I wouldn't dare writing db dependant code ... but that's just me :p
+Dec 28 13:00:18 <Piraty>	i didn't write any js for the last 12y and alot may have changed, so i wouldn't know. but looks reasonable
+Dec 28 13:01:24 <Piraty>	back when js was used to animate image slideshows and open messagebox dialogs
+Dec 28 13:03:12 <ShinyRice>	yeah this is just something basic, don't think it has changed much
+Dec 28 13:03:14 <ShinyRice>	okay thanks
+Dec 28 13:04:34 *	natrys has quit (Ping timeout: 245 seconds)
+Dec 28 13:05:47 *	natrys (~natrys@user/natrys) has joined
+Dec 28 13:06:21 *	meator (~meator@user/meator) has joined
+Dec 28 13:11:22 *	TheAnachron has quit (Quit: TheAnachron)
+Dec 28 13:13:45 *	natrys has quit (Ping timeout: 240 seconds)
+Dec 28 13:17:18 *	belgarath_ (~belgarath@lfbn-nan-1-2292-176.w92-139.abo.wanadoo.fr) has joined
+Dec 28 13:17:37 <belgarath_>	merry christmas voidlinux
+Dec 28 13:21:25 *	eoli3n__ has quit (Ping timeout: 240 seconds)
+Dec 28 13:25:05 *	bilebucket1 (~bilebucke@user/bilebucket) has joined
+Dec 28 13:25:05 *	bilebucket1 has quit (Client Quit)
+Dec 28 13:25:24 *	bilebucket has quit ()
+Dec 28 13:25:50 *	bilebucket (~bilebucke@user/bilebucket) has joined
+Dec 28 13:27:29 *	natrys (~natrys@user/natrys) has joined
+Dec 28 13:31:54 *	nexeq has quit (Read error: Connection reset by peer)
+Dec 28 13:33:15 *	neceve (~quassel@2.26.93.228) has joined
+Dec 28 13:37:37 *	belgarath_ has quit (Quit: Leaving.)
+Dec 28 13:37:59 *	belgarath_ (~belgarath@lfbn-nan-1-2292-176.w92-139.abo.wanadoo.fr) has joined
+Dec 28 13:40:17 *	ceamac has quit (Remote host closed the connection)
+Dec 28 13:41:30 *	vanessa has quit (Quit: Leaving)
+Dec 28 13:43:00 *	nexeq (~nexeq@user/nexeq) has joined
+Dec 28 13:44:41 <j0ni>	ShinyRice: iirc if you use mongodb from a js app running in a different process your code will look 90% the same as if you typed it into the mongo commandline, but if you want to do something like set up a map/reduce operation in mongo itself, you must write the part that runs inside mongo using the limited environment available there - i.e., you can't make use of any neato libs you might
+Dec 28 13:44:43 <j0ni>	routinely use to make javascript less horrific
+Dec 28 13:46:00 <j0ni>	I think it's only really confusing if you're using js in your client code too - otherwise it's pretty obvious what's up
+Dec 28 13:46:11 *	ceamac (~ceamac@89.42.42.141) has joined
+Dec 28 13:48:19 <j0ni>	quick look at the mongo docs - there seems to be a new query dsl so I guess I'm an unreliable witness
+Dec 28 13:51:01 <ShinyRice>	yeah I just looked at that like 5 mins ago lol
+Dec 28 13:56:25 <Mellowlink>	hello. is it possible on void to remove the newest kernel and use lts kernel only?
+Dec 28 13:57:03 <Mellowlink>	i can't even get the lts kernel to boot as default on setup with encrypted grub
+Dec 28 14:01:24 <Mellowlink>	forgot to mention that refering to this guide did not work
+Dec 28 14:01:25 <Mellowlink>	https://docs.voidlinux.org/config/kernel.html#removing-the-default-kernel-series
+Dec 28 14:02:40 <paper_>	define "did not work"
+Dec 28 14:04:09 <j0ni>	ShinyRice: I bet it didn't tell you to set fire to your mongo and run away, which is the advice any question about mongo should elicit
+Dec 28 14:04:09 <paper_>	>  It might be necessary to add linux and linux-headers to an ignorepkg entry in xbps.d(5), since base packages can depend on them.
+Dec 28 14:04:24 <paper_>	this os the most important part
+Dec 28 14:06:13 <stoneriver>	I opened an issue on github for pcmanfm...
+Dec 28 14:07:20 <stoneriver>	I don't get it... the last time I installed it on void it worked flawless.
+Dec 28 14:07:50 <stoneriver>	Version does not seem to have changed since then.
+Dec 28 14:08:17 <hyperreal>	good morning Void
+Dec 28 14:11:14 *	neceve has quit (Read error: Connection reset by peer)
+Dec 28 14:11:52 <Mellowlink>	paper_: oh yeah i had typo i just had ignore=$name instead of ignorepkg=$name
+Dec 28 14:11:55 <Mellowlink>	thx anyway
+Dec 28 14:14:00 <ShinyRice>	j0ni: fortunately (for now) all I need to know are the basics, as I'm required to learn them in an introductory course to databases...
+Dec 28 14:14:56 <ShinyRice>	so why is it shunned? aside from the bad license
+Dec 28 14:15:12 <ShinyRice>	the dsl doesn't seem the most readable either...
+Dec 28 14:16:02 <randomvoiduser>	I have do_patch() defined in template and it still tries to apply default hook so it patches twice
+Dec 28 14:16:08 <randomvoiduser>	how to handle that?
+Dec 28 14:18:49 *	Justin_T (~Justin@user/justin-t/x-2449983) has left (WeeChat 2.7.1)
+Dec 28 14:23:21 *	luca1 (~luca@2001:4640:3a2e:0:7571:818a:5032:9f7f) has joined
+Dec 28 14:24:09 <stoneriver>	guardant[m], you might be right... it's not that pcmanfm-qt writes directly to that file, it seems to go through xdg
+Dec 28 14:24:14 <stoneriver>	so the bug might be there
+Dec 28 14:24:14 <luca1>	Hi, I was wondering if there was some iso file out there with a gui installer for void linux?
+Dec 28 14:32:13 *	zeden has quit (Quit: WeeChat 3.4)
+Dec 28 14:33:02 *	semeion (~semeion@user/semeion) has joined
+Dec 28 14:33:33 *	semeion is now known as mnemonic
+Dec 28 14:36:21 <duncaen>	someone worked on the calamares installed, but I don't think there is anything ready to use or actually compatible other than the ncurses installed
+Dec 28 14:36:27 <duncaen>	s/installed/installer
+Dec 28 14:39:01 <luca1>	Do you have a link? Sounds interesting
+Dec 28 14:40:02 <duncaen>	https://github.com/void-linux/void-packages/pull/33310
+Dec 28 14:40:16 <luca1>	Thanks
+Dec 28 14:41:16 *	einnhverr (~einnhverr@user/einnhverr) has joined
+Dec 28 14:45:08 <stoneriver>	Ok, I got an answer from the dev of pcmanfm-qt, it's a bug. He is going to fix it. That was fast.
+Dec 28 14:45:26 *	belgarath_ has quit (Quit: Leaving.)
+Dec 28 14:45:27 *	tvtoon (~tvtoon@168.197.232.177) has joined
+Dec 28 14:45:43 *	belgarath_ (~belgarath@lfbn-nan-1-2292-176.w92-139.abo.wanadoo.fr) has joined
+Dec 28 14:48:51 *	sliced has quit (Ping timeout: 256 seconds)
+Dec 28 14:59:47 *	greenly has quit (Quit: WeeChat 3.0.1)
+Dec 28 15:00:01 *	nexeq has quit (Remote host closed the connection)
+Dec 28 15:00:08 *	greenel (~el@bl8-67-202.dsl.telepac.pt) has joined
+Dec 28 15:02:19 *	nexeq (~nexeq@user/nexeq) has joined
+Dec 28 15:08:18 *	stoneriver has quit (Quit: Leaving)
+Dec 28 15:17:04 *	EnfauKerus has quit (Remote host closed the connection)
+Dec 28 15:17:38 *	nexeq has quit (Remote host closed the connection)
+Dec 28 15:18:34 *	Epsilon has quit (Remote host closed the connection)
+Dec 28 15:18:52 *	Epsilon (~Epsilon@user/epsilon) has joined
+Dec 28 15:19:02 *	nexeq (~nexeq@user/nexeq) has joined
+Dec 28 15:19:28 *	EnfauKerus (~EnfauKeru@gateway/tor-sasl/enfaukerus) has joined
+Dec 28 15:20:30 *	lavaball has quit (Ping timeout: 240 seconds)
+Dec 28 15:45:55 *	Disconnected ()
+**** ENDING LOGGING AT Tue Dec 28 15:45:58 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 16:15:24 2021
+
+Dec 28 16:15:24 *	Now talking on #voidlinux
+Dec 28 16:15:24 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 28 16:15:24 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 28 16:15:24 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+Dec 28 16:15:24 <stoneriver>	how can i set environment variables correctly? I have tried .xinitrc, with a script... etc... so I can specify xdg_current_desktop variable for graphical apps
+Dec 28 16:15:24 <stoneriver>	I want to set this variable globally.
+Dec 28 16:15:24 <stoneriver>	XDG_CURRENT_DESKTOP="lxqt"
+Dec 28 16:15:24 <lopid>	i put mine in /etc/profile.d/local.sh
+Dec 28 16:15:24 <lopid>	or ~/.profile for user stuff
+Dec 28 16:15:24 *	Cicoria has quit (Ping timeout: 252 seconds)
+Dec 28 16:15:24 *	Disconnected (Remote host closed socket)
+**** ENDING LOGGING AT Tue Dec 28 16:15:24 2021
+
+**** BEGIN LOGGING AT Tue Dec 28 16:15:48 2021
+
+Dec 28 16:15:48 *	Now talking on #voidlinux
+Dec 28 16:15:48 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Dec 28 16:15:48 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Dec 28 16:15:48 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+Dec 28 16:15:55 *	xaltsc (0013b3a2de@2604:bf00:561:2000::2a0) has joined
+**** ENDING LOGGING AT Tue Dec 28 16:16:03 2021
+
+**** BEGIN LOGGING AT Sun Jan  2 14:46:31 2022
+
+Jan 02 14:46:31 *	Now talking on #voidlinux
+Jan 02 14:46:31 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Jan 02 14:46:31 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+**** ENDING LOGGING AT Sun Jan  2 14:48:04 2022
+
+**** BEGIN LOGGING AT Sun Jan  2 14:48:04 2022
+
+**** ENDING LOGGING AT Sun Jan  2 14:48:26 2022
+
+**** BEGIN LOGGING AT Sun Jan  2 14:48:26 2022
+
+Jan 02 14:48:28 *	ftpd has quit (Quit: ftpd)
+Jan 02 14:48:43 *	ftpd (f@gentoo/ricer/ftpd) has joined
+Jan 02 14:48:51 *	joahe has quit (Remote host closed the connection)
+Jan 02 14:51:15 *	spcext (~athena@103.79.248.148) has joined
+Jan 02 14:51:26 *	erich_zann has quit (Quit: WeeChat 3.4)
+Jan 02 14:54:50 *	sektor (~sektor@2601:547:202:930:3985:4732:2650:ce6e) has joined
+Jan 02 15:02:42 <spcext>	anyone has some ideas to fix/improve battery life on linux?
+Jan 02 15:03:00 <spcext>	i find the battery behavior quite erratic on my new laptop, i have a fairly light workload but despite that it chugs battery like anything somedays (even when lite browsing/book-reading)
+Jan 02 15:03:02 <Toromino>	Maybe use tlp
+Jan 02 15:04:04 <spcext>	i thought that the improvements to the linux kernel make tlp somewhat redundant?
+Jan 02 15:04:12 <spcext>	although i haven
+Jan 02 15:04:29 <spcext>	*haven't personally tried it
+Jan 02 15:07:48 *	jyom10j3 (~jyom10j3@2405:6580:8da0:3800:3e84::1000) has joined
+Jan 02 15:08:12 <spcext>	somedays i can get 7-9 hours but other days it barely lasts me 4 hours while my workload remains the same
+Jan 02 15:09:27 <Toromino>	tlp helped a bit on my old laptop
+Jan 02 15:09:35 <Toromino>	It too had poor battery life
+Jan 02 15:10:49 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 15:11:06 *	sgn (~sgn@user/sgn) has joined
+Jan 02 15:11:50 <spcext>	i don't think the problem lies with my laptop though, its brand new and the battery is consistently good when on windows
+Jan 02 15:12:34 *	Toromino is now known as toromino
+Jan 02 15:14:05 <toromino>	Hmm, any resource intensive processes?
+Jan 02 15:14:44 <spcext>	i actually thought battery might be a bit better on a systemd-free system but doesn't seem much of a difference compared to other linuxes
+Jan 02 15:15:19 <steinex>	spcext: have a look at powertop. it has a --auto-tune switch, you could run this on boot. i ceased to do that though, i configured usb and pci autosuspend via udev manually, because this is mostly all powertop is doing anyway. i think it's described in the arch wiki.
+Jan 02 15:15:20 *	akonai (~akonai@user/akonai) has joined
+Jan 02 15:15:35 <toromino>	I don't think systemd makes that much of a difference. But DEs like GNOME or KDE can be rather resource hungry.
+Jan 02 15:16:00 <spcext>	toromino: not really, just lite browsing/text editing/ocassional video watching
+Jan 02 15:16:19 *	ceamac has quit (Remote host closed the connection)
+Jan 02 15:17:02 <spcext>	steinex: thanks! i will take a look at it
+Jan 02 15:17:21 <spcext>	how do i make it run on boot everytime though?
+Jan 02 15:17:39 <steinex>	/etc/rc.local
+Jan 02 15:19:19 <steinex>	i remember why i stopped using --auto-tune though. because i have several devices i want to charge on my laptop. with usb autosuspend active for every device, it will charge 30 seconds and then the port goes to sleep. i do this nowadays: https://nognu.de/s/99-powermanagement.rules.j2
+Jan 02 15:19:31 <steinex>	as /etc/udev/rules.d/99-powermanagement.rules
+Jan 02 15:19:31 *	kts has quit (Quit: Konversation terminated!)
+Jan 02 15:19:51 <toromino>	yea. tlp also messes a bit with bluetooth
+Jan 02 15:20:36 *	prez (~prez@2001:470:b610::560) has joined
+Jan 02 15:20:50 <spcext>	steinex: should it not suspend the port then if it knows a device is already connected?
+Jan 02 15:21:38 <steinex>	if it's used, it's not suspended. if it just charges though, it will suspend anyway.
+Jan 02 15:22:43 <ftpd>	Hi guys. Since kernel 5.15 my resuming after opening the lid works 'funny'. After pressing any key I have black screen for a couple of seconds, then a quick glimpse of my desktop and after that my physlock kicks in. I've tested suckless slock, the same effect. It's a Thinkpad T14s with amdgpu.
+Jan 02 15:23:30 <ftpd>	I'm using elogind (started automatically with dbus) and have line `xss-lock -- physlock &` in my xinitrc.
+Jan 02 15:24:26 <spcext>	ftpd: lol its been like that for me even before 5.15
+Jan 02 15:26:26 <ftpd>	Maybe it's not the kernel but something different. Mesa? xorg-server? No idea.
+Jan 02 15:26:38 <ftpd>	I can live with it, but it would be nice to have fixed.
+Jan 02 15:26:47 <spcext>	ftpd: maybe you can stay on the older kernel for a while till its fixed?
+Jan 02 15:27:52 <ftpd>	It's not like "it happened 10 mins ago". I live with it for a few kernel versions now, I simply didn't ask before.
+Jan 02 15:28:02 <ftpd>	So I don't know which kernel version is 'safe'.
+Jan 02 15:28:37 <spcext>	ah, too much of a hassle then to go figuring by trial and error then
+Jan 02 15:28:50 <steinex>	ftpd: do you have acpid running by any chance?
+Jan 02 15:28:59 <ftpd>	Nope.
+Jan 02 15:29:05 <steinex>	k
+Jan 02 15:39:13 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 15:39:35 *	sgn (~sgn@user/sgn) has joined
+Jan 02 15:39:48 <jyom10j3>	Should i put: Copyright (C) 2022, My name <email> ; Authors: my name <email>
+Jan 02 15:40:01 <jyom10j3>	in the gpl license comment at the top of my source?
+Jan 02 15:40:40 <needle>	yes
+Jan 02 15:41:44 <jyom10j3>	do i put authors and copyright because on the gnu website the template just has copyright, i figured i should add in the authors part. \
+Jan 02 15:44:02 *	___nick___ has quit (Quit: https://quassel-irc.org - Chat comfortably. Anywhere.)
+Jan 02 15:45:32 *	___nick___ (~quassel@cpc68286-cdif17-2-0-cust533.5-1.cable.virginm.net) has joined
+Jan 02 15:45:53 *	___nick___ has quit (Client Quit)
+Jan 02 15:46:40 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 15:47:02 *	sgn (~sgn@user/sgn) has joined
+Jan 02 15:47:23 *	___nick___ (~quassel@cpc68286-cdif17-2-0-cust533.5-1.cable.virginm.net) has joined
+Jan 02 15:47:52 *	kts (~kts@103.73.237.212) has joined
+Jan 02 15:47:59 *	_spOOn_ has quit (Ping timeout: 256 seconds)
+Jan 02 15:51:15 *	kts has quit (Client Quit)
+Jan 02 15:53:32 *	kts (~kts@103.73.237.212) has joined
+Jan 02 15:54:27 *	jyom10j3 has quit (Quit: Client closed)
+Jan 02 16:04:30 <paper_>	I don't think GPL requires that, MIT and BSD do
+Jan 02 16:05:09 <paper_>	and it should be copyleft, not copyright :P
+Jan 02 16:13:12 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 16:13:34 *	sgn (~sgn@user/sgn) has joined
+Jan 02 16:15:11 *	einnhverr has quit (Ping timeout: 256 seconds)
+Jan 02 16:20:40 *	meator (~meator@user/meator) has joined
+Jan 02 16:34:17 *	ar-jan (~quassel@185.65.134.233) has joined
+Jan 02 16:34:26 *	greenel has quit (Ping timeout: 268 seconds)
+Jan 02 16:34:53 *	greenel (~el@bl8-67-202.dsl.telepac.pt) has joined
+Jan 02 16:37:20 *	meator has quit (Quit: Leaving)
+Jan 02 16:37:59 *	sektor has quit (Remote host closed the connection)
+Jan 02 16:38:18 *	_sa0sin_ (~sa0sin@2a01:e0a:414:b360:91a0:b012:97da:4f5a) has joined
+Jan 02 16:39:33 *	sa0 has quit (Ping timeout: 240 seconds)
+Jan 02 16:44:14 *	spcext has quit (Quit: Leaving)
+Jan 02 16:48:42 *	_gypci0 (uid22991@id-22991.tinside.irccloud.com) has joined
+Jan 02 16:50:38 *	rb1 (~rb@2a02:a313:a041:e800:c5e6:f8f0:848b:4f87) has joined
+Jan 02 16:53:43 *	Galladite (~Galladite@host-92-24-75-159.as13285.net) has joined
+Jan 02 17:00:57 *	greenel has quit (Ping timeout: 268 seconds)
+Jan 02 17:03:14 *	Momentum (momentum@tilde.team) has joined
+Jan 02 17:05:02 <Momentum>	anyone using pipewire? i wonder if i can still use pavucontrol along with pipewire
+Jan 02 17:05:09 *	raspbeguy (~raspbeguy@wireguard/tunneler/raspbeguy) has left (Error from remote client)
+Jan 02 17:05:14 <nonchip>	yes and yes. it's actually the preferred tool
+Jan 02 17:05:50 <Momentum>	hmm for some reason pavu tells me that the pulse server is not running. any idea how to address this?
+Jan 02 17:06:02 <paper_>	did you run pipewire-pulse?
+Jan 02 17:06:07 <nonchip>	it probably doesn't know how to talk to it then.
+Jan 02 17:06:08 <paper_>	this is btw documented in the handbook
+Jan 02 17:06:46 <Momentum>	oh! i think i just enabled the pw service
+Jan 02 17:06:55 <paper_>	please don't use the services
+Jan 02 17:07:05 <paper_>	we warn against this in the hadnbook AND in the services
+Jan 02 17:07:20 <nonchip>	you'll want to run that as part of the desktop session in like 99% of use cases
+Jan 02 17:07:27 <paper_>	^
+Jan 02 17:08:05 <Momentum>	oh oups! i actually thought i'm running it as a service. yeah i read that and apparently i'm running it from xinitrc
+Jan 02 17:08:10 <Momentum>	or from X
+Jan 02 17:08:16 <nonchip>	because that's also how it tells programs how to talk to it. combination of dbus magic, x11 properties and fancy sockets that are expected to belong to you
+Jan 02 17:08:45 <Momentum>	but yeah there's just `pipewire &` in my .xinitrc file
+Jan 02 17:08:54 <Momentum>	should i add `pipewire-pulse` ?
+Jan 02 17:09:05 <Momentum>	got it nonchip
+Jan 02 17:10:15 *	Guest1731 (~Guest17@185.183.97.187) has joined
+Jan 02 17:10:43 <Guest1731>	any specific reason why bitwarden is not in repos yet?
+Jan 02 17:11:34 <nonchip>	probably because either nobody cared yet or because it's not allowed
+Jan 02 17:12:01 <Momentum>	beautiful. thanks paper_ and nonchip
+Jan 02 17:13:02 *	Guest1731 has quit (Client Quit)
+Jan 02 17:14:10 FiSHLiM plugin unloaded
+**** ENDING LOGGING AT Sun Jan  2 17:14:10 2022
+
+**** BEGIN LOGGING AT Sun Jan  2 23:06:19 2022
+
+Jan 02 23:06:19 *	Now talking on #voidlinux
+Jan 02 23:06:19 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Jan 02 23:06:19 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Jan 02 23:09:23 *	Qixt[m] (~pixtummat@2001:470:69fc:105::d6d1) has joined
+Jan 02 23:19:26 *	pinote (~pinote@179.95.211.147) has joined
+Jan 02 23:19:52 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 23:20:17 *	sgn (~sgn@user/sgn) has joined
+Jan 02 23:22:37 *	justJanne has quit (Quit: So, if you care to find me, look to the western sky. As someone told me lately, everyone deserves a chance to fly.)
+Jan 02 23:22:37 *	Laralubsch has quit ()
+Jan 02 23:22:37 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 23:22:54 *	sgn (~sgn@user/sgn) has joined
+Jan 02 23:23:02 *	ShinyRice (~shinyrice@130.red-79-145-9.dynamicip.rima-tde.net) has joined
+Jan 02 23:23:38 *	eoli3n___ has quit (Ping timeout: 260 seconds)
+Jan 02 23:27:06 *	via_c7 (~orangeext@user/orangeextract) has joined
+Jan 02 23:28:36 *	antoine62[m] (~antoine62@2001:470:69fc:105::2ad5) has joined
+Jan 02 23:28:40 *	nfbyte (~nfbyte@2001:470:69fc:105::db39) has joined
+Jan 02 23:28:40 *	eschwartz[m] (~eschwartz@archlinux/bugwrangler/eschwartz) has joined
+Jan 02 23:28:40 *	toromino_m (~torominos@2001:470:69fc:105::1:5cdb) has joined
+Jan 02 23:28:57 *	Laura[m] (~selfiseka@2001:470:69fc:105::1:3610) has joined
+Jan 02 23:29:15 *	ferie[m] (~feriematr@2001:470:69fc:105::1:283b) has joined
+Jan 02 23:29:16 *	vpzom[m] (~vpzomsyna@2001:470:69fc:105::432d) has joined
+Jan 02 23:29:20 *	wiben[m] (~wibe@2001:470:69fc:105::1:5a05) has joined
+Jan 02 23:29:20 *	dziq|m (~dziq@user/dziq) has joined
+Jan 02 23:29:20 *	paper[m] (~thepaperm@2001:470:69fc:105::1:1f38) has joined
+Jan 02 23:32:05 *	paper_ has quit (Read error: Connection reset by peer)
+Jan 02 23:32:11 *	paper__ (~paper_@user/paper) has joined
+Jan 02 23:32:15 *	voiceofreason_ is now known as voiceofreason
+Jan 02 23:32:22 *	paper__ is now known as paper_
+Jan 02 23:33:29 *	Laralubsch (~laralubsc@kuschku.de) has joined
+Jan 02 23:33:32 *	justJanne (~kuschku@kuschku.de) has joined
+Jan 02 23:35:26 *	Laralubsch has quit (Client Quit)
+Jan 02 23:35:26 *	justJanne has quit (Client Quit)
+Jan 02 23:36:35 *	nklsfrt has quit (Remote host closed the connection)
+Jan 02 23:36:37 *	Laralubsch (~laralubsc@kuschku.de) has joined
+Jan 02 23:36:40 *	justJanne (~kuschku@kuschku.de) has joined
+Jan 02 23:40:10 *	computerworm110 (~quassel@xpress10873.htc.net) has joined
+Jan 02 23:40:54 *	computerworm110 has quit (Client Quit)
+Jan 02 23:41:01 *	mahmutov has quit (Ping timeout: 256 seconds)
+Jan 02 23:41:12 *	computerworm110 (~quassel@xpress10873.htc.net) has joined
+Jan 02 23:43:04 *	pitch (~pitch@user/pitch) has joined
+Jan 02 23:43:34 *	srv (~cmd@user/srv) has joined
+Jan 02 23:44:48 *	AlaskanEmily (~AlaskanEm@user/alaskanemily) has joined
+Jan 02 23:45:39 *	pr-asadi_ is now known as pr-asadi
+Jan 02 23:45:49 *	Xenguy (~Xenguy@user/xenguy) has joined
+Jan 02 23:48:26 *	pitch has quit (Write error: Connection reset by peer)
+Jan 02 23:48:26 *	paper[m] has quit (Remote host closed the connection)
+Jan 02 23:48:26 *	ferie[m] has quit (Remote host closed the connection)
+Jan 02 23:48:26 *	antoine62[m] has quit (Remote host closed the connection)
+Jan 02 23:48:27 *	wiben[m] has quit (Remote host closed the connection)
+Jan 02 23:48:27 *	vpzom[m] has quit (Remote host closed the connection)
+Jan 02 23:48:27 *	Laura[m] has quit (Remote host closed the connection)
+Jan 02 23:48:27 *	eschwartz[m] has quit (Remote host closed the connection)
+Jan 02 23:48:28 *	nfbyte has quit (Remote host closed the connection)
+Jan 02 23:48:29 *	toromino_m has quit (Remote host closed the connection)
+Jan 02 23:48:29 *	exit70[m] has quit (Remote host closed the connection)
+Jan 02 23:48:30 *	drake[m] has quit (Write error: Connection reset by peer)
+Jan 02 23:48:30 *	dziq|m has quit (Remote host closed the connection)
+Jan 02 23:48:31 *	AviKav[m] has quit (Remote host closed the connection)
+Jan 02 23:48:31 *	comphuter[m] has quit (Remote host closed the connection)
+Jan 02 23:48:31 *	julian[m]123456 has quit (Write error: Connection reset by peer)
+Jan 02 23:48:31 *	M9d0cd7d2[m] has quit (Write error: Connection reset by peer)
+Jan 02 23:48:31 *	Qixt[m] has quit (Read error: Connection reset by peer)
+Jan 02 23:48:54 *	sgn has quit (Read error: Connection reset by peer)
+Jan 02 23:49:18 *	sgn (~sgn@user/sgn) has joined
+Jan 02 23:49:37 *	julian[m] (~kniffymat@2001:470:69fc:105::ca09) has joined
+Jan 02 23:49:52 *	joahe (~joahe@110.54.247.45) has joined
+Jan 02 23:50:57 *	eftepede is now known as ftpd
+Jan 02 23:51:13 *	deu has quit (Ping timeout: 256 seconds)
+Jan 02 23:52:04 *	jcgruenhage (~jcgruenha@2001:470:69fc:105::2f7) has joined
+Jan 02 23:52:04 *	theantz (~theantz@2001:470:69fc:105::1fa) has joined
+Jan 02 23:52:04 *	jA_cOp (~jacopmatr@2001:470:69fc:105::103b) has joined
+Jan 02 23:52:05 *	priner (~priner@2001:470:69fc:105::804) has joined
+Jan 02 23:52:05 *	nicoty (~nicoty@user/nicoty) has joined
+Jan 02 23:52:05 *	tiziodcaio (~tiziodcai@2001:470:69fc:105::1:2bf8) has joined
+Jan 02 23:52:05 *	exit70[m] (~exit70@user/exit70) has joined
+Jan 02 23:52:05 *	jemershaw[m] (~jemershaw@2001:470:69fc:105::b904) has joined
+Jan 02 23:52:05 *	CarlosEDP (~carlosedp@2001:470:69fc:105::218e) has joined
+Jan 02 23:52:05 *	harrydus-matrix (~harrydusm@2001:470:69fc:105::fa60) has joined
+Jan 02 23:52:05 *	ormaaj2 (~ormaaj@user/ormaaj) has joined
+Jan 02 23:52:05 *	dziq|m (~dziq@user/dziq) has joined
+Jan 02 23:52:05 *	rslabbert1 (~rslabbert@2001:470:69fc:105::1:457d) has joined
+Jan 02 23:52:05 *	nfbyte (~nfbyte@2001:470:69fc:105::db39) has joined
+Jan 02 23:52:05 *	peeweep[m] (~peeweepm]@2001:470:69fc:105::1:39c1) has joined
+Jan 02 23:52:06 *	_javyre (~javyre@2001:470:69fc:105::2162) has joined
+Jan 02 23:52:06 *	lorens[m] (~greatwiel@2001:470:69fc:105::500b) has joined
+Jan 02 23:52:09 *	guardant[m] (~guardante@2001:470:69fc:105::1:220c) has joined
+Jan 02 23:52:10 *	not-chicken (~not-chick@2001:470:69fc:105::17b1) has joined
+Jan 02 23:52:11 *	JoelB[m] (~joelthebe@2001:470:69fc:105::327e) has joined
+Jan 02 23:52:16 *	Epictek[m] (~epictekma@2001:470:69fc:105::d7cd) has joined
+Jan 02 23:52:16 *	foxlet (~foxletmat@2001:470:69fc:105::30b5) has joined
+Jan 02 23:52:16 *	AviKav[m] (~avikavmat@2001:470:69fc:105::1:5e3a) has joined
+Jan 02 23:52:16 *	drake[m] (~xldrakeen@2001:470:69fc:105::e62d) has joined
+Jan 02 23:52:17 *	toromino_m (~torominos@2001:470:69fc:105::1:5cdb) has joined
+Jan 02 23:52:17 *	Acid-Bong (~acid-bong@2001:470:69fc:105::ef45) has joined
+Jan 02 23:52:17 *	comphuter[m] (~comphuter@2001:470:69fc:105::e934) has joined
+Jan 02 23:52:17 *	Laura[m] (~selfiseka@2001:470:69fc:105::1:3610) has joined
+Jan 02 23:52:17 *	CodeBitCookie[m] (~code-bit-@2001:470:69fc:105::a2f) has joined
+Jan 02 23:52:17 *	ferie[m] (~feriematr@2001:470:69fc:105::1:283b) has joined
+Jan 02 23:52:18 *	Qixt[m] (~pixtummat@2001:470:69fc:105::d6d1) has joined
+Jan 02 23:52:18 *	nihilipster[m] (~nihilipst@2001:470:69fc:105::720) has joined
+Jan 02 23:52:18 *	andrea[m] (~andreanit@2001:470:69fc:105::1:28a8) has joined
+Jan 02 23:52:18 *	vpzom[m] (~vpzomsyna@2001:470:69fc:105::432d) has joined
+Jan 02 23:52:18 *	illusive_evil[m] (~illusivee@2001:470:69fc:105::1:3d2a) has joined
+Jan 02 23:52:18 *	antoine62[m] (~antoine62@2001:470:69fc:105::2ad5) has joined
+Jan 02 23:52:18 *	anniehallmoon (~anniehall@2001:470:69fc:105::c190) has joined
+Jan 02 23:52:18 *	JuniorJPDJ (~juniorjpd@2001:470:69fc:105::c22) has joined
+Jan 02 23:52:19 *	paper[m] (~thepaperm@2001:470:69fc:105::1:1f38) has joined
+Jan 02 23:52:19 *	OmarZeghouani[m] (~ram02zmat@2001:470:69fc:105::de88) has joined
+Jan 02 23:52:19 *	M9d0cd7d2[m] (~M9d0cd7d2@2001:470:69fc:105::1:1609) has joined
+Jan 02 23:52:19 *	majomi[m] (~majomi@2001:470:69fc:105::1:1008) has joined
+Jan 02 23:52:19 *	teldra (~teldra@2001:470:69fc:105::bb1f) has joined
+Jan 02 23:52:19 *	pitch (~pitch@user/pitch) has joined
+Jan 02 23:52:20 *	eschwartz[m] (~eschwartz@archlinux/bugwrangler/eschwartz) has joined
+Jan 02 23:52:21 *	wiben[m] (~wibe@2001:470:69fc:105::1:5a05) has joined
+Jan 02 23:52:40 *	trmg1 is now known as trmg
+Jan 02 23:54:38 *	mahmutov (~mahmutov@5.176.45.237) has joined
+Jan 02 23:55:30 *	deu (de@uio.re) has joined
+Jan 03 00:05:56 *	cruelnoise_ (~cruelnois@198-200-100-148.cpe.distributel.net) has joined
+Jan 03 00:06:42 *	joahe has quit (Remote host closed the connection)
+Jan 03 00:08:43 *	teasea has quit (Quit: teasea)
+Jan 03 00:10:34 *	teasea50 (~teasea@user/teasea) has joined
+Jan 03 00:12:12 *	teasea50 is now known as teasea
+Jan 03 00:13:17 *	julian[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:36 *	dziq|m has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:13:50 *	nicoty has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:01 *	ormaaj2 has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:14:22 *	theantz has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:20 *	jemershaw[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:26 *	CarlosEDP has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:49 *	jA_cOp has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:15:49 *	peeweep[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:20 *	priner has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:23 *	jcgruenhage has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:16:44 *	Laralubsch has quit ()
+Jan 03 00:16:44 *	justJanne has quit (Quit: So, if you care to find me, look to the western sky. As someone told me lately, everyone deserves a chance to fly.)
+Jan 03 00:16:58 *	Laralubsch (~laralubsc@kuschku.de) has joined
+Jan 03 00:16:58 *	nfbyte has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:00 *	justJanne (~kuschku@kuschku.de) has joined
+Jan 03 00:17:02 *	exit70[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:08 *	lorens[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:36 *	tiziodcaio has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:37 *	barbaros- has quit (Quit: ZNC 1.7.2+deb3 - https://znc.in)
+Jan 03 00:17:57 *	_javyre has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:57 *	harrydus-matrix has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:17:57 *	rslabbert1 has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:10 *	guardant[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:11 *	not-chicken has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:12 *	JoelB[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:31 *	Acid-Bong has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:31 *	comphuter[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:32 *	foxlet has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:32 *	Epictek[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:32 *	AviKav[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:33 *	drake[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:33 *	toromino_m has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:33 *	antoine62[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	CodeBitCookie[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	Laura[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	ferie[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	nihilipster[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	Qixt[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	vpzom[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:34 *	andrea[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:35 *	illusive_evil[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:35 *	anniehallmoon has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:35 *	M9d0cd7d2[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:36 *	OmarZeghouani[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:36 *	paper[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:36 *	JuniorJPDJ has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:36 *	teldra has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:37 *	pitch has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:37 *	majomi[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:38 *	eschwartz[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:18:40 *	wiben[m] has quit (Quit: Client limit exceeded: 20000)
+Jan 03 00:20:35 *	barbarossa93 (~barbaross@c-73-39-107-44.hsd1.md.comcast.net) has joined
+Jan 03 00:23:43 *	lavaball (~Melissa@p54a4dd9a.dip0.t-ipconnect.de) has joined
+Jan 03 00:26:52 *	natte has quit (Quit: Leaving)
+**** ENDING LOGGING AT Mon Jan  3 00:31:46 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:35:28 2022
+
+Jan 09 20:35:28 *	Now talking on #voidlinux
+Jan 09 20:35:28 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Jan 09 20:35:28 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Jan 09 20:36:02 *	Piraty meanwhile sets up swapfile in /tmp
+**** ENDING LOGGING AT Sun Jan  9 20:36:47 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:36:47 2022
+
+Jan 09 20:36:53 *	PackRat-2019 has quit (Quit: Leaving)
+**** ENDING LOGGING AT Sun Jan  9 20:37:04 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:37:04 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:37:46 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:37:46 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:17 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:17 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:44 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:44 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:38:50 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:38:50 2022
+
+**** ENDING LOGGING AT Sun Jan  9 20:40:28 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 20:40:28 2022
+
+Jan 09 20:44:12 <Cicoria>	im trying to clean the /var/cache/xbps/ directory and i noticed that there are some files of some packages i have not currently installed. I tried doing xbps-remove -O but nothing was removed. Can i safely delete the /var/cache/xbps?
+Jan 09 20:49:00 *	marcello42 (~mp@2001:1a81:1319:4e00:2dd7:b332:3cc:7021) has joined
+Jan 09 20:54:03 *	oZZ has quit (Quit: Leaving)
+Jan 09 21:01:15 *	lavaball has quit (Remote host closed the connection)
+Jan 09 21:40:08 *	Disconnected ()
+**** ENDING LOGGING AT Sun Jan  9 21:40:08 2022
+
+**** BEGIN LOGGING AT Sun Jan  9 21:40:38 2022
+
+Jan 09 21:40:38 *	Now talking on #voidlinux
+Jan 09 21:40:38 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Jan 09 21:40:38 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Jan 09 21:40:38 -ChanServ-	[#gentoo] Welcome to #gentoo || Code of Conduct @ https://wiki.gentoo.org/wiki/Project:Council/Code_of_conduct || Read /topic! || Keep the language clean || For social talk try #gentoo-chat || Google is your friend || No bots or scripts that talk || Turn off public away messages
+**** ENDING LOGGING AT Sun Jan  9 21:41:30 2022
+
+**** BEGIN LOGGING AT Sat Jan 15 14:48:53 2022
+
+Jan 15 14:48:53 *	Now talking on #voidlinux
+Jan 15 14:48:53 *	Topic for #voidlinux is: The Void Linux distribution https://www.voidlinux.org || images: https://alpha.de.repo.voidlinux.org/live/current || Getting Started: https://docs.voidlinux.org/xbps/ && https://docs.voidlinux.org/config/services/
+Jan 15 14:48:53 *	Topic for #voidlinux set by maldridge (Sat May 22 06:06:29 2021)
+Jan 15 14:50:11 *	fhblf has quit (Quit: Leaving.)
+Jan 15 14:51:35 <meator>	paper_: Ok, Thanks! I'll have to do it via /etc/zzz.d/ then.
+Jan 15 15:02:44 *	kts (~kts@103.73.237.195) has joined
+Jan 15 15:03:16 *	kts has quit (Client Quit)
+Jan 15 15:03:26 *	mahmutov (~mahmutov@37.155.74.26) has joined
+Jan 15 15:03:53 *	gnd has quit (Quit: Going offline, see ya! (www.adiirc.com))
+Jan 15 15:04:25 *	lavaball has quit (Remote host closed the connection)
