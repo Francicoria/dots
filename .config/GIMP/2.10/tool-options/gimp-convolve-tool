@@ -5,11 +5,10 @@
 (brush "2. Hardness 075")
 (dynamics "Pencil Generic")
 (palette "Color History")
-(brush-size 6)
+(brush-size 29)
 (brush-aspect-ratio 1.3877787807814457e-16)
 (brush-angle 20)
 (brush-hardness 0.60999999999999999)
-(brush-force 1)
 (brush-link-size no)
 (fade-length 0)
 
