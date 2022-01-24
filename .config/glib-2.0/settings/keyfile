@@ -1,6 +1,6 @@
 [org/gtk/settings/file-chooser]
-window-position=(242, 84)
-window-size=(881, 599)
+window-position=(0, 20)
+window-size=(1005, 599)
 date-format='regular'
 location-mode='path-bar'
 show-hidden=true

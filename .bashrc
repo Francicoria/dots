@@ -11,7 +11,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias sudo='doas'
 alias nnn='nnn -C -H'
-alias scrot="scrot ~/Pictures/'%d-%m-%Y_%H:%M.png'"
-
+alias scrot="scrot -F ~/Pictures/'%d-%m-%Y_%H:%M.png'"
+alias vscode='code-oss'
 #PS1
-PS1='\w|\$ ↪ '
+PS1='\e[4;35m\w\e[0m|\e[0;35m\$\e[0m ↪ '

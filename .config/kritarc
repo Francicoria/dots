@@ -41,8 +41,8 @@ Krita/Ocio/OcioConfigPath=
 Krita/Ocio/OcioLockColorVisualRepresentation=false
 Krita/Ocio/OcioLutPath=
 Krita/Ocio/UseOcio=false
-LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB r="1" space="sRGB-elle-V2-srgbtrc.icc" g="1" b="1"/>\n</LastBackGroundColor>\n
-LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB r="0.0392156876623631" space="sRGB-elle-V2-srgbtrc.icc" g="0.0823529437184334" b="0.117647059261799"/>\n</LastForeGroundColor>\n
+LastBackGroundColor=<!DOCTYPE LastBackGroundColor>\n<LastBackGroundColor>\n <RGB b="1" space="sRGB-elle-V2-srgbtrc.icc" g="1" r="1"/>\n</LastBackGroundColor>\n
+LastForeGroundColor=<!DOCTYPE LastForeGroundColor>\n<LastForeGroundColor>\n <RGB b="0.117647059261799" space="sRGB-elle-V2-srgbtrc.icc" g="0.0823529437184334" r="0.0392156876623631"/>\n</LastForeGroundColor>\n
 LastPreset=b) Basic-1
 LastPreset_-1=b) Basic-1
 LineSmoothingDelayDistance=11
@@ -303,7 +303,7 @@ eDP-1 Height 1366x768=746
 eDP-1 Width 1366x768=1364
 eDP1 Height 1366x768=746
 eDP1 Width 1366x768=1364
-ko_geometry=AdnQywADAAD/////AAAAEwAABVQAAAL+AAAAAAAAABQAAAVTAAAC/QAAAAAAAAAABVYAAAAAAAAAFAAABVMAAAL9
+ko_geometry=AdnQywADAAAAAAAAAAAAFAAABVUAAAL/AAAAAQAAABUAAAVUAAAC/gAAAAAAAAAABVYAAAABAAAAFQAABVQAAAL+
 
 [MainWindow][DockWidget AnimationCurvesDocker]
 Collapsed=false

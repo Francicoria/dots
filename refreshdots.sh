@@ -1,16 +1,23 @@
 #!/bin/sh
-cp -rf ~/.config/ ~/source/dots/
+rm -rf ~/source/dots/.config/
+cp -r ~/.config/ ~/source/dots/
 printf "Copying .config folder\n"
-cp -rf ~/.wallpapers/ ~/source/dots/
+rm -rf ~/source/dots/.wallpapers/
+cp -r ~/.wallpapers/ ~/source/dots/
 printf "Copying the wallpapers folder\n"
-cp -f ~/.Xresources ~/source/dots/
+rm -f  ~/source/dots/.Xresources
+cp ~/.Xresources ~/source/dots/
 printf "Copying the Xresources file\n"
-cp -f ~/.bashrc ~/source/dots/
+rm -f ~/source/dots/.bashrc
+cp ~/.bashrc ~/source/dots/
 printf "Copying the bashrc file\n"
-cp -f ~/.xinitrc ~/source/dots/
+rm -f ~/source/dots/.xinitrc
+cp ~/.xinitrc ~/source/dots/
 printf "Copying the xinitrc file\n"
-cp -f ~/.xbindkeysrc ~/source/dots/
+rm -f ~/source/dots/.xbindkeysrc
+cp ~/.xbindkeysrc ~/source/dots/
 printf "Copying the xbindkeysrc file\n"
-cp -f ~/refreshdots.sh ~/source/dots/
+rm -f ~/source/refreshdots.sh
+cp ~/refreshdots.sh ~/source/dots/
 printf "Copying this script\n"
 printf "Done!\n"

@@ -1,0 +1,13 @@
+{
+    "workbench.colorTheme": "Dark+ Black",
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.tabs.enableAnimation": false,
+    "editor.smoothScrolling": true,
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 15,
+    "editor.fontLigatures": true,
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "update.mode": "none",
+    "extensions.autoUpdate": "onlyEnabledExtensions",
+}

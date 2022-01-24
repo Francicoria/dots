@@ -1,0 +1,14 @@
+[2022-01-22 18:34:39.225] [sharedprocess] [warning] No ptyHost heartbeat after 6 seconds
+[2022-01-22 18:35:08.191] [sharedprocess] [info] Installing extension: pkief.material-icon-theme
+[2022-01-22 18:35:13.595] [sharedprocess] [info] Downloaded extension: pkief.material-icon-theme /home/franci/.config/Code - OSS/CachedExtensionVSIXs/pkief.material-icon-theme-4.11.0
+[2022-01-22 18:35:18.433] [sharedprocess] [info] Extracted extension to /home/franci/.vscode-oss/extensions/.394616a3-8297-4e5c-b618-ddc5f32e414d: pkief.material-icon-theme
+[2022-01-22 18:35:18.454] [sharedprocess] [info] Renamed to /home/franci/.vscode-oss/extensions/pkief.material-icon-theme-4.11.0
+[2022-01-22 18:35:18.463] [sharedprocess] [info] Extracting completed. pkief.material-icon-theme
+[2022-01-22 18:35:18.473] [sharedprocess] [info] Extension installed successfully: pkief.material-icon-theme
+[2022-01-22 18:38:43.245] [sharedprocess] [info] Installing extension: vincesalvino.dark-plus-black
+[2022-01-22 18:38:46.198] [sharedprocess] [info] Downloaded extension: vincesalvino.dark-plus-black /home/franci/.config/Code - OSS/CachedExtensionVSIXs/vincesalvino.dark-plus-black-1.1.0
+[2022-01-22 18:38:46.276] [sharedprocess] [info] Extracted extension to /home/franci/.vscode-oss/extensions/.0d1c79a7-d3ff-4d9e-bd28-145e02ada77c: vincesalvino.dark-plus-black
+[2022-01-22 18:38:46.299] [sharedprocess] [info] Renamed to /home/franci/.vscode-oss/extensions/vincesalvino.dark-plus-black-1.1.0
+[2022-01-22 18:38:46.307] [sharedprocess] [info] Extracting completed. vincesalvino.dark-plus-black
+[2022-01-22 18:38:46.312] [sharedprocess] [info] Extension installed successfully: vincesalvino.dark-plus-black
+[2022-01-22 18:42:19.122] [sharedprocess] [info] Starting worker process with pid 6741 (type: watcherServiceParcelSharedProcess, window: 1).
