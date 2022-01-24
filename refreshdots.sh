@@ -20,4 +20,13 @@ printf "Copying the xbindkeysrc file\n"
 rm -f ~/source/refreshdots.sh
 cp ~/refreshdots.sh ~/source/dots/
 printf "Copying this script\n"
-printf "Done!\n"
+printf "Done copying!\n"
+cd ~/source/dots/
+printf "Changing to dots directory...\n"
+git add .
+printf "Adding all of the files...\n"
+git commit -m "Dots refreshed!"
+printf "Committing...\n"
+git push
+printf "Pushing commits to main branch...\n"
+printf "All done!\n\n"
