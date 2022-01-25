@@ -1,7 +1,0 @@
-[2022-01-22 18:34:26.023] [main] [info] update#ctor - updates are disabled as there is no update URL
-[2022-01-22 18:34:26.165] [main] [info] ExtensionHostStarterWorker created
-[2022-01-22 18:34:33.760] [main] [info] Starting extension host with pid 6363 (fork() took 68 ms).
-[2022-01-22 18:42:10.932] [main] [info] Extension host with pid 6363 exited with code: 0, signal: null.
-[2022-01-22 18:42:17.732] [main] [info] Starting extension host with pid 6724 (fork() took 15 ms).
-[2022-01-22 18:54:39.629] [main] [info] Waiting for extension host with pid 6724 to exit.
-[2022-01-22 18:54:39.800] [main] [info] Extension host with pid 6724 exited with code: 0, signal: null.

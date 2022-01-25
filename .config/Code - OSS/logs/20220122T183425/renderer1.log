@@ -1,4 +1,0 @@
-[2022-01-22 18:34:36.968] [renderer1] [error] [Extension Host] (node:6363) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-(Use `electron --trace-deprecation ...` to show where the warning was created)
-[2022-01-22 18:42:20.914] [renderer1] [error] [Extension Host] (node:6724) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
-(Use `electron --trace-deprecation ...` to show where the warning was created)

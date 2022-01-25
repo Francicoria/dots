@@ -1,7 +1,0 @@
-T 1640115727 23*	28[18Cicoria28] 30(24~Cicoria@84.33.178.8730): 18realname
-T 1640115727 23*	28[18Cicoria28] #voidlinux
-T 1640115727 23*	28[18Cicoria28] 29strontium.libera.chat :North Carolina, US
-T 1640115727 23*	28[18Cicoria28] is using a secure connection [TLSv1.3, TLS_AES_256_GCM_SHA384]
-T 1640115727 23*	28[18Cicoria28] 84.33.178.87 :actually using host
-T 1640115727 23*	28[18Cicoria28] idle 2300:01:06, signon: 23Tue Dec 21 19:37:09
-T 1640115727 23*	28[18Cicoria28] End of WHOIS list.
