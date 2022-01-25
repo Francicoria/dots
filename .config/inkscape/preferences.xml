@@ -125,10 +125,10 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="883.307"
-         height="1236.93"
+         width="1012.56"
+         height="621.578"
          ry="0"
-         rx="152.632" />
+         rx="0" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -319,7 +319,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="mm"
+       unit="px"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -345,8 +345,8 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="1153.63"
-       y="245.298"
+       x="-119.59"
+       y="503.494"
        edit_clipping_paths="0"
        edit_masks="0" />
     <eventcontext
@@ -559,7 +559,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -598,7 +598,7 @@
        path="">
       <group
          id="exportarea"
-         value="selection" />
+         value="drawing" />
       <group
          id="defaultxdpi"
          value="53.687" />
@@ -608,7 +608,7 @@
        default="org.inkscape.output.svg.inkscape"
        append_extension="1"
        enable_preview="1"
-       path="/home/franci/source/vectorart"
+       path="/home/franci/Documents/svgs"
        use_current_dir="1" />
     <group
        id="save_copy"
@@ -973,7 +973,7 @@
      org.inkscape.input.svg.scale="auto" />
   <group
      id="desktop"
-     style="fill:#478061;stroke-width:0.5;paint-order:stroke fill markers;stroke-linecap:round;stroke-linejoin:round">
+     style="fill:#572769;stroke-width:0.5;paint-order:stroke fill markers;stroke-linecap:round;stroke-linejoin:round;opacity:0.25">
     <group
        width="640"
        height="480"
