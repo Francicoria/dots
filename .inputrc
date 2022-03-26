@@ -1,0 +1,5 @@
+$include /etc/inputrc
+# Ctrl-Backspace
+"\C-H": shell-backward-kill-word
+# Enables keypad
+set enable-keypad off

@@ -1,0 +1,16 @@
+" Plugins
+source ~/.config/nvim/plugins.vim
+
+" Sets and lets
+set notermguicolors
+set lcs=tab:>.,trail:-,nbsp:+,space:·
+set nu
+set numberwidth=2
+let g:startify_custom_header =
+	\ startify#pad(split('Neovim <3', '\n'))
+
+" Mappings
+source ~/.config/nvim/keymaps.vim
+
+" Highlights
+source ~/.config/nvim/highlights.vim

@@ -1,0 +1,59 @@
+Xcursor.theme: phinger-cursors
+Xcursor.size: 16
+!! Appearance
+urxvt.termName: rxvt-unicode
+urxvt.externalBorder: 0
+urxvt.internalBorder: 5
+urxvt.borderless: true
+!! Scrollbar
+urxvt.scrollBar: true
+urxvt.scrollBar_right: true
+urxvt.scrollBar_floating: false
+urxvt.scrollStyle: plain
+urxvt.thickness: 10
+urxvt.scrollColor: #111111
+!! Fonts
+urxvt.font: xft:Iosevka Fixed:size=13
+urxvt.boldFont: xft:Iosevka Fixed:size=13:weight=bold
+urxvt.letterSpace: 0
+!! Larger history limit
+urxvt.saveLines: 1000000
+
+!! Open urls in browser with Control-Click
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+
+!! Theme
+! special
+*.foreground:   #cbcbcb
+*.background:   #000000
+*.cursorColor:  #cbcbcb
+! black
+*.color0:       #12100b
+*.color8:       #24211a
+! red
+*.color1:       #ae2e2e
+*.color9:       #be5252
+! green
+*.color2:       #529114
+*.color10:      #71c220
+! yellow
+*.color3:       #c9af21
+*.color11:      #d5c157
+! blue
+*.color4:       #3d87c1
+*.color12:      #55a0da
+! magenta
+*.color5:       #6139a9
+*.color13:      #714cb4
+! cyan
+*.color6:       #41a293
+*.color14:      #53b4a5
+! white
+*.color7:       #a0a0a0
+*.color15:      #b9b9b9
+
+! Normal copy-paste keybindings without perls
+URxvt.iso14755:                   false
+URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard

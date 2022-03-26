@@ -1,0 +1,11 @@
+set inputbar-fg "#000000"
+set inputbar-bg "#3358B9"
+
+set completion-highlight-fg "#000000"
+set completion-highlight-bg "#3358B9"
+
+set completion-fg "#CBCBCB"
+set completion-bg "#000000"
+
+set font "Iosevka Fixed 13"
+set scroll-step 20
