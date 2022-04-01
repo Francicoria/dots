@@ -1,14 +1,16 @@
--- Plugins(WIP)
+-- Plugins
 require("plugins")
 
--- Sets and lets
+-- Options
 require("options")
 
 -- Key maps
 require("keymaps")
 
+-- Highlights
 require("highlights")
---vim.cmd 'source ~/.config/nvim/vim/highlights.vim'
 
+-- Status line
 require("statusline")
+
 require("check")

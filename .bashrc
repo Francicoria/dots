@@ -3,7 +3,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return 0
 # Autostart
-~/source/blocks1
+~/source/cblocks
 
 # Aliases
 alias ls='ls -lAh --color=auto'

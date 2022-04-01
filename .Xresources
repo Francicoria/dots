@@ -1,59 +1,87 @@
+!!! Cursor
 Xcursor.theme: phinger-cursors
 Xcursor.size: 16
+
+!!! Xcalc
+XCalc*Font:		fixed
+XCalc*ti.button3.font:	fixed
+XCalc*ti.button21.font:	fixed
+XCalc*ti.button35.font:	fixed
+XCalc*hp.button1.font:	fixed
+XCalc*hp.button10.font:	fixed
+XCalc*hp.button12.font:	fixed
+XCalc.cursor: hand2
+
+!!! suckless
+!! st
+st.font: 	CtrlD:size=13
+st.borderpx:	7
+st.shell:	/bin/sh
+
+st.color0:	#12100b
+st.color1:	#ae2e2e
+st.color2:	#529114
+st.color3:	#c9af21
+st.color4:	#3d87c1
+st.color5:	#6139a9
+st.color6:	#41a293
+st.color7:	#a0a0a0
+st.color8:	#24211a
+st.color9:	#be5252
+st.color10:	#71c220
+st.color11:	#d5c157
+st.color12:	#55a0da
+st.color13:	#714cb4
+st.color14:	#53b4a5
+st.color15:	#b9b9b9
+st.background:	#000000
+st.foreground:	#CBCBCB
+st.cursorColor:	#CBCBCB
+
+!!! urxvt
 !! Appearance
 urxvt.termName: rxvt-unicode
 urxvt.externalBorder: 0
-urxvt.internalBorder: 5
+urxvt.internalBorder: 7
 urxvt.borderless: true
-!! Scrollbar
-urxvt.scrollBar: true
-urxvt.scrollBar_right: true
-urxvt.scrollBar_floating: false
-urxvt.scrollStyle: plain
-urxvt.thickness: 10
-urxvt.scrollColor: #111111
+!! Scrollbar disable
+urxvt.scrollBar: false
 !! Fonts
-urxvt.font: xft:Iosevka Fixed:size=13
-urxvt.boldFont: xft:Iosevka Fixed:size=13:weight=bold
+urxvt.font:	ctrld-fixed-13r.pcf -ctrld-fixed-medium-r-normal--13-80-96-96-c-80-iso10646-1
+urxvt.boldFont:	ctrld-fixed-13b.pcf -ctrld-fixed-bold-r-normal--13-80-96-96-c-70-iso10646-1
 urxvt.letterSpace: 0
 !! Larger history limit
 urxvt.saveLines: 1000000
-
-!! Open urls in browser with Control-Click
-urxvt.urlLauncher: /usr/bin/firefox
-urxvt.matcher.button: C1
-
-!! Theme
+!! Colorscheme
 ! special
-*.foreground:   #cbcbcb
-*.background:   #000000
-*.cursorColor:  #cbcbcb
+urxvt.foreground:	#cbcbcb
+urxvt.background:	#000000
+urxvt.cursorColor:	#cbcbcb
 ! black
-*.color0:       #12100b
-*.color8:       #24211a
+urxvt.color0:	#12100b
+urxvt.color8:	#24211a
 ! red
-*.color1:       #ae2e2e
-*.color9:       #be5252
+urxvt.color1:	#ae2e2e
+urxvt.color9:	#be5252
 ! green
-*.color2:       #529114
-*.color10:      #71c220
+urxvt.color2:	#529114
+urxvt.color10:	#71c220
 ! yellow
-*.color3:       #c9af21
-*.color11:      #d5c157
+urxvt.color3:	#c9af21
+urxvt.color11:	#d5c157
 ! blue
-*.color4:       #3d87c1
-*.color12:      #55a0da
+urxvt.color4:	#3d87c1
+urxvt.color12:	#55a0da
 ! magenta
-*.color5:       #6139a9
-*.color13:      #714cb4
+urxvt.color5:	#6139a9
+urxvt.color13:	#714cb4
 ! cyan
-*.color6:       #41a293
-*.color14:      #53b4a5
+urxvt.color6:	#41a293
+urxvt.color14:	#53b4a5
 ! white
-*.color7:       #a0a0a0
-*.color15:      #b9b9b9
-
-! Normal copy-paste keybindings without perls
-URxvt.iso14755:                   false
-URxvt.keysym.Shift-Control-V:     eval:paste_clipboard
-URxvt.keysym.Shift-Control-C:     eval:selection_to_clipboard
+urxvt.color7:	#a0a0a0
+urxvt.color15:	#b9b9b9
+! Copy-Paste
+URxvt.iso14755:			false
+URxvt.keysym.Shift-Control-V:	eval:paste_clipboard
+URxvt.keysym.Shift-Control-C:	eval:selection_to_clipboard

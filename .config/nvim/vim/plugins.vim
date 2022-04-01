@@ -1,11 +1,9 @@
-" Plugins will be downloaded under the specified directory.
-call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
-" Declare the list of plugins.
-"Plug 'tpope/vim-sensible'
 Plug 'ap/vim-css-color'
-#Plug 'WolfgangMehner/bash-support'
 Plug 'mhinz/vim-startify'
+Plug 'dhruvasagar/vim-dotoo'
+Plug 'tpope/vim-commentary'
+Plug 'spiiph/vim-space'
 
-" List ends here. Plugins become visible to Vim after this call.
 call plug#end()
