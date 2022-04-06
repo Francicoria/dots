@@ -2,8 +2,10 @@
 DOTSFOLDER="$HOME/source/dotfiles"
 STATUSBAR="$HOME/source/scripts/statusbar"
 REFSCRIPT="$HOME/source/scripts/shell/refreshdots.sh"
+OBTHEME="$HOME/.themes/BlackWhite-OB"
 
 rm -r $DOTSFOLDER/.config/
+rm -r $DOTSFOLDER/BlackWhite-OB/
 rm $DOTSFOLDER/.Xresources
 rm $DOTSFOLDER/.bashrc
 rm $DOTSFOLDER/.profile
@@ -26,6 +28,9 @@ cp -r $HOME/.config/zathura/ $DOTSFOLDER/.config/
 cp -r $HOME/.config/snes9x/ $DOTSFOLDER/.config/
 cp -r $HOME/.config/mpv/ $DOTSFOLDER/.config/
 printf "Copied things from .config folder\n"
+
+cp -r $OBTHEME/ $DOTSFOLDER/
+printf "Copied the Openbox theme folder\n"
 
 cp $HOME/.Xresources $DOTSFOLDER/
 printf "Copied the Xresources file\n"
