@@ -14,4 +14,4 @@ xwallpaper --zoom $HOME/.wallpapers/MountainSkyNight.png &
 # Status bar
 $HOME/source/scripts/statusbar &
 
-exec dwm
+exec openbox
