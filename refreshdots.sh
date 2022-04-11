@@ -5,6 +5,7 @@ REFSCRIPT="$HOME/source/scripts/shell/refreshdots.sh"
 OBTHEME="$HOME/.themes/BlackWhite-OB"
 
 rm -r $DOTSFOLDER/.config/
+rm -r $DOTSFOLDER/.local/share/
 rm -r $DOTSFOLDER/BlackWhite-OB/
 rm $DOTSFOLDER/.Xresources
 rm $DOTSFOLDER/.bashrc
@@ -28,6 +29,11 @@ cp -r $HOME/.config/zathura/ $DOTSFOLDER/.config/
 cp -r $HOME/.config/snes9x/ $DOTSFOLDER/.config/
 cp -r $HOME/.config/mpv/ $DOTSFOLDER/.config/
 printf "Copied things from .config folder\n"
+
+mkdir -p $DOTSFOLDER/.local/share/
+mkdir $DOTSFOLDER/.local/share/PolyMC/
+cp $HOME/.local/share/PolyMC/polymc.cfg $DOTSFOLDER/.local/share/PolyMC/
+printf "Copied things from .local/share folder\n"
 
 cp -r $OBTHEME/ $DOTSFOLDER/
 printf "Copied the Openbox theme folder\n"
