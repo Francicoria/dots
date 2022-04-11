@@ -25,7 +25,7 @@ menu.items.font: shadow=n
 menu.title.text.font: shadow=y:shadowtint=30:shadowoffset=1
 
 # Window title justification
-window.label.text.justify: Center
+window.label.text.justify: Left
 
 # Active window
 window.active.title.bg: Flat
