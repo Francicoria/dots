@@ -9,6 +9,9 @@ set.lcs = 'tab:|-,trail:-,nbsp:+,space:·'
 set.number = true
 set.numberwidth = 4
 
+-- Case insensitive search
+set.ignorecase = true
+
 -- Startify
 vim.cmd [[
   let g:startify_custom_header =

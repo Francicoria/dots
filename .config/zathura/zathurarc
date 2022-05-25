@@ -7,5 +7,5 @@ set completion-highlight-bg "#3358B9"
 set completion-fg "#CBCBCB"
 set completion-bg "#000000"
 
-set font "Victor Mono 13"
-set scroll-step 20
+set font "Inter 13"
+set scroll-step 30

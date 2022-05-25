@@ -1,6 +1,6 @@
 !!! Cursor
 Xcursor.theme: phinger-cursors
-Xcursor.size: 16
+Xcursor.size: 24
 
 !!! Xcalc
 !XCalc*Font:		fixed
@@ -12,32 +12,6 @@ Xcursor.size: 16
 !XCalc*hp.button12.font:	fixed
 XCalc.cursor: hand2
 
-!!! suckless
-!! st
-!st.font: 	CtrlD:size=13
-st.borderpx:	7
-st.shell:	/bin/sh
-
-st.color0:	#12100b
-st.color1:	#ae2e2e
-st.color2:	#529114
-st.color3:	#c9af21
-st.color4:	#3d87c1
-st.color5:	#6139a9
-st.color6:	#41a293
-st.color7:	#a0a0a0
-st.color8:	#24211a
-st.color9:	#be5252
-st.color10:	#71c220
-st.color11:	#d5c157
-st.color12:	#55a0da
-st.color13:	#714cb4
-st.color14:	#53b4a5
-st.color15:	#b9b9b9
-st.background:	#000000
-st.foreground:	#CBCBCB
-st.cursorColor:	#CBCBCB
-
 !!! urxvt
 !! Appearance
 urxvt.termName: rxvt-unicode
@@ -47,8 +21,8 @@ urxvt.borderless: true
 !! Scrollbar disable
 urxvt.scrollBar: false
 !! Fonts
-urxvt.font:	xft:Victor Mono:size=13
-urxvt.boldFont:	xft:Victor Mono:size=13:style=Bold
+urxvt.font:	xft:Iosevka Fixed Slab:size=13
+urxvt.boldFont:	xft:Iosevka Fixed Slab:size=13:style=Bold
 urxvt.letterSpace: 0
 !! Larger history limit
 urxvt.saveLines: 1000000

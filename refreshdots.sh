@@ -8,7 +8,7 @@ rm -r $DOTSFOLDER/.config/
 rm -r $DOTSFOLDER/.local/share/
 rm -r $DOTSFOLDER/BlackWhite-OB/
 rm $DOTSFOLDER/.Xresources
-rm $DOTSFOLDER/.bashrc
+rm $DOTSFOLDER/.mkshrc
 rm $DOTSFOLDER/.profile
 rm $DOTSFOLDER/.xinitrc
 rm $DOTSFOLDER/.xbindkeysrc
@@ -44,8 +44,8 @@ printf "Copied the Xresources file\n"
 cp "$HOME/.gtkrc-2.0" $DOTSFOLDER/
 printf "Copied gtk2 config file\n"
 
-cp $HOME/.bashrc $DOTSFOLDER/
-printf "Copied the bashrc file\n"
+cp $HOME/.mkshrc $DOTSFOLDER/
+printf "Copied the mkshrc file\n"
 
 cp $HOME/.profile $DOTSFOLDER/
 printf "Copied .profile file\n"
