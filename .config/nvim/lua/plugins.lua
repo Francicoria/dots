@@ -7,5 +7,6 @@ Plug 'mhinz/vim-startify'
 Plug 'dhruvasagar/vim-dotoo'
 Plug 'tpope/vim-commentary'
 Plug 'spiiph/vim-space'
+Plug 'elkowar/yuck.vim'
 
 vim.call('plug#end')

@@ -1,5 +1,0 @@
-#!/bin/sh
-while true; do
-	xsetroot -name "$(df -h /home | awk '{print $3}' | grep "^[0-9]") used out of $(df -h /home | awk '{print $2}' | grep "^[0-9]") | $(date '+%H:%M %d/%b/%y') | $(acpi | awk -F',' '{print $2}' | sed 's/ //g')"
-	sleep 5
-done
