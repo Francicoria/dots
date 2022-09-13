@@ -5,26 +5,26 @@ local fn = vim.fn
 local api = vim.api
 
 local modes = {
-  ["n"] = "NORMAL",
+  ["n"]  = "NORMAL",
   ["no"] = "NORMAL",
-  ["v"] = "VISUAL",
-  ["V"] = "VISUAL LINE",
+  ["v"]  = "VISUAL",
+  ["V"]  = "VISUAL LINE",
   [""] = "VISUAL BLOCK",
-  ["s"] = "SELECT",
-  ["S"] = "SELECT LINE",
+  ["s"]  = "SELECT",
+  ["S"]  = "SELECT LINE",
   [""] = "SELECT BLOCK",
-  ["i"] = "INSERT",
+  ["i"]  = "INSERT",
   ["ic"] = "INSERT",
-  ["R"] = "REPLACE",
+  ["R"]  = "REPLACE",
   ["Rv"] = "VISUAL REPLACE",
-  ["c"] = "COMMAND",
+  ["c"]  = "COMMAND",
   ["cv"] = "VIM EX",
   ["ce"] = "EX",
-  ["r"] = "PROMPT",
+  ["r"]  = "PROMPT",
   ["rm"] = "MOAR",
   ["r?"] = "CONFIRM",
-  ["!"] = "SHELL",
-  ["t"] = "TERMINAL",
+  ["!"]  = "SHELL",
+  ["t"]  = "TERMINAL",
 }
 -- Get the mode and compare it to the list above
 local function mode()

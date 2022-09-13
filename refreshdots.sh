@@ -11,11 +11,11 @@ rm $DOTSFOLDER/.mkshrc
 rm $DOTSFOLDER/.profile
 rm $DOTSFOLDER/.xinitrc
 rm $DOTSFOLDER/.xbindkeysrc
-rm $DOTSFOLDER/statusbar
 rm $DOTSFOLDER/refreshdots.sh
 printf "Removed all of the dotfiles.\n\n"
 
 mkdir $DOTSFOLDER/.config/
+cp -r $HOME/.config/alacritty/ $DOTSFOLDER/.config/
 cp -r "$HOME/.config/gtk-3.0/" $DOTSFOLDER/.config/
 cp -r $HOME/.config/fontconfig/ $DOTSFOLDER/.config/
 cp -r $HOME/.config/nvim/ $DOTSFOLDER/.config/

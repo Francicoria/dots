@@ -8,10 +8,9 @@ require("options")
 require("keymaps")
 
 -- Highlights
-require("highlights")
 --vim.cmd("source ~/.config/nvim/vim/colorscheme_template.vim")
+vim.cmd("colorscheme 4colors")
+require("highlights")
 
 -- Status line
 require("statusline")
-
-require("check")

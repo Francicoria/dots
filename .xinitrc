@@ -7,7 +7,7 @@ setxkbmap it &
 xbindkeys &
 
 # Xresources and wallpaper
-xrdb .Xresources &
+xrdb $HOME/.Xresources &
 xwallpaper --zoom $HOME/.wallpapers/MountainSkyNight.png &
 
 # Status bar
