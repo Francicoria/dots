@@ -1,4 +1,3 @@
-## dotfiles
-These are the config files for my linux system.
+### dotfiles
 
-They are under the Unlicense license, if that matters to you.
+These are the config files for my linux system.

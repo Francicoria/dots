@@ -8,9 +8,7 @@
 alias ls='ls -lAh --color=auto'
 alias rm='rm -i'
 alias cp='cp -i'
-alias sudo='doas'
 alias nnn='nnn -C -H'
-alias feh='nsxiv'
 alias less='nvimpager'
 
 alias xpbs-install='xbps-install'

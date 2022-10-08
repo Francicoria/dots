@@ -10,6 +10,7 @@ require("keymaps")
 -- Highlights
 --vim.cmd("source ~/.config/nvim/vim/colorscheme_template.vim")
 vim.cmd("colorscheme 4colors")
+require("colors")
 require("highlights")
 
 -- Status line

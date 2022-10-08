@@ -15,13 +15,14 @@ rm $DOTSFOLDER/refreshdots.sh
 printf "Removed all of the dotfiles.\n\n"
 
 mkdir $DOTSFOLDER/.config/
-cp -r $HOME/.config/alacritty/ $DOTSFOLDER/.config/
-cp -r "$HOME/.config/gtk-3.0/" $DOTSFOLDER/.config/
+cp -r $HOME/.config/alacritty/  $DOTSFOLDER/.config/
+cp -r "$HOME/.config/gtk-3.0/"  $DOTSFOLDER/.config/
 cp -r $HOME/.config/fontconfig/ $DOTSFOLDER/.config/
-cp -r $HOME/.config/nvim/ $DOTSFOLDER/.config/
-cp -r $HOME/.config/zathura/ $DOTSFOLDER/.config/
-cp -r $HOME/.config/snes9x/ $DOTSFOLDER/.config/
-cp -r $HOME/.config/mpv/ $DOTSFOLDER/.config/
+cp -r $HOME/.config/nvim/       $DOTSFOLDER/.config/
+cp -r $HOME/.config/zathura/    $DOTSFOLDER/.config/
+cp -r $HOME/.config/snes9x/     $DOTSFOLDER/.config/
+cp -r $HOME/.config/mpv/        $DOTSFOLDER/.config/
+cp -r $HOME/.config/tint2/      $DOTSFOLDER/.config/
 printf "Copied things from .config folder\n"
 
 mkdir -p $DOTSFOLDER/.local/share/
